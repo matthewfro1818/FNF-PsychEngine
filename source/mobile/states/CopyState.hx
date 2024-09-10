@@ -199,7 +199,7 @@ class CopyState extends MusicBeatState
 				continue;
 			
 			var ignoreFile:String = getFile(Path.join([Path.directory(file), IGNORE_FOLDER_FILE_NAME]));
-			if(OpenFLAssets.exists(ignoreFile) && !directoriesToIgnore.contains(ignoreFile))
+			if(OpenFLAssets.exists(ignoreFile) && directoriesToIgnore.contains(ignoreFile))
 				directoriesToIgnore.push(Path.directory(file));
 
 			if(directoriesToIgnore.length > 0)

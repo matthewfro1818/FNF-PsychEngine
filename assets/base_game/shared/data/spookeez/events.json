@@ -1,0 +1,49 @@
+﻿{
+    "events":  [
+                   {
+                       "value":  [
+                                     15583.3333333333,
+                                     [
+                                         "PlayAnimation",
+                                         "cheer",
+                                         "dad|force=True"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     18783.3333333333,
+                                     [
+                                         "PlayAnimation",
+                                         "cheer",
+                                         "boyfriend|force=True"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     41183.3333333333,
+                                     [
+                                         "PlayAnimation",
+                                         "cheer",
+                                         "dad|force=True"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     44383.3333333333,
+                                     [
+                                         "PlayAnimation",
+                                         "cheer",
+                                         "boyfriend|force=True"
+                                     ]
+                                 ],
+                       "Count":  2
+                   }
+               ],
+    "format":  "psych_v1_convert"
+}

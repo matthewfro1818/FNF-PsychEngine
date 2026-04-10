@@ -1,0 +1,139 @@
+import funkin.play.character.SparrowCharacter;
+import funkin.play.PlayState;
+import funkin.graphics.FunkinSprite;
+import flixel.util.FlxSpriteUtil;
+import funkin.modding.base.ScriptedFlxRuntimeShader;
+import funkin.vis.dsp.SpectralAnalyzer;
+import funkin.Highscore;
+
+class FloraPixelCharacter extends SparrowCharacter {
+	function new() {
+		super('flora-pixel'); //gonna do the flora pixel recode once flora's pixel sprites are 100% finished
+	}
+
+	var flora;
+	var visualizerFlora;
+	var refershedLol:Bool = false;
+
+	// viz stuff
+	var defaultPoints = [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5];
+	var points = defaultPoints;
+	var lineStyle:LineStyle;
+	var curve = 0;
+	var analyzer:SpectralAnalyzer;
+
+	var comboFloraCheck:Bool = true;
+
+	function onCreate(event:ScriptEvent) {
+		super.onCreate(event);
+
+		flora = new FunkinSprite(0, 0).loadSparrow('characters/flora/FloraPixel');
+		flora.animation.addByPrefix('idle', 'lights', 12, false);
+		flora.animation.play('idle');
+		flora.animation.curAnim.finish();
+		PlayState.instance.currentStage.add(flora);
+
+		visualizerFlora = new FunkinSprite().makeGraphic(102, 72); // makeGraphic so it will actually update the shader <3
+		var pixelShader = ScriptedFlxRuntimeShader.init('pixelShader');
+		visualizerFlora.shader = pixelShader;
+		PlayState.instance.currentStage.add(visualizerFlora);
+	}
+
+	override function dance(force) {
+		if (flora != null)
+			flora.animation.play('idle', false);
+		super.dance(force);
+	}
+
+	function onSongStart(scriptEvent) {
+		super.onSongStart(scriptEvent);
+		analyzer = new SpectralAnalyzer(FlxG.sound.music._channel.__audioSource, 7, 0.1, 40);
+		analyzer.fftN = 256;
+	}
+
+	function onCountdownStart(scriptEvent) {
+		super.onCountdownStart(scriptEvent);
+		analyzer = null;
+	}
+
+	function onUpdate(event:UpdateScriptEvent) {
+		super.onUpdate(event);
+		if (!refershedLol) {
+			flora.zIndex = this.zIndex + 1;
+			flora.scale.set(6, 6);
+			flora.antialiasing = false;
+			flora.x = this.x + 325;
+			flora.y = this.y + 260;
+
+			visualizerFlora.x = this.x + 342;
+			visualizerFlora.y = this.y + 276;
+			visualizerFlora.zIndex = flora.zIndex + 1;
+			visualizerFlora.antialiasing = false;
+
+			PlayState.instance.currentStage.add(flora);
+			PlayState.instance.currentStage.refresh();
+			refershedLol = true;
+		}
+		lineStyle = FlxSpriteUtil.getDefaultLineStyle({
+			thickness: 4,
+			color: 0xFF6df7e9
+		});
+	}
+
+	override public function draw() {
+		// viz shit
+		if (PlayState.instance?.currentStage != null) {
+			if (analyzer != null) {
+				points = [];
+				var levels = analyzer.getLevels();
+				for (i in 0...levels.length) {
+					points.push(levels[i].value / 2);
+					points[points.length - 1] += 0.5;
+				}
+				points.push(0.5);
+			} else
+				points = defaultPoints;
+
+			// actually drawing shit that i want to forget about, i was cooking back then now its gibbirsh to me
+
+			lineStyle.color = 0x00000000;
+			FlxSpriteUtil.fill(visualizerFlora, 0);
+			FlxSpriteUtil.beginDraw(0xFF6df7e9, lineStyle);
+
+			for (b in [0, 1]) {
+				var oldPointX = 0;
+				var oldPointY = visualizerFlora.height * 0.6;
+				var oldI = 0.5;
+				for (i in 0...points.length) {
+					var x = (visualizerFlora.width / points.length) * (i + 1);
+					var y = visualizerFlora.height * (1 - points[i] + 0.1);
+					FlxSpriteUtil.flashGfx.moveTo(oldPointX, oldPointY);
+
+					var stupidCurveAxes = curve;
+
+					if (oldI >= points[i])
+						stupidCurveAxes = 0;
+
+					FlxSpriteUtil.flashGfx.curveTo(((oldPointX + x) / 2) + stupidCurveAxes, ((oldPointY + y) / 2), x, y);
+
+					if (b == 0) {
+						FlxSpriteUtil.flashGfx.lineTo(x, visualizerFlora.height);
+						FlxSpriteUtil.flashGfx.lineTo(oldPointX, visualizerFlora.height);
+					}
+					oldPointX = x;
+					oldPointY = y;
+					oldI = points[i];
+				}
+
+				FlxSpriteUtil.flashGfx.moveTo(0, 0);
+
+				lineStyle.color = 0xFF6df7e9;
+				FlxSpriteUtil.setLineStyle(lineStyle);
+				FlxSpriteUtil.flashGfx.beginFill(0x00000000, 0);
+			}
+
+			FlxSpriteUtil.endDraw(visualizerFlora, null);
+		}
+		super.draw();
+	}
+}

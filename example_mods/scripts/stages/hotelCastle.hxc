@@ -1,0 +1,239 @@
+import funkin.play.stage.Stage;
+import funkin.graphics.shaders.DropShadowShader;
+import funkin.play.character.CharacterType;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import funkin.play.PlayState;
+import flixel.util.FlxSave;
+
+class hotelCastleStage extends Stage {
+	function new() {
+		super('hotelCastle');
+
+		save = new FlxSave();
+		save.bind("GooeyMixOptions", "FunkinCrew");
+	}
+
+	function buildStage() {
+		super.buildStage();
+
+		var lighting = getNamedProp('lighting');
+		lighting.blend = 0;
+
+		var lighting2 = getNamedProp('lighting2');
+		lighting2.blend = 9;
+
+		var stageLighting = getNamedProp('stageLighting');
+		stageLighting.blend = 9;
+
+		var spotlight1 = getNamedProp('spotlight1');
+		spotlight1.blend = 9;
+		spotlight1.alpha = 1;
+
+		var spotlight2 = getNamedProp('spotlight2');
+		spotlight2.blend = 0;
+		spotlight2.alpha = 0.05;
+
+		var spotlight3 = getNamedProp('spotlight3');
+		spotlight3.blend = 0;
+		spotlight3.alpha = 0.5;
+
+		var extraSpotlight = getNamedProp('extraSpotlight');
+		extraSpotlight.blend = 9;
+		extraSpotlight.alpha = 0.0001;
+
+		var extraSpotlight2 = getNamedProp('extraSpotlight2');
+		extraSpotlight2.blend = 9;
+		extraSpotlight2.alpha = 0.0001;
+
+		var topLantern1Light = getNamedProp('topLantern1Light');
+		topLantern1Light.blend = 0;
+		var topLantern2Light = getNamedProp('topLantern2Light');
+		topLantern2Light.blend = 0;
+		var candleFrontLight = getNamedProp('candleFrontLight');
+		candleFrontLight.blend = 0;
+		var candleBackLight = getNamedProp('candleBackLight');
+		candleBackLight.blend = 0;
+		var bottomLantern1Light = getNamedProp('bottomLantern1Light');
+		bottomLantern1Light.blend = 0;
+		var bottomLantern2Light = getNamedProp('bottomLantern2Light');
+		bottomLantern2Light.blend = 0;
+
+		var radEyeBop = getNamedProp('radEyeBop');
+		radEyeBop.blend = 0;
+
+		if (save.data.morphoMode == 'On' || save.data.morphoMode == 'No Stickers') {
+			PlayState.instance.currentStage.getNamedProp('morphoBop').alpha = 0;
+		}
+	}
+
+	public function onGameOver(event:ScriptEvent) {
+		super.onGameOver(event);
+		if (save.data.gooeyShaders != false) {
+			getBoyfriend().shader = null;
+		}
+	}
+
+	override function onCountdownStart(event:CountdownScriptEvent):Void {
+		super.onCountdownStart(event);
+
+		if (PlayState.instance.currentStage.getDad() != null) {
+			switch (PlayState.instance.currentStage.getDad().characterId) {
+				case 'morpho', 'morpho-player':
+					PlayState.instance.currentStage.getNamedProp('morphoBop').alpha = 0;
+				case 'rad':
+					PlayState.instance.currentStage.getNamedProp('radBop').alpha = 0;
+					PlayState.instance.currentStage.getNamedProp('radEyeBop').alpha = 0;
+				case 'blue', 'blue-player':
+					PlayState.instance.currentStage.getNamedProp('blueBop').alpha = 0;
+				case 'noodle', 'noodle-player':
+					PlayState.instance.currentStage.getNamedProp('noodleBop').alpha = 0;
+				case 'cereal', 'cereal-player':
+					PlayState.instance.currentStage.getNamedProp('cerealBop').alpha = 0;
+			}
+		}
+		if (PlayState.instance.currentStage.getGirlfriend() != null) {
+			switch (PlayState.instance.currentStage.getGirlfriend().characterId) {
+				case 'morpho', 'morpho-player':
+					PlayState.instance.currentStage.getNamedProp('morphoBop').alpha = 0;
+				case 'rad':
+					PlayState.instance.currentStage.getNamedProp('radBop').alpha = 0;
+					PlayState.instance.currentStage.getNamedProp('radEyeBop').alpha = 0;
+				case 'blue', 'blue-player':
+					PlayState.instance.currentStage.getNamedProp('blueBop').alpha = 0;
+				case 'noodle', 'noodle-player':
+					PlayState.instance.currentStage.getNamedProp('noodleBop').alpha = 0;
+				case 'cereal', 'cereal-player':
+					PlayState.instance.currentStage.getNamedProp('cerealBop').alpha = 0;
+			}
+		}
+		if (PlayState.instance.currentStage.getBoyfriend() != null) {
+			switch (PlayState.instance.currentStage.getBoyfriend().characterId) {
+				case 'morpho', 'morpho-player':
+					PlayState.instance.currentStage.getNamedProp('morphoBop').alpha = 0;
+				case 'rad':
+					PlayState.instance.currentStage.getNamedProp('radBop').alpha = 0;
+					PlayState.instance.currentStage.getNamedProp('radEyeBop').alpha = 0;
+				case 'blue', 'blue-player':
+					PlayState.instance.currentStage.getNamedProp('blueBop').alpha = 0;
+				case 'noodle', 'noodle-player':
+					PlayState.instance.currentStage.getNamedProp('noodleBop').alpha = 0;
+				case 'cereal', 'cereal-player':
+					PlayState.instance.currentStage.getNamedProp('cerealBop').alpha = 0;
+			}
+		}
+	}
+
+	override function addCharacter(character:BaseCharacter, charType:CharacterType):Void {
+		// Apply the shader automatically to each character as it gets added.
+		super.addCharacter(character, charType);
+		trace('Applied stage shader to ' + character.characterName);
+		if (save.data.gooeyShaders != false) {
+			var rim = new DropShadowShader();
+			rim.setAdjustColor(0, 0, 0, 0);
+			rim.color = 0xFF423427;
+			character.shader = rim;
+			rim.attachedSprite = character;
+			rim.threshold = -1;
+
+			switch (charType) {
+				case CharacterType.BF:
+					rim.angle = 67.5;
+
+					character.animation.onFrameChange.add(function() {
+						if (getBoyfriend() != null) {
+							rim.updateFrameInfo(getBoyfriend().frame);
+						}
+					});
+
+				case CharacterType.GF:
+					rim.angle = 90;
+					rim.color = 0xFF000000;
+
+					character.animation.onFrameChange.add(function() {
+						rim.updateFrameInfo(getGirlfriend().frame);
+					});
+
+				case CharacterType.DAD:
+					rim.angle = 67.5;
+					character.animation.onFrameChange.add(function() {
+						rim.updateFrameInfo(getDad().frame);
+					});
+
+				default:
+			}
+		}
+	}
+
+	function onCreate(event:ScriptEvent):Void {
+		super.onCreate(event);
+		if (PlayState.instance != null
+			&& PlayState.instance.currentStage.getNamedProp('morphoBop') != null
+			&& !PlayState.instance.isChartingMode) {
+			if (PlayState.instance.currentSong.id.toLowerCase() == "starcraft") {
+				PlayState.instance.currentStage.getNamedProp('morphoBop').danceEvery = 2;
+				PlayState.instance.currentStage.getNamedProp('blueBop').danceEvery = 2;
+				PlayState.instance.currentStage.getNamedProp('noodleBop').danceEvery = 2;
+				PlayState.instance.currentStage.getNamedProp('cerealBop').danceEvery = 2;
+				PlayState.instance.currentStage.getNamedProp('radBop').danceEvery = 4;
+				PlayState.instance.currentStage.getNamedProp('radEyeBop').danceEvery = 4;
+			}
+		}
+	}
+
+	function onSongRetry(event:ScriptEvent) {
+		super.onSongRetry(event);
+		if (PlayState.instance.currentSong.id.toLowerCase() == "starcraft") {
+			PlayState.instance.currentStage.getNamedProp('extraSpotlight').alpha = 0;
+			PlayState.instance.currentStage.getNamedProp('extraSpotlight2').alpha = 0;
+			PlayState.instance.currentStage.getNamedProp('spotlight2').alpha = 0.05;
+			PlayState.instance.currentStage.getNamedProp('morphoBop').danceEvery = 2;
+			PlayState.instance.currentStage.getNamedProp('blueBop').danceEvery = 2;
+			PlayState.instance.currentStage.getNamedProp('noodleBop').danceEvery = 2;
+			PlayState.instance.currentStage.getNamedProp('cerealBop').danceEvery = 2;
+			PlayState.instance.currentStage.getNamedProp('radBop').danceEvery = 4;
+			PlayState.instance.currentStage.getNamedProp('radEyeBop').danceEvery = 4;
+		}
+	}
+
+	function onStepHit(event:SongTimeScriptEvent):Void {
+		super.onStepHit(event);
+		if (PlayState.instance.currentSong.id.toLowerCase() == "starcraft") {
+			if (event.step == 885) {
+				FlxTween.tween(PlayState.instance.currentStage.getNamedProp('extraSpotlight'), {alpha: 0.5}, 2.8, {ease: FlxEase.quartin});
+				FlxTween.tween(PlayState.instance.currentStage.getNamedProp('extraSpotlight2'), {alpha: 0.5}, 2.8, {ease: FlxEase.quartin});
+				FlxTween.tween(PlayState.instance.currentStage.getNamedProp('spotlight2'), {alpha: 0}, 1.2, {ease: FlxEase.quartin});
+			}
+			if (event.step == 911 || event.step == 16 || event.step == 1310 || event.step == 530) {
+				PlayState.instance.currentStage.getNamedProp('morphoBop').danceEvery = 2;
+				PlayState.instance.currentStage.getNamedProp('blueBop').danceEvery = 2;
+				PlayState.instance.currentStage.getNamedProp('noodleBop').danceEvery = 2;
+				PlayState.instance.currentStage.getNamedProp('cerealBop').danceEvery = 2;
+				PlayState.instance.currentStage.getNamedProp('radBop').danceEvery = 4;
+				PlayState.instance.currentStage.getNamedProp('radEyeBop').danceEvery = 4;
+			}
+			if (event.step == 1038 || event.step == 1 || event.step == 275 || event.step == 786 || event.step == 1343 || event.step == 658
+				|| event.step == 1182) {
+				PlayState.instance.currentStage.getNamedProp('morphoBop').danceEvery = 1;
+				PlayState.instance.currentStage.getNamedProp('blueBop').danceEvery = 1;
+				PlayState.instance.currentStage.getNamedProp('noodleBop').danceEvery = 1;
+				PlayState.instance.currentStage.getNamedProp('cerealBop').danceEvery = 1;
+				PlayState.instance.currentStage.getNamedProp('radBop').danceEvery = 2;
+				PlayState.instance.currentStage.getNamedProp('radEyeBop').danceEvery = 2;
+			}
+			if (event.step == 1169 || event.step == 755 || event.step == 885) {
+				PlayState.instance.currentStage.getNamedProp('morphoBop').danceEvery = 20;
+				PlayState.instance.currentStage.getNamedProp('blueBop').danceEvery = 20;
+				PlayState.instance.currentStage.getNamedProp('noodleBop').danceEvery = 20;
+				PlayState.instance.currentStage.getNamedProp('cerealBop').danceEvery = 20;
+				PlayState.instance.currentStage.getNamedProp('radBop').danceEvery = 20;
+				PlayState.instance.currentStage.getNamedProp('radEyeBop').danceEvery = 20;
+			}
+			if (event.step == 1182) {
+				FlxTween.tween(PlayState.instance.currentStage.getNamedProp('extraSpotlight'), {alpha: 0}, 1.2, {ease: FlxEase.quartin});
+				FlxTween.tween(PlayState.instance.currentStage.getNamedProp('extraSpotlight2'), {alpha: 0}, 1.2, {ease: FlxEase.quartin});
+				FlxTween.tween(PlayState.instance.currentStage.getNamedProp('spotlight2'), {alpha: 0.05}, 1.2, {ease: FlxEase.quartin});
+			}
+		}
+	}
+}

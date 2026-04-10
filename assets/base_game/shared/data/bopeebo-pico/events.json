@@ -1,0 +1,401 @@
+﻿{
+    "events":  [
+                   {
+                       "value":  [
+                                     4200,
+                                     [
+                                         "PlayAnimation",
+                                         "hey",
+                                         "boyfriend|force=False"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     9000,
+                                     [
+                                         "PlayAnimation",
+                                         "hey",
+                                         "boyfriend|force=False"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     18600,
+                                     [
+                                         "PlayAnimation",
+                                         "hey",
+                                         "boyfriend|force=False"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     19050,
+                                     [
+                                         "SetCameraBop",
+                                         "1",
+                                         "0.6"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     23400,
+                                     [
+                                         "PlayAnimation",
+                                         "hey",
+                                         "boyfriend|force=False"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     28200,
+                                     [
+                                         "PlayAnimation",
+                                         "hey",
+                                         "boyfriend|force=False"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     31200,
+                                     [
+                                         "ZoomCamera",
+                                         "0.75",
+                                         "16|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     33600,
+                                     [
+                                         "ZoomCamera",
+                                         "0.85",
+                                         "16|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     37200,
+                                     [
+                                         "ZoomCamera",
+                                         "0.75",
+                                         "16|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     37800,
+                                     [
+                                         "PlayAnimation",
+                                         "hey",
+                                         "boyfriend|force=False"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     38250,
+                                     [
+                                         "SetCameraBop",
+                                         "20",
+                                         "0.6"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     38400,
+                                     [
+                                         "ZoomCamera",
+                                         "0.85",
+                                         "16|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     40650,
+                                     [
+                                         "SetCameraBop",
+                                         "1",
+                                         "0.7"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     42600,
+                                     [
+                                         "PlayAnimation",
+                                         "hey",
+                                         "boyfriend|force=False"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     43200,
+                                     [
+                                         "ZoomCamera",
+                                         "0.75",
+                                         "16|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     45600,
+                                     [
+                                         "ZoomCamera",
+                                         "0.85",
+                                         "16|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     47400,
+                                     [
+                                         "PlayAnimation",
+                                         "hey",
+                                         "boyfriend|force=False"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     57000,
+                                     [
+                                         "PlayAnimation",
+                                         "hey",
+                                         "boyfriend|force=False"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     57450,
+                                     [
+                                         "SetCameraBop",
+                                         "1",
+                                         "0.6"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     58500,
+                                     [
+                                         "ZoomCamera",
+                                         "0.75",
+                                         "16|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     60000,
+                                     [
+                                         "ZoomCamera",
+                                         "0.9",
+                                         "16|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     61800,
+                                     [
+                                         "PlayAnimation",
+                                         "hey",
+                                         "boyfriend|force=False"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     62400,
+                                     [
+                                         "ZoomCamera",
+                                         "0.75",
+                                         "16|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     64650,
+                                     [
+                                         "SetCameraBop",
+                                         "1",
+                                         "0.4"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     64800,
+                                     [
+                                         "ZoomCamera",
+                                         "0.9",
+                                         "16|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     66600,
+                                     [
+                                         "PlayAnimation",
+                                         "hey",
+                                         "boyfriend|force=False"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     67050,
+                                     [
+                                         "SetCameraBop",
+                                         "1",
+                                         "0.6"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     67200,
+                                     [
+                                         "ZoomCamera",
+                                         "0.75",
+                                         "16|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     69600,
+                                     [
+                                         "ZoomCamera",
+                                         "0.9",
+                                         "16|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     72000,
+                                     [
+                                         "ZoomCamera",
+                                         "0.75",
+                                         "16|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     74400,
+                                     [
+                                         "ZoomCamera",
+                                         "0.9",
+                                         "16|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     76200,
+                                     [
+                                         "ZoomCamera",
+                                         "0.85",
+                                         "16|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     76200,
+                                     [
+                                         "PlayAnimation",
+                                         "hey",
+                                         "boyfriend|force=False"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     79200,
+                                     [
+                                         "ZoomCamera",
+                                         "0.75",
+                                         "16|expoOut|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     79500,
+                                     [
+                                         "SetCameraBop",
+                                         "10",
+                                         "0.4"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     80100,
+                                     [
+                                         "ZoomCamera",
+                                         "0.7",
+                                         "16|expoOut|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   }
+               ],
+    "format":  "psych_v1_convert"
+}

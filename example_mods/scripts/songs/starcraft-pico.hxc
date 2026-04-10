@@ -1,0 +1,71 @@
+import funkin.play.song.Song;
+import funkin.save.Save;
+import funkin.play.PlayState;
+import Date;
+import flixel.FlxSprite;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import funkin.util.FlxTweenUtil;
+
+class StarcraftPicoMixSong extends Song {
+	function new() {
+		super('starcraft', {
+			variation: 'pico'
+		});
+	}
+
+	public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool {
+		if (currentVariation == 'pico')
+			return !Save.instance.hasBeatenSong(this.id, null, this.variation);
+
+		return false;
+	}
+
+	function onCreate(event:ScriptEvent):Void {
+		super.onCreate(event);
+
+		blackScreen = new FlxSprite(-100, -100).makeGraphic(FlxG.width * 2, FlxG.height * 2, 0xFF000000);
+		blackScreen.cameras = [PlayState.instance.camHUD];
+		PlayState.instance.add(blackScreen);
+
+		if (PlayState.instance.isChartingMode)
+			blackScreen.alpha = 0;
+
+		if (!FlxG.onMobile) {
+			PlayState.instance.discordRPCAlbum = "https://raw.githubusercontent.com/LeGooeyy/GooeyMixDiscordIcons/refs/heads/main/assets/album-covers/"
+				+ PlayState.instance.currentChart.album
+				+ ".png?raw=true";
+			PlayState.instance.discordRPCIcon = "https://raw.githubusercontent.com/LeGooeyy/GooeyMixDiscordIcons/refs/heads/main/assets/icons/"
+				+ PlayState.instance.currentChart.characters.opponent
+				+ ".png?raw=true?t="
+				+ Date.now().getTime();
+		}
+	}
+
+	function onSongRetry(event:ScriptEvent) {
+		super.onSongRetry(event);
+		if (blackScreen != null)
+			FlxTween.cancelTweensOf(blackScreen);
+		if (!PlayState.instance.isChartingMode)
+			blackScreen.alpha = 1;
+	}
+
+	function onStepHit(event:SongTimeScriptEvent):Void {
+		super.onStepHit(event);
+
+		if (event.step == 4) {
+			FlxTween.tween(blackScreen, {alpha: 0}, 1);
+		}
+	}
+	
+	function onPause(event:ScriptEvent) {
+		super.onPause(event);
+		if (blackScreen != null)
+			FlxTweenUtil.pauseTweensOf(blackScreen);
+	}
+	function onResume(event:ScriptEvent) {
+		super.onResume(event);
+		if (blackScreen != null)
+			FlxTweenUtil.resumeTweensOf(blackScreen);
+	}
+}

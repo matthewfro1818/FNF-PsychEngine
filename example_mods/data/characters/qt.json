@@ -1,0 +1,98 @@
+{
+  "version": "1.0.0",
+  "renderType": "animateatlas",
+  "name": "QT (QT Rewired).",
+  "singTime": 8.0,
+  "flipX": false,
+  "startingAnimation": "idle",
+  "cameraOffsets": [
+    0,
+    0
+  ],
+  "assetPath": "shared:characters/QT_assets/qt",
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle"
+    },
+    {
+      "name": "still",
+      "prefix": "hi cutie",
+      "frameIndices": [
+        0
+      ]
+    },
+    {
+      "name": "intro",
+      "prefix": "hi cutie"
+    },
+    {
+      "name": "danceRight-alt",
+      "prefix": "dance",
+      "frameIndices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "name": "danceLeft-alt",
+      "prefix": "dance",
+      "frameIndices": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left"
+    },
+    {
+      "name": "singLEFT-alt",
+      "prefix": "left angry"
+    },
+    {
+      "name": "disgust",
+      "prefix": "ew"
+    },
+    {
+      "name": "cheer",
+      "prefix": "hey"
+    },
+    {
+      "name": "preDance",
+      "prefix": "pre dance"
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down"
+    },
+    {
+      "name": "singUP",
+      "prefix": "up"
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [
+        20,
+        0
+      ]
+    }
+  ]
+}

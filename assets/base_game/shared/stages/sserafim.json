@@ -1,0 +1,269 @@
+﻿{
+    "directory":  "",
+    "defaultZoom":  0.5,
+    "stageUI":  "normal",
+    "boyfriend":  [
+                      1530,
+                      970
+                  ],
+    "girlfriend":  [
+                       938.5,
+                       392
+                   ],
+    "opponent":  [
+                     70,
+                     470
+                 ],
+    "hide_girlfriend":  false,
+    "camera_boyfriend":  [
+                             -100,
+                             -100
+                         ],
+    "camera_opponent":  [
+                            150,
+                            -100
+                        ],
+    "camera_girlfriend":  [
+                              0,
+                              0
+                          ],
+    "camera_speed":  1,
+    "objects":  [
+                    {
+                        "name":  "solid",
+                        "x":  -5000,
+                        "y":  -3000,
+                        "scale":  [
+                                      10000,
+                                      10000
+                                  ],
+                        "scroll":  [
+                                       0,
+                                       0
+                                   ],
+                        "type":  "square",
+                        "color":  "#FFFFFF"
+                    },
+                    {
+                        "name":  "fucker",
+                        "x":  790,
+                        "y":  625,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       0.85,
+                                       0.85
+                                   ],
+                        "alpha":  0,
+                        "type":  "sprite",
+                        "image":  "floor"
+                    },
+                    {
+                        "name":  "bg",
+                        "x":  -1853,
+                        "y":  -815,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       0.75,
+                                       0.75
+                                   ],
+                        "type":  "sprite",
+                        "image":  "bg"
+                    },
+                    {
+                        "name":  "backTablesCutscene",
+                        "x":  -1858,
+                        "y":  377,
+                        "scale":  [
+                                      400,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       0.93,
+                                       0.93
+                                   ],
+                        "type":  "sprite",
+                        "image":  "cutscene/counter-stretch"
+                    },
+                    {
+                        "name":  "backTables",
+                        "x":  -1857,
+                        "y":  267,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       0.93,
+                                       0.93
+                                   ],
+                        "type":  "sprite",
+                        "image":  "back-tables"
+                    },
+                    {
+                        "name":  "burgerCutscene",
+                        "x":  -97,
+                        "y":  237,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       0.93,
+                                       0.93
+                                   ],
+                        "type":  "sprite",
+                        "image":  "cutscene/burger-cutscene"
+                    },
+                    {
+                        "name":  "backStools",
+                        "x":  -1357,
+                        "y":  426,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       0.94,
+                                       0.94
+                                   ],
+                        "type":  "sprite",
+                        "image":  "back-stools"
+                    },
+                    {
+                        "name":  "backLightColor",
+                        "x":  -1241,
+                        "y":  -949,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       0.93,
+                                       0.93
+                                   ],
+                        "alpha":  0,
+                        "type":  "sprite",
+                        "image":  "lights/back-light-color"
+                    },
+                    {
+                        "name":  "backLightWhite",
+                        "x":  -771,
+                        "y":  -599,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       0.93,
+                                       0.93
+                                   ],
+                        "alpha":  0,
+                        "type":  "sprite",
+                        "image":  "lights/back-light-white"
+                    },
+                    {
+                        "name":  "truck",
+                        "x":  -983,
+                        "y":  -707,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       0.95,
+                                       0.95
+                                   ],
+                        "type":  "sprite",
+                        "image":  "truck-stuff"
+                    },
+                    {
+                        "name":  "truckDoor",
+                        "x":  -980,
+                        "y":  -173,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       0.95,
+                                       0.95
+                                   ],
+                        "type":  "sprite",
+                        "image":  "truck-door"
+                    },
+                    {
+                        "name":  "truckLight2",
+                        "x":  -781,
+                        "y":  -464,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       0.95,
+                                       0.95
+                                   ],
+                        "alpha":  0,
+                        "type":  "sprite",
+                        "image":  "lights/truck-light2"
+                    },
+                    {
+                        "name":  "truckLight1",
+                        "x":  -962,
+                        "y":  -607,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       0.95,
+                                       0.95
+                                   ],
+                        "alpha":  0,
+                        "type":  "sprite",
+                        "image":  "lights/truck-light1"
+                    },
+                    {
+                        "name":  "frontStool",
+                        "x":  -280,
+                        "y":  818,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "sprite",
+                        "image":  "front-stool"
+                    },
+                    {
+                        "name":  "solidCover",
+                        "x":  -5000,
+                        "y":  -3000,
+                        "scale":  [
+                                      10000,
+                                      10000
+                                  ],
+                        "scroll":  [
+                                       0,
+                                       0
+                                   ],
+                        "alpha":  0,
+                        "type":  "square",
+                        "color":  "#000000"
+                    }
+                ],
+    "_editorMeta":  {
+                        "dad":  "dad",
+                        "boyfriend":  "bf",
+                        "gf":  "gf"
+                    }
+}

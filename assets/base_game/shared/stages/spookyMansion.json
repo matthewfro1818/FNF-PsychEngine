@@ -1,0 +1,82 @@
+﻿{
+    "directory":  "",
+    "defaultZoom":  1,
+    "stageUI":  "normal",
+    "boyfriend":  [
+                      989.5,
+                      885
+                  ],
+    "girlfriend":  [
+                       751.5,
+                       787
+                   ],
+    "opponent":  [
+                     382,
+                     865
+                 ],
+    "hide_girlfriend":  false,
+    "camera_boyfriend":  [
+                             -100,
+                             -100
+                         ],
+    "camera_opponent":  [
+                            150,
+                            -100
+                        ],
+    "camera_girlfriend":  [
+                              0,
+                              0
+                          ],
+    "camera_speed":  1,
+    "objects":  [
+                    {
+                        "name":  "halloweenBG",
+                        "x":  -395,
+                        "y":  -505,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "animatedSprite",
+                        "image":  "halloween_bg",
+                        "animations":  [
+                                           {
+                                               "anim":  "idle",
+                                               "name":  "static",
+                                               "fps":  24,
+                                               "loop":  false,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           },
+                                           {
+                                               "anim":  "lightning",
+                                               "name":  "thunder",
+                                               "fps":  24,
+                                               "loop":  false,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           }
+                                       ],
+                        "firstAnimation":  "idle"
+                    }
+                ],
+    "_editorMeta":  {
+                        "dad":  "dad",
+                        "boyfriend":  "bf",
+                        "gf":  "gf"
+                    }
+}

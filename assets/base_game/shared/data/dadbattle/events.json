@@ -1,0 +1,16 @@
+﻿{
+    "events":  [
+                   {
+                       "value":  [
+                                     10083.3333333333,
+                                     [
+                                         "ZoomCamera",
+                                         "1.05",
+                                         "12|quintInOut|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   }
+               ],
+    "format":  "psych_v1_convert"
+}

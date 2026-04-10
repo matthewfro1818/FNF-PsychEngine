@@ -1,0 +1,150 @@
+{
+  "version": "1.0.0",
+
+  "backdrop": {
+    "type": "solid",
+    "fadeTime": 2.0,
+    "color": "#BFB3DFD8"
+  },
+
+  "music": {
+    "asset": "Lunchbox",
+    "fadeTime": 2.0,
+    "looped": true
+  },
+
+  "outro": {
+    "type": "fade",
+    "fadeTime": 1.0
+  },
+
+  "dialogue": [
+    {
+      "speaker": "senpai",
+      "speakerAnimation": "talkEnter",
+      "box": "roses",
+      "boxAnimation": "enter",
+
+      "text": ["Ah, it seems like yet another lovely-"]
+    },
+    {
+      "speaker": "senpai-bwuh",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": ["Wait..."]
+    },
+    {
+      "speaker": "senpai-bwuh",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": ["Where is the lovely mademoiselle..."]
+    },
+    {
+      "speaker": "senpai-bwuh",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": ["And what the hell kind of mutt is that!?"]
+    },
+    {
+      "speaker": "gooey-pixel",
+      "speakerAnimation": "talkEnter",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": ["Haiiiii :D"]
+    },
+    {
+      "speaker": "senpai",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": ["Um... Shouldn't there be some sort of, you know, lovely maiden that also arrived here with you?"]
+    },
+    {
+      "speaker": "gooey-pixel",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": ["Nope! Just me!"]
+    },
+    {
+      "speaker": "flora-sideeye",
+      "speakerAnimation": "talkEnter",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": ["Ok so like im here too but this guy seems like a weirdo so i'm just going to not speak or do anything."]
+    },
+    {
+      "speaker": "senpai-confused",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": ["Huh? Did you hear something?"]
+    },
+    {
+      "speaker": "flora-shocked",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": ["Uh..."]
+    },
+        {
+      "speaker": "flora-nervous",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": ["Beep boop speaker sounds im just a speaker."]
+    },
+    {
+      "speaker": "senpai",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": ["Oh okay."]
+    },
+    {
+      "speaker": "senpai",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "speaking",
+      "text": ["Never the less,"," would you care to join me in a short ballad for a palatable warm up after school?"]
+    },
+    {
+      "speaker": "gooey-pixel",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "enter",
+
+      "text": ["Ok gay boy."]
+    },
+    {
+      "speaker": "senpai",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": ["hahaha..."]
+    },
+    {
+      "speaker": "senpai-bwuh",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": ["Don't call me that."]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+import gooeymix.characters.FloraBaseCharacter;
+import funkin.play.PlayState;
+import flixel.util.FlxSave;
+import funkin.graphics.FunkinSprite;
+import funkin.graphics.shaders.AdjustColorShader;
+import funkin.graphics.shaders.DropShadowShader;
+
+class FloraTankmenCharacter extends FloraBaseCharacter {
+	public function new() {
+		super('flora-tankmen');
+		save = new FlxSave();
+		save.bind("GooeyMixOptions", "FunkinCrew");
+	}
+
+	var tankBopLeft;
+	var tankBopRight;
+
+	function onCreate(event:ScriptEvent) {
+		super.onCreate(event);
+
+		if (PlayState.instance?.currentStage != null) {
+			tankBopLeft = new FunkinSprite(0, 0).loadSparrow('characters/flora/LeftTanker');
+			tankBopLeft.animation.addByPrefix('idle', 'idle', 24, false);
+			tankBopLeft.animation.play('idle');
+
+			tankBopRight = new FunkinSprite(0, 0).loadSparrow('characters/flora/RightTanker');
+			tankBopRight.animation.addByPrefix('idle', 'idle', 24, false);
+			tankBopRight.animation.play('idle');
+		}
+	}
+
+	private function addFloraProps() {
+		if (setupFloraProps)
+			return;
+
+		// My Flora is not kinda speakerless, so we shall add the speaker.
+		if (!isMyFloraKindaSpeakerless) {
+			floraSpeaker.zIndex = this.zIndex - 2;
+			currentStage.add(floraSpeaker);
+
+			floraSpeakerScreen.zIndex = this.zIndex - 1;
+			currentStage.add(floraSpeakerScreen);
+
+			floraSpeaker?.setPosition(this.x - 183 - (-this.globalOffsets[0] * this.scale.x), this.y + 81 - (-this.globalOffsets[1] * this.scale.y));
+			floraSpeakerScreen?.setPosition(floraSpeaker.x - 5, floraSpeaker.y - 10);
+			floraSpeakerScreen.blend = 0;
+
+			tankBopLeft.x = floraSpeaker.x - 595;
+			tankBopLeft.y = floraSpeaker.y - 625;
+			tankBopLeft.zIndex = floraSpeaker.zIndex - 1;
+
+			tankBopRight.x = floraSpeaker.x - 583;
+			tankBopRight.y = floraSpeaker.y - 620;
+			tankBopRight.zIndex = floraSpeaker.zIndex - 1;
+			currentStage.add(tankBopRight);
+			currentStage.add(tankBopLeft);
+		}
+
+		currentStage.refresh();
+		setupFloraProps = true;
+	}
+
+	private function speakerBump(force:Bool = true) {
+		// My Flora is not kinda speakerless, so the speaker goes BOOM DA BOOM BOOM.
+		// Flora's speaker ain't on if Flora ain't on.
+		if (!isMyFloraKindaSpeakerless && setupFloraProps) {
+			floraSpeaker?.anim?.play('idle', true);
+			tankBopLeft?.anim?.play('idle', true);
+			tankBopRight?.anim?.play('idle', true);
+
+			if (!comboAnims.contains(floraSpeakerScreen.animation?.curAnim?.name)
+				|| (comboAnims.contains(floraSpeakerScreen.animation?.curAnim?.name) && floraSpeakerScreen.animation?.finished))
+				floraSpeakerScreen?.animation?.play('lightBop', true);
+		}
+	}
+
+	function synchronizeShader():Void {
+		if (save.data.gooeyShaders != false) {
+			if (currentShader == this.shader)
+				return;
+
+			currentShader = this.shader;
+
+			if (Std.isOfType(this.shader, DropShadowShader)) {
+				adjustColor = new AdjustColorShader();
+				adjustColor.brightness = this.shader.baseBrightness;
+				adjustColor.hue = this.shader.baseHue;
+				adjustColor.contrast = this.shader.baseContrast;
+				adjustColor.saturation = this.shader.baseSaturation;
+				floraSpeaker.shader = adjustColor;
+				floraSpeakerScreen.shader = adjustColor;
+			} else {
+				floraSpeaker.shader = this.shader;
+				floraSpeakerScreen.shader = this.shader;
+			}
+			tankBopLeft.shader = floraSpeaker.shader;
+			tankBopRight.shader = floraSpeaker.shader;
+
+			trace("Synchronized shader between children!");
+		}
+	}
+}

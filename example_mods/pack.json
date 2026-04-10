@@ -1,0 +1,11 @@
+﻿{
+    "name":  "FNF: GOOEY MIX",
+    "description":  "Goober Alert!",
+    "restart":  false,
+    "runsGlobally":  true,
+    "color":  [
+                  146,
+                  113,
+                  253
+              ]
+}

@@ -1,0 +1,27 @@
+﻿{
+    "events":  [
+                   {
+                       "value":  [
+                                     54400,
+                                     [
+                                         "ZoomCamera",
+                                         "1",
+                                         "16|quart|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     60800,
+                                     [
+                                         "ZoomCamera",
+                                         "1.1",
+                                         "16|quart|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   }
+               ],
+    "format":  "psych_v1_convert"
+}

@@ -1,0 +1,133 @@
+{
+  "version": "1.0.0",
+
+  "backdrop": {
+    "type": "solid",
+    "fadeTime": 2.0,
+    "color": "#BFB3DFD8"
+  },
+
+  "music": {
+    "asset": "LunchboxScary",
+    "fadeTime": 2.0,
+    "looped": true
+  },
+
+  "outro": {
+    "type": "fade",
+    "fadeTime": 1.0
+  },
+
+  "dialogue": [
+    {
+      "speaker": "spirit",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "enter",
+
+      "text": [
+        "Direct contact with actual living creatures, after all this time..."
+      ],
+      "speed": 1.0
+    },
+    {
+      "speaker": "spirit",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": [
+        "I'll finally be able to get out of this hell once and for all..."
+      ]
+    },
+    {
+      "speaker": "spirit",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": [
+        "You don't mind your bodies being borrowed right?",
+        " It's only fair..."
+      ]
+    },
+    {
+      "speaker": "gooey-sad-pixel",
+      "speakerAnimation": "talkEnter",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": ["Ok... yeah this is getting too weird. Flora, let's just go already."]
+    },
+    {
+      "speaker": "gooey-sad-pixel",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": ["..."]
+    },
+    {
+      "speaker": "gooey-sad-pixel",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": ["...Flora?"]
+    },
+        {
+      "speaker": "flora-spirit",
+      "speakerAnimation": "talkEnter",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": [" "]
+    },
+    {
+      "speaker": "gooey-scared-pixel",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": ["Wh-what the h-hell..."]
+    },
+    {
+      "speaker": "flora-spirit",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": [
+        "One step closer to freedom, after so, so long...",
+        " I can almost feel the outside world again."
+      ]
+    },
+    {
+      "speaker": "gooey-scared-pixel",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": ["I-I don't know what the hell is happening..."]
+    },
+     {
+      "speaker": "gooey-crystal-pixel",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": ["But you b-better let her go r-right now... O-Or else!"]
+    },
+    {
+      "speaker": "flora-spirit",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": [
+          "Dont worry little one... This won't take much longer...",
+          " Just hold still..."
+      ]
+    }
+  ]
+}

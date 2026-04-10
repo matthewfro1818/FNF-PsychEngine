@@ -1,0 +1,1985 @@
+﻿{
+    "events":  [
+                   {
+                       "value":  [
+                                     0,
+                                     [
+                                         "SetCameraBop",
+                                         "1",
+                                         "1.2"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     0,
+                                     [
+                                         "ZoomCamera",
+                                         "1.1",
+                                         "4|INSTANT|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     337.078651685393,
+                                     [
+                                         "ZoomCamera",
+                                         "1.2",
+                                         "4|INSTANT|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     674.157303370787,
+                                     [
+                                         "ZoomCamera",
+                                         "1.3",
+                                         "4|INSTANT|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     1011.23595505618,
+                                     [
+                                         "ZoomCamera",
+                                         "1.4",
+                                         "4|INSTANT|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     1348.31460674157,
+                                     [
+                                         "ZoomCamera",
+                                         "1.5",
+                                         "4|INSTANT|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     1516.85393258427,
+                                     [
+                                         "SetCameraBop",
+                                         "4",
+                                         "1"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     1685.39325842697,
+                                     [
+                                         "ZoomCamera",
+                                         "1",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     2528.08988764045,
+                                     [
+                                         "ZoomCamera",
+                                         "1.05",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     3707.86516853933,
+                                     [
+                                         "ZoomCamera",
+                                         "1",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     4044.94382022472,
+                                     [
+                                         "ZoomCamera",
+                                         "1.1",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     5224.7191011236,
+                                     [
+                                         "ZoomCamera",
+                                         "1.15",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     5898.87640449438,
+                                     [
+                                         "ZoomCamera",
+                                         "1.1",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     6235.95505617978,
+                                     [
+                                         "ZoomCamera",
+                                         "1.05",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     6573.03370786517,
+                                     [
+                                         "ZoomCamera",
+                                         "1",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     7078.65168539326,
+                                     [
+                                         "ZoomCamera",
+                                         "1.1",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     7921.34831460674,
+                                     [
+                                         "ZoomCamera",
+                                         "1.15",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     9101.12359550562,
+                                     [
+                                         "ZoomCamera",
+                                         "1.2",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     9438.20224719101,
+                                     [
+                                         "ZoomCamera",
+                                         "1.15",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     10112.3595505618,
+                                     [
+                                         "ZoomCamera",
+                                         "1.2",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     10617.9775280899,
+                                     [
+                                         "ZoomCamera",
+                                         "1.25",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     11629.2134831461,
+                                     [
+                                         "ZoomCamera",
+                                         "1.3",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     12134.8314606742,
+                                     [
+                                         "ZoomCamera",
+                                         "1",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     13314.606741573,
+                                     [
+                                         "ZoomCamera",
+                                         "1.05",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     14494.3820224719,
+                                     [
+                                         "ZoomCamera",
+                                         "1",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     14831.4606741573,
+                                     [
+                                         "ZoomCamera",
+                                         "1.1",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     16011.2359550562,
+                                     [
+                                         "ZoomCamera",
+                                         "1.15",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     16685.393258427,
+                                     [
+                                         "ZoomCamera",
+                                         "1.1",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     17022.4719101124,
+                                     [
+                                         "ZoomCamera",
+                                         "1.05",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     17359.5505617978,
+                                     [
+                                         "ZoomCamera",
+                                         "1",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     17865.1685393258,
+                                     [
+                                         "ZoomCamera",
+                                         "1.1",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     18707.8651685393,
+                                     [
+                                         "ZoomCamera",
+                                         "1.15",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     19887.6404494382,
+                                     [
+                                         "ZoomCamera",
+                                         "1.2",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     20224.7191011236,
+                                     [
+                                         "ZoomCamera",
+                                         "1.15",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     20898.8764044944,
+                                     [
+                                         "ZoomCamera",
+                                         "1.2",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     21404.4943820225,
+                                     [
+                                         "SetCameraBop",
+                                         "2",
+                                         "1.1|0"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     21573.0337078652,
+                                     [
+                                         "ZoomCamera",
+                                         "1.25",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     22078.6516853933,
+                                     [
+                                         "SetCameraBop",
+                                         "1",
+                                         "1.1|0"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     22247.191011236,
+                                     [
+                                         "ZoomCamera",
+                                         "1.3",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     23174.1573033708,
+                                     [
+                                         "SetCameraBop",
+                                         "1",
+                                         "1.1"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     23258.4269662921,
+                                     [
+                                         "ZoomCamera",
+                                         "1.15",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     23595.5056179775,
+                                     [
+                                         "ZoomCamera",
+                                         "1.2",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     24775.2808988764,
+                                     [
+                                         "ZoomCamera",
+                                         "1.15",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     25955.0561797753,
+                                     [
+                                         "ZoomCamera",
+                                         "1.3",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     27134.8314606742,
+                                     [
+                                         "ZoomCamera",
+                                         "1.35",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     27471.9101123596,
+                                     [
+                                         "ZoomCamera",
+                                         "1.25",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     28988.7640449438,
+                                     [
+                                         "ZoomCamera",
+                                         "1.35",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     30168.5393258427,
+                                     [
+                                         "ZoomCamera",
+                                         "1.3",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     31011.2359550562,
+                                     [
+                                         "ZoomCamera",
+                                         "0.8",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     32528.0898876404,
+                                     [
+                                         "ZoomCamera",
+                                         "0.85",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     33539.3258426966,
+                                     [
+                                         "ZoomCamera",
+                                         "0.9",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     34382.0224719101,
+                                     [
+                                         "ZoomCamera",
+                                         "1.2",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     35561.797752809,
+                                     [
+                                         "ZoomCamera",
+                                         "1.15",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     36741.5730337079,
+                                     [
+                                         "ZoomCamera",
+                                         "1.3",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     37415.7303370787,
+                                     [
+                                         "ZoomCamera",
+                                         "1.4",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     37921.3483146067,
+                                     [
+                                         "ZoomCamera",
+                                         "1.35",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     38258.4269662922,
+                                     [
+                                         "ZoomCamera",
+                                         "1.25",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     39775.2808988764,
+                                     [
+                                         "ZoomCamera",
+                                         "1.35",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     40955.0561797753,
+                                     [
+                                         "ZoomCamera",
+                                         "1.3",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     41797.2359550562,
+                                     [
+                                         "ZoomCamera",
+                                         "0.8",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     43314.0898876404,
+                                     [
+                                         "ZoomCamera",
+                                         "0.85",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     44325.3258426966,
+                                     [
+                                         "ZoomCamera",
+                                         "0.9",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     44747.191011236,
+                                     [
+                                         "SetCameraBop",
+                                         "4",
+                                         "1|1"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     44831.4606741573,
+                                     [
+                                         "ZoomCamera",
+                                         "1",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     46011.2359550562,
+                                     [
+                                         "ZoomCamera",
+                                         "1.05",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     46348.3146067416,
+                                     [
+                                         "ZoomCamera",
+                                         "1.1",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     46685.393258427,
+                                     [
+                                         "ZoomCamera",
+                                         "1",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     47359.5505617978,
+                                     [
+                                         "ZoomCamera",
+                                         "1.05",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     48033.7078651685,
+                                     [
+                                         "ZoomCamera",
+                                         "1.1",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     48539.3258426966,
+                                     [
+                                         "ZoomCamera",
+                                         "1",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     48707.8651685393,
+                                     [
+                                         "ZoomCamera",
+                                         "1.05",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     49044.9438202247,
+                                     [
+                                         "ZoomCamera",
+                                         "1.1",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     49382.0224719101,
+                                     [
+                                         "ZoomCamera",
+                                         "1.15",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     49719.1011235955,
+                                     [
+                                         "ZoomCamera",
+                                         "1.2",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     50056.1797752809,
+                                     [
+                                         "ZoomCamera",
+                                         "1.25",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     50393.2584269663,
+                                     [
+                                         "ZoomCamera",
+                                         "1.1",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     51067.4157303371,
+                                     [
+                                         "ZoomCamera",
+                                         "1.15",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     51573.0337078652,
+                                     [
+                                         "ZoomCamera",
+                                         "1.1",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     52078.6516853933,
+                                     [
+                                         "ZoomCamera",
+                                         "1.05",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     52584.2696629213,
+                                     [
+                                         "ZoomCamera",
+                                         "1.1",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     53089.8876404494,
+                                     [
+                                         "ZoomCamera",
+                                         "1.15",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     53764.0449438202,
+                                     [
+                                         "ZoomCamera",
+                                         "1.1",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     54269.6629213483,
+                                     [
+                                         "ZoomCamera",
+                                         "1.15",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     54775.2808988764,
+                                     [
+                                         "ZoomCamera",
+                                         "1.2",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     55365.1685393258,
+                                     [
+                                         "SetCameraBop",
+                                         "1",
+                                         "1|0"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     55617.9775280899,
+                                     [
+                                         "ZoomCamera",
+                                         "1.4",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     56797.7528089888,
+                                     [
+                                         "ZoomCamera",
+                                         "1.45",
+                                         "8|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     57134.8314606742,
+                                     [
+                                         "ZoomCamera",
+                                         "1.5",
+                                         "8|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     57471.9101123595,
+                                     [
+                                         "ZoomCamera",
+                                         "1.6",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     57808.9887640449,
+                                     [
+                                         "ZoomCamera",
+                                         "1.55",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     58314.606741573,
+                                     [
+                                         "ZoomCamera",
+                                         "0.8",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     59325.8426966292,
+                                     [
+                                         "ZoomCamera",
+                                         "0.85",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     60337.0786516854,
+                                     [
+                                         "ZoomCamera",
+                                         "0.9",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     61853.9325842697,
+                                     [
+                                         "ZoomCamera",
+                                         "0.85",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     62359.5505617978,
+                                     [
+                                         "ZoomCamera",
+                                         "0.9",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     62865.1685393258,
+                                     [
+                                         "ZoomCamera",
+                                         "0.95",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     63370.7865168539,
+                                     [
+                                         "SetCameraBop",
+                                         "1",
+                                         "1|0"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     63707.8651685393,
+                                     [
+                                         "ZoomCamera",
+                                         "0.9",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     63876.404494382,
+                                     [
+                                         "SetCameraBop",
+                                         "24",
+                                         "1|0"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     64550.5617977528,
+                                     [
+                                         "ZoomCamera",
+                                         "0.85",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     65224.7191011236,
+                                     [
+                                         "ZoomCamera",
+                                         "0.9",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     66151.6853932584,
+                                     [
+                                         "SetCameraBop",
+                                         "2",
+                                         "1|0"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     66741.5730337079,
+                                     [
+                                         "ZoomCamera",
+                                         "1",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     67584.2696629213,
+                                     [
+                                         "ZoomCamera",
+                                         "1.05",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     68764.0449438202,
+                                     [
+                                         "ZoomCamera",
+                                         "1",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     69101.1235955056,
+                                     [
+                                         "ZoomCamera",
+                                         "1.1",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     70280.8988764045,
+                                     [
+                                         "ZoomCamera",
+                                         "1.15",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     70955.0561797753,
+                                     [
+                                         "ZoomCamera",
+                                         "1.1",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     71292.1348314607,
+                                     [
+                                         "ZoomCamera",
+                                         "1.05",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     71629.2134831461,
+                                     [
+                                         "ZoomCamera",
+                                         "1",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     72134.8314606741,
+                                     [
+                                         "ZoomCamera",
+                                         "1.1",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     72977.5280898876,
+                                     [
+                                         "ZoomCamera",
+                                         "1.15",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     74157.3033707865,
+                                     [
+                                         "ZoomCamera",
+                                         "1.2",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     74157.3033707865,
+                                     [
+                                         "ZoomCamera",
+                                         "1.1",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     74325.8426966292,
+                                     [
+                                         "SetCameraBop",
+                                         "20",
+                                         "1|0"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     74578.6516853933,
+                                     [
+                                         "ScrollSpeed",
+                                         "0.85",
+                                         "20|smoothStepInOut|both|False"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     74662.9213483146,
+                                     [
+                                         "ZoomCamera",
+                                         "1.2",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     76267.3367275281,
+                                     [
+                                         "SetCameraBop",
+                                         "1",
+                                         "1|0.5"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     76443.1179775281,
+                                     [
+                                         "ZoomCamera",
+                                         "1.25",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     77029.0554775281,
+                                     [
+                                         "SetCameraBop",
+                                         "2",
+                                         "0.8|0"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     77263.4304775281,
+                                     [
+                                         "SetCameraBop",
+                                         "4",
+                                         "1|0"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     77380.6179775281,
+                                     [
+                                         "ZoomCamera",
+                                         "1.1",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     78919.0795159896,
+                                     [
+                                         "ZoomCamera",
+                                         "1.3",
+                                         "96|smoothStepInOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     89544.0795159896,
+                                     [
+                                         "SetCameraBop",
+                                         "1",
+                                         "0.8|0"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     89688.3102852204,
+                                     [
+                                         "ZoomCamera",
+                                         "0.8",
+                                         "110|smoothStepInOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     101803.694900605,
+                                     [
+                                         "SetCameraBop",
+                                         "4",
+                                         "1|0"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     102092.156439067,
+                                     [
+                                         "SetCameraBop",
+                                         "20",
+                                         "1"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     103342.156439067,
+                                     [
+                                         "SetCameraBop",
+                                         "1",
+                                         "0.3"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     103438.31028522,
+                                     [
+                                         "ScrollSpeed",
+                                         "1",
+                                         "16|smoothStepInOut|both|False"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     103534.464131374,
+                                     [
+                                         "ZoomCamera",
+                                         "1.6",
+                                         "18|smoothStepInOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     103745.731737008,
+                                     [
+                                         "SetCameraBop",
+                                         "1",
+                                         "0.6"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     104168.266948275,
+                                     [
+                                         "SetCameraBop",
+                                         "1",
+                                         "0.9"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     104590.802159543,
+                                     [
+                                         "SetCameraBop",
+                                         "1",
+                                         "1.1"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     105171.788075036,
+                                     [
+                                         "ZoomCamera",
+                                         "1.3",
+                                         "8|elasticOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     106404.752808989,
+                                     [
+                                         "ZoomCamera",
+                                         "1.35",
+                                         "8|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     106741.831460674,
+                                     [
+                                         "ZoomCamera",
+                                         "1.4",
+                                         "8|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     107078.91011236,
+                                     [
+                                         "ZoomCamera",
+                                         "1.5",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     107415.988764045,
+                                     [
+                                         "ZoomCamera",
+                                         "1.45",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     107921.606741573,
+                                     [
+                                         "ZoomCamera",
+                                         "0.8",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     108932.842696629,
+                                     [
+                                         "ZoomCamera",
+                                         "0.85",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     109944.078651685,
+                                     [
+                                         "ZoomCamera",
+                                         "0.9",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     111460.93258427,
+                                     [
+                                         "ZoomCamera",
+                                         "0.85",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     111966.550561798,
+                                     [
+                                         "ZoomCamera",
+                                         "0.9",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     112472.168539326,
+                                     [
+                                         "ZoomCamera",
+                                         "0.95",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     112977.413965209,
+                                     [
+                                         "SetCameraBop",
+                                         "4",
+                                         "1"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     113145.953291052,
+                                     [
+                                         "SetCameraBop",
+                                         "20",
+                                         "1.1"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     113314.865168539,
+                                     [
+                                         "ZoomCamera",
+                                         "0.9",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     114157.561797753,
+                                     [
+                                         "ZoomCamera",
+                                         "0.85",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     114578.537560715,
+                                     [
+                                         "SetCameraBop",
+                                         "25",
+                                         "1|0"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     114831.346549479,
+                                     [
+                                         "ZoomCamera",
+                                         "1.25",
+                                         "18|smoothStepInOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     115842.582504535,
+                                     [
+                                         "ScrollSpeed",
+                                         "1.155",
+                                         "4|smoothStepInOut|both|False"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     116348.200482063,
+                                     [
+                                         "ZoomCamera",
+                                         "1.45",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     117275.166774198,
+                                     [
+                                         "SetCameraBop",
+                                         "1",
+                                         "1.3"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     117317.301605658,
+                                     [
+                                         "ZoomCamera",
+                                         "1.15",
+                                         "8|elasticOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     118707.751043861,
+                                     [
+                                         "ZoomCamera",
+                                         "1.25",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     120224.604976445,
+                                     [
+                                         "ZoomCamera",
+                                         "1.2",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     121741.458909029,
+                                     [
+                                         "ZoomCamera",
+                                         "1.3",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     122921.234189928,
+                                     [
+                                         "ZoomCamera",
+                                         "1.35",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     123763.930819142,
+                                     [
+                                         "ZoomCamera",
+                                         "1.4",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     124101.009470827,
+                                     [
+                                         "ZoomCamera",
+                                         "0.8",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     125280.784751726,
+                                     [
+                                         "ZoomCamera",
+                                         "0.85",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     126292.020706782,
+                                     [
+                                         "ZoomCamera",
+                                         "0.9",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     126629.099358467,
+                                     [
+                                         "SetCameraBop",
+                                         "1",
+                                         "1.5"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     126797.63868431,
+                                     [
+                                         "ZoomCamera",
+                                         "1.4",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     127640.335313524,
+                                     [
+                                         "ZoomCamera",
+                                         "1.45",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     128820.110594423,
+                                     [
+                                         "ZoomCamera",
+                                         "1.5",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     129494.267897793,
+                                     [
+                                         "ZoomCamera",
+                                         "0.8",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     130842.582504535,
+                                     [
+                                         "ZoomCamera",
+                                         "0.85",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     131516.739807906,
+                                     [
+                                         "ZoomCamera",
+                                         "0.9",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     132190.897111276,
+                                     [
+                                         "ZoomCamera",
+                                         "1.3",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     133202.133066333,
+                                     [
+                                         "ZoomCamera",
+                                         "1.35",
+                                         "8|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     134044.829695546,
+                                     [
+                                         "ZoomCamera",
+                                         "1.4",
+                                         "8|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     134887.52632476,
+                                     [
+                                         "ZoomCamera",
+                                         "0.8",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     136235.840931501,
+                                     [
+                                         "ZoomCamera",
+                                         "0.85",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     137078.537560715,
+                                     [
+                                         "ZoomCamera",
+                                         "0.9",
+                                         "16|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     137331.346549479,
+                                     [
+                                         "SetCameraBop",
+                                         "3",
+                                         "1.4"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     137584.155538243,
+                                     [
+                                         "ZoomCamera",
+                                         "0.85",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     138595.391493299,
+                                     [
+                                         "ZoomCamera",
+                                         "0.8",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     139606.627448355,
+                                     [
+                                         "ZoomCamera",
+                                         "0.75",
+                                         "32|expoOut|stage"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     140027.975762962,
+                                     [
+                                         "SetCameraBop",
+                                         "28",
+                                         "1.4"
+                                     ]
+                                 ],
+                       "Count":  2
+                   }
+               ],
+    "format":  "psych_v1_convert"
+}

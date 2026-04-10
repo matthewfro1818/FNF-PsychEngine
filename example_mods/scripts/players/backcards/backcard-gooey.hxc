@@ -1,0 +1,243 @@
+import funkin.ui.freeplay.backcards.BackingCard;
+import flixel.math.FlxMath;
+import flixel.FlxSprite;
+import funkin.ui.freeplay.FreeplayState;
+import funkin.util.BitmapUtil;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxTimer;
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import flixel.addons.display.FlxBackdrop;
+import funkin.ui.FullScreenScaleMode;
+import funkin.Conductor;
+
+class GooeyCard extends BackingCard {
+	final X_POSITION:Float = (FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) - 175;
+
+	public function new() {
+		super("gooey");
+	}
+
+	public override function enterCharSel():Void {
+		FlxTween.tween(crystal.velocity, {x: 0}, 0.8, {ease: FlxEase.sineIn});
+		FlxTween.tween(crystal2.velocity, {x: 0}, 0.8, {ease: FlxEase.sineIn});
+		FlxTween.tween(crystal0.velocity, {x: 0}, 0.8, {ease: FlxEase.sineIn});
+	}
+
+	public override function applyExitMovers(?exitMovers:FreeplayState.ExitMoverData, ?exitMoversCharSel:FreeplayState.ExitMoverData):Void {
+		super.applyExitMovers(exitMovers, exitMoversCharSel);
+		if (exitMovers == null || exitMoversCharSel == null)
+			return;
+
+		exitMoversCharSel.set([crystal], {
+			y: -50,
+			speed: 0.8,
+			wait: 0.1
+		});
+		exitMoversCharSel.set([crystal2], {
+			y: -50,
+			speed: 0.8,
+			wait: 0.1
+		});
+		exitMoversCharSel.set([crystal0], {
+			y: -50,
+			speed: 0.8,
+			wait: 0.1
+		});
+		exitMoversCharSel.set([crystal], {
+			y: -50,
+			speed: 0.8,
+			wait: 0.1
+		});
+		exitMoversCharSel.set([crystal], {
+			y: -50,
+			speed: 0.8,
+			wait: 0.1
+		});
+	}
+
+	public override function onCreate(event:ScriptEvent):Void {
+		add(crystal0 = new FlxSprite(0, 0, Paths.image('freeplay/backingCards/gooey/ourpleBack')));
+
+		add(natCrystal = new FlxSprite(X_POSITION, 0, Paths.image('freeplay/backingCards/gooey/natCrystal')));
+		natCrystal.alpha = 0;
+
+		add(natCrystalGlow = new FlxSprite(X_POSITION, 0, Paths.image('freeplay/backingCards/gooey/natCrystalGlow')));
+		natCrystalGlow.blend = 0;
+		natCrystalGlow.alpha = 0;
+
+		add(natCrystalGlow2 = new FlxSprite(X_POSITION, 0, Paths.image('freeplay/backingCards/gooey/natCrystalGlow')));
+		natCrystalGlow2.blend = 0;
+		natCrystalGlow2.alpha = 0;
+
+		add(selectShade = new FlxSprite(X_POSITION, 0, Paths.image('freeplay/backingCards/gooey/selectShade')));
+		selectShade.blend = 9;
+		selectShade.alpha = 0;
+
+		add(crystal = new FlxBackdrop(Paths.image('freeplay/backingCards/gooey/crystalBack'), 0x01, 0));
+		crystal.velocity.x = -10;
+		crystal.blend = 0;
+		crystal.alpha = 0.1;
+
+		add(crystal2 = new FlxBackdrop(Paths.image('freeplay/backingCards/gooey/crystalBack'), 0x01, 0));
+		crystal2.velocity.x = 10;
+		crystal2.blend = 0;
+		crystal2.alpha = 0.25;
+		crystal2.flipY = true;
+		crystal2.flipX = true;
+
+		add(gooLines = new FlxBackdrop(Paths.image('freeplay/backingCards/gooey/gooWave'), 0x01));
+		gooLines.setPosition(0, 90);
+		gooLines.velocity.x = 100;
+		gooLines.alpha = 0.9;
+
+		add(gooLines2 = new FlxBackdrop(Paths.image('freeplay/backingCards/gooey/gooWave'), 0x01));
+		gooLines2.setPosition(0, 370);
+		gooLines2.flipY = true;
+		gooLines2.velocity.x = -100;
+		gooLines2.alpha = 0.9;
+
+		add(gooLines3 = new FlxBackdrop(Paths.image('freeplay/backingCards/gooey/gooWave'), 0x01));
+		gooLines3.setPosition(0, 650);
+		gooLines3.velocity.x = 100;
+		gooLines3.alpha = 0.9;
+
+		var bleeehnd = 8;
+
+		gooLines.blend = bleeehnd;
+		gooLines2.blend = bleeehnd;
+		gooLines3.blend = bleeehnd;
+
+		add(gooberAlert3 = new FlxBackdrop(Paths.image('freeplay/backingCards/gooey/gooAlert3'), 0x01, 20));
+		gooberAlert3.setPosition(0, 345);
+		gooberAlert3.velocity.x = -250;
+		gooberAlert3.blend = 0;
+		gooberAlert3.alpha = 0.6;
+
+
+		add(gooberAlert4 = new FlxBackdrop(Paths.image('freeplay/backingCards/gooey/gooAlert4'), 0x01, 20));
+		gooberAlert4.setPosition(0, 625);
+		gooberAlert4.velocity.x = 250;
+		gooberAlert4.blend = 0;
+		gooberAlert4.alpha = 0.45;
+
+		add(glow = new FlxSprite(0, 0, Paths.image('freeplay/backingCards/gooey/gooGrad')));
+		glow.blend = 0;
+		glow.alpha = 0.3;
+
+		add(gooberAlert1 = new FlxBackdrop(Paths.image('freeplay/backingCards/gooey/gooAlert1'), 0x01, 20));
+		gooberAlert1.setPosition(0, 165);
+		gooberAlert1.velocity.x = -200;
+		gooberAlert1.blend = 0;
+		gooberAlert1.alpha = 0.3;
+
+		add(gooberAlert2 = new FlxBackdrop(Paths.image('freeplay/backingCards/gooey/gooAlert2'), 0x01, 15));
+		gooberAlert2.setPosition(0, 445);
+		gooberAlert2.velocity.x = 200;
+		gooberAlert2.blend = 0;
+		gooberAlert2.alpha = 0.6;
+
+		add(natFlash = new FlxSprite(0, 0, Paths.image('freeplay/backingCards/gooey/natFlash')));
+		natFlash.blend = 0;
+		natFlash.alpha = 0;
+
+		FlxTween.tween(pinkBack, {x: 0}, 0.6, {ease: FlxEase.quartOut});
+		add(pinkBack);
+
+		cardGlow.blend = 0;
+		cardGlow.visible = false;
+		cardGlow.scale.x = cardGlow.scale.x * 1.5;
+		add(cardGlow);
+
+		crystal0.visible = false;
+		crystal.visible = false;
+		crystal2.visible = false;
+		gooberAlert1.visible = false;
+		gooberAlert2.visible = false;
+		gooberAlert3.visible = false;
+		gooberAlert4.visible = false;
+		gooLines.visible = false;
+		gooLines2.visible = false;
+		gooLines3.visible = false;
+		glow.visible = false;
+	}
+
+	override public function confirm():Void {
+		crystal2.velocity.x = 0;
+		crystal.velocity.x = 0;
+
+		FlxTween.tween(crystal, {alpha: 0}, 2.3, {ease: FlxEase.expoOut});
+		FlxTween.tween(crystal2, {alpha: 0}, 2.3, {ease: FlxEase.expoOut});
+		FlxTween.tween(natCrystal, {alpha: 1}, 2);
+		FlxTween.tween(natCrystalGlow, {alpha: 1}, 2);
+		FlxTween.tween(natCrystalGlow2, {alpha: 1}, 2);
+		FlxTween.tween(selectShade, {alpha: 1}, 2);
+		FlxTween.tween(natFlash, {alpha: 1}, 0.05);
+
+		FlxTween.tween(crystal, {angle: 180}, 2, {ease: FlxEase.expoOut});
+		FlxTween.tween(crystal2, {angle: -180}, 2, {ease: FlxEase.expoOut});
+
+		FlxTween.tween(crystal.scale, {x: 1.5, y: 1.5}, 1, {ease: FlxEase.expoOut});
+		FlxTween.tween(crystal2.scale, {x: 2, y: 2}, 1, {ease: FlxEase.expoOut});
+
+		FlxTween.tween(natCrystal.scale, {x: 1.015, y: 1.015}, 5, {ease: FlxEase.expoOut});
+
+		FlxTween.color(crystal0, 0.05, 0x240435, 0x240435, {ease: FlxEase.quadOut});
+
+		FlxTimer.wait(0.25, () -> {
+			FlxTween.tween(natFlash, {alpha: 0}, 1);
+			gooberAlert1.visible = false;
+			gooberAlert2.visible = false;
+			gooberAlert3.visible = false;
+			gooberAlert4.visible = false;
+			gooLines.visible = false;
+			gooLines2.visible = false;
+			gooLines3.visible = false;
+			glow.visible = false;
+		});
+	}
+
+	public override function introDone():Void {
+		pinkBack.visible = false;
+
+		crystal0.visible = true;
+		crystal.visible = true;
+		crystal2.visible = true;
+		gooberAlert1.visible = true;
+		gooberAlert2.visible = true;
+		gooberAlert3.visible = true;
+		gooberAlert4.visible = true;
+		gooLines.visible = true;
+		gooLines2.visible = true;
+		gooLines3.visible = true;
+		glow.visible = true;
+
+		cardGlow.visible = true;
+		FlxTween.tween(cardGlow, {alpha: 0}, 0.45, {ease: FlxEase.sineOut});
+		FlxTween.tween(cardGlow.scale, {x: 1.2, y: 1.2}, 0.45, {ease: FlxEase.sineOut});
+	}
+
+	public override function disappear():Void {
+		FlxTween.color(pinkBack, 0.25, 0xFF6620AD, 0xFFFFD0D5, {ease: FlxEase.quadOut});
+
+		pinkBack.visible = true;
+
+		crystal0.visible = false;
+		crystal.visible = false;
+		crystal2.visible = false;
+		gooberAlert1.visible = false;
+		gooberAlert2.visible = false;
+		gooberAlert3.visible = false;
+		gooberAlert4.visible = false;
+		gooLines.visible = false;
+		gooLines2.visible = false;
+		gooLines3.visible = false;
+		glow.visible = false;
+
+		cardGlow.visible = true;
+		cardGlow.alpha = 1;
+		cardGlow.scale.set(1, 1);
+		FlxTween.tween(cardGlow, {alpha: 0}, 0.25, {ease: FlxEase.sineOut});
+		FlxTween.tween(cardGlow.scale, {x: 1.2, y: 1.2}, 0.25, {ease: FlxEase.sineOut});
+	}
+}

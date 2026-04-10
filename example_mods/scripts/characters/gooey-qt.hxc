@@ -1,0 +1,7 @@
+import gooeymix.characters.GooeyBaseCharacter;
+
+class GooeyQTCharacter extends GooeyBaseCharacter {
+	public function new() {
+		super('gooey-qt');
+	}
+}

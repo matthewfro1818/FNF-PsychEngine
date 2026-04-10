@@ -1,0 +1,120 @@
+import funkin.play.song.Song;
+import funkin.save.Save;
+import funkin.play.PlayState;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxTimer;
+import funkin.audio.FunkinSound;
+import Date;
+import StringTools;
+import funkin.util.ReflectUtil;
+import funkin.Conductor;
+import funkin.modding.module.ModuleHandler;
+import funkin.util.Sequence;
+
+class BlissfulGooeyMixSong extends Song {
+	function new() {
+		super('blissful', {
+			variation: 'gooey'
+		});
+	}
+
+	var hasPlayedCutscene:Bool = false;
+
+	var cutsceneConductor:Conductor;
+	var songIntro:FunkinSound;
+
+	public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool {
+		if (currentVariation == 'gooey')
+			return !Save.instance.hasBeatenSong(this.id, null, this.variation);
+
+		return false;
+	}
+
+	function onCutsceneBeatHitFake() {
+		new FlxTimer().start(0.7, _ -> {
+			if (!hasPlayedCutscene) {
+				PlayState.instance.currentStage.getGirlfriend().dance(true);
+				onCutsceneBeatHitFake();
+			}
+		});
+	}
+
+	function onCreate(event:ScriptEvent):Void {
+		super.onCreate(event);
+
+		if (!FlxG.onMobile) {
+			PlayState.instance.discordRPCAlbum = "https://raw.githubusercontent.com/LeGooeyy/GooeyMixDiscordIcons/refs/heads/main/assets/album-covers/"
+				+ PlayState.instance.currentChart.album
+				+ ".png?raw=true";
+			PlayState.instance.discordRPCIcon = "https://raw.githubusercontent.com/LeGooeyy/GooeyMixDiscordIcons/refs/heads/main/assets/icons/"
+				+ PlayState.instance.currentChart.characters.opponent
+				+ ".png?raw=true?t="
+				+ Date.now().getTime();
+		}
+	}
+
+	var gooeyCutSequenceData:Array<SequenceData>;
+
+	public override function onCountdownStart(event:CountdownScriptEvent):Void {
+		super.onCountdownStart(event);
+		if (PlayState.instance?.currentStage != null) {
+			if (!hasPlayedCutscene) {
+				event.cancel();
+
+				var gooeyPos:Array<Float> = [
+					PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.x,
+					PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.y
+				];
+
+				gooeyCutSequenceData = [
+					{
+						time: 0.1,
+						callback: () -> {
+							for (sound in FlxG.sound.list) {
+								if (ReflectUtil.getClassNameOf(sound) != "funkin.audio.FunkinSound")
+									continue;
+
+								if (sound._label == Paths.music("gameplay/introSong/introSong"
+									+ (PlayState.instance.currentVariation == 'pico' ? "-pico" : "-boyfriend"), "shared"))
+									sound.stop();
+							}
+							songIntro = FunkinSound.load(Paths.music("gameplay/introSong/introSong-pico", "shared"), true);
+							songIntro.play();
+							songIntro.volume = 0.1;
+
+							onCutsceneBeatHitFake();
+							FlxG.keys.enabled = false;
+						}
+					},
+					{
+						time: 2.5,
+						callback: () -> {
+							ModuleHandler.getModule("CountDownCutieModule").active = false;
+							PlayState.instance.tweenCameraToPosition(gooeyPos[0] + 30, gooeyPos[1] + 25, 4, FlxEase.smootherStepInOut);
+							PlayState.instance.tweenCameraZoom(PlayState.instance.stageZoom * 1.5, 4, true, FlxEase.smootherStepInOut);
+						}
+					},
+					{time: 3.85, callback: () -> gooeySfx = FunkinSound.load(Paths.sound("qtCutscene/QTgooeyCutSound"), 1, false, true, true)},
+					{time: 4, callback: () -> PlayState.instance.currentStage.getBoyfriend().playAnimation('GooeyQTwave', true)},
+					{time: 6.5, callback: () -> songIntro.fadeOut(1, 0)},
+					{
+						time: 7,
+						callback: () -> {
+							PlayState.instance.tweenCameraZoom(PlayState.instance.stageZoom, 2, true, FlxEase.smoothStepInOut);
+							PlayState.instance.tweenCameraToPosition(gooeyPos[0], gooeyPos[1], 2, FlxEase.smoothStepInOut);
+							hasPlayedCutscene = true;
+							PlayState.instance.startCountdown();
+							PlayState.instance.camHUD.alpha = 0;
+							FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1, {ease: FlxEase.smoothStepInOut});
+							PlayState.instance.isInCutscene = false;
+							FlxG.keys.enabled = true;
+						}
+					}
+				];
+				gooeyCutSequence = new Sequence(gooeyCutSequenceData);
+			}
+		}
+		PlayState.instance.comboPopUps.offsets = [-450, 350];
+	}
+}

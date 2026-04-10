@@ -1,0 +1,77 @@
+import funkin.modding.module.Module;
+import funkin.util.ReflectUtil;
+import funkin.save.Save;
+import funkin.ui.options.OptionsState;
+import funkin.ui.freeplay.FreeplayState;
+import funkin.ui.mainmenu.MainMenuState;
+import haxe.Json;
+import flixel.util.FlxSave;
+import funkin.data.freeplay.player.PlayerRegistry;
+import funkin.modding.ModStore;
+
+class DefaultCharacterOption extends Module {
+	var playableCharacters:Array<String> = ["Boyfriend" => "bf"];
+	var madeCharacterList:Bool = false;
+
+	var openedFreeplay(get, set):Bool;
+
+	function get_openedFreeplay() {
+		return ModStore.get('GooeyOpenedFreeplay') ?? false;
+	}
+
+	function set_openedFreeplay(value) {
+		trace("Don't set anymore");
+		ModStore.register('GooeyOpenedFreeplay', value);
+		return value;
+	}
+
+	var setRememberedCharacter:Bool = false; // has set the remembered character to the default character on startup
+
+	var save:FlxSave;
+
+	public function new() {
+		super('DefaultCharacterOption');
+		save = new FlxSave();
+		save.bind("GooeyMixOptions", "FunkinCrew");
+
+		if (save.data.defaultStartupCharacter != "remember" && !openedFreeplay) {
+			FreeplayState.rememberedCharacterId = save.data.defaultStartupCharacter;
+			save.data.rememberedStartupCharacter = save.data.defaultStartupCharacter;
+			save.flush();
+		}
+	}
+
+	override function onStateChangeEnd(event) {
+		if ((event.targetState is MainMenuState) || (event.targetState is OptionsState)) {
+			if (!openedFreeplay) {
+				FreeplayState.rememberedCharacterId = save.data.rememberedStartupCharacter;
+
+				if (save.data.defaultStartupCharacter != "remember") {
+					FreeplayState.rememberedCharacterId = save.data.defaultStartupCharacter;
+					save.data.rememberedStartupCharacter = save.data.defaultStartupCharacter;
+					save.flush();
+				}
+			}
+			if (!madeCharacterList) makeOptionsList();
+		}
+	}
+
+	override function onSubStateOpenEnd(event) {
+		if (event.targetState is FreeplayState) {
+			openedFreeplay = true;
+			save.data.rememberedStartupCharacter = FreeplayState.rememberedCharacterId;
+			save.flush();
+			madeCharacterList = false;
+		}
+	}
+
+	function makeOptionsList() {
+		playableCharacters.set("Remember Previous", "remember");
+
+		for (character in PlayerRegistry.instance.listEntryIds()) {
+			playableCharacters.set(PlayerRegistry.instance.fetchEntry(character).getName(), character);
+		}
+
+		madeCharacterList = true;
+	}
+}

@@ -1,0 +1,144 @@
+﻿{
+    "directory":  "",
+    "defaultZoom":  1,
+    "stageUI":  "normal",
+    "boyfriend":  [
+                      1250,
+                      885
+                  ],
+    "girlfriend":  [
+                       821.5,
+                       800
+                   ],
+    "opponent":  [
+                     382,
+                     865
+                 ],
+    "hide_girlfriend":  false,
+    "camera_boyfriend":  [
+                             -100,
+                             -100
+                         ],
+    "camera_opponent":  [
+                            150,
+                            -100
+                        ],
+    "camera_girlfriend":  [
+                              0,
+                              0
+                          ],
+    "camera_speed":  1,
+    "objects":  [
+                    {
+                        "name":  "solid",
+                        "x":  -300,
+                        "y":  -500,
+                        "scale":  [
+                                      2400,
+                                      2000
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "square",
+                        "color":  "#242336"
+                    },
+                    {
+                        "name":  "bgTrees",
+                        "x":  200,
+                        "y":  50,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       0.8,
+                                       0.8
+                                   ],
+                        "type":  "animatedSprite",
+                        "image":  "erect/bgtrees",
+                        "animations":  [
+                                           {
+                                               "anim":  "bgtrees",
+                                               "name":  "bgtrees",
+                                               "fps":  5,
+                                               "loop":  true,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           }
+                                       ],
+                        "firstAnimation":  "bgtrees"
+                    },
+                    {
+                        "name":  "bgDark",
+                        "x":  -560,
+                        "y":  -220,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "sprite",
+                        "image":  "erect/bgDark"
+                    },
+                    {
+                        "name":  "bgLight",
+                        "x":  -560,
+                        "y":  -220,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "sprite",
+                        "image":  "erect/bgLight"
+                    },
+                    {
+                        "name":  "stairsDark",
+                        "x":  966,
+                        "y":  -225,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "sprite",
+                        "image":  "erect/stairsDark"
+                    },
+                    {
+                        "name":  "stairsLight",
+                        "x":  966,
+                        "y":  -225,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "sprite",
+                        "image":  "erect/stairsLight"
+                    }
+                ],
+    "_editorMeta":  {
+                        "dad":  "dad",
+                        "boyfriend":  "bf",
+                        "gf":  "gf"
+                    }
+}

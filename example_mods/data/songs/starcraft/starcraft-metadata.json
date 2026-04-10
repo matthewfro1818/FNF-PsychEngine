@@ -1,0 +1,27 @@
+{
+  "version": "2.2.4",
+  "songName": "Starcraft",
+  "artist": "HEV",
+  "charter": "LeGooey",
+  "timeFormat": "ms",
+  "divisions": 96,
+  "offsets": {"instrumental": 0},
+   "timeChanges": [{"t": 0, "bpm": 178},{"t": 75505.6179775281, "bpm": 128},{"t": 77380.6179775281, "bpm": 156},{"t": 103534.464131374, "bpm": 142},{"t": 105224.604976445, "bpm": 178}],
+  "looped": false,
+  "playData": {
+    "songVariations": ["pico"],
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "bf","girlfriend": "gf","opponent": "gooey-opponent",
+      "instrumental": "","playerVocals": ["bf"],"opponentVocals": ["gooey"], "altInstrumentals": ["pico"]
+    },
+    "stage": "hotelCastle",
+    "noteStyle": "funkin",
+    "ratings": { "easy": 6, "normal": 8, "hard": 9},
+    "album": "gooeymix2",
+    "stickerPack": "bonus-gooeyWeekBf"
+  },
+  "previewStart": 0,
+  "previewEnd": 15000,
+  "generatedBy": "LeGooey (by hand)"
+}

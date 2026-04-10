@@ -1,0 +1,437 @@
+﻿{
+    "directory":  "",
+    "defaultZoom":  0.69,
+    "stageUI":  "normal",
+    "boyfriend":  [
+                      1025,
+                      848
+                  ],
+    "girlfriend":  [
+                       495,
+                       786.5
+                   ],
+    "opponent":  [
+                     -29,
+                     864
+                 ],
+    "hide_girlfriend":  false,
+    "camera_boyfriend":  [
+                             -226,
+                             -110
+                         ],
+    "camera_opponent":  [
+                            330,
+                            -100
+                        ],
+    "camera_girlfriend":  [
+                              35,
+                              17
+                          ],
+    "camera_speed":  1,
+    "objects":  [
+                    {
+                        "name":  "floorUnder",
+                        "x":  158,
+                        "y":  460,
+                        "scale":  [
+                                      2045,
+                                      728
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "square",
+                        "color":  "#4B7334"
+                    },
+                    {
+                        "name":  "sky",
+                        "x":  -270,
+                        "y":  -356,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "sprite",
+                        "image":  "outskirts/sky"
+                    },
+                    {
+                        "name":  "cityBehind",
+                        "x":  -977,
+                        "y":  -57,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       0.6,
+                                       0.6
+                                   ],
+                        "type":  "sprite",
+                        "image":  "outskirts/city_behind"
+                    },
+                    {
+                        "name":  "cityFront",
+                        "x":  66,
+                        "y":  -177,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       0.7,
+                                       0.7
+                                   ],
+                        "type":  "sprite",
+                        "image":  "outskirts/city_front"
+                    },
+                    {
+                        "name":  "tree",
+                        "x":  537,
+                        "y":  -73.5,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       0.85,
+                                       0.85
+                                   ],
+                        "type":  "sprite",
+                        "image":  "outskirts/tree"
+                    },
+                    {
+                        "name":  "electricPoles",
+                        "x":  101,
+                        "y":  -139,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       0.9,
+                                       0.9
+                                   ],
+                        "type":  "sprite",
+                        "image":  "outskirts/electric_poles"
+                    },
+                    {
+                        "name":  "randomCars",
+                        "x":  -600,
+                        "y":  30,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       0.9,
+                                       1
+                                   ],
+                        "type":  "animatedSprite",
+                        "image":  "outskirts/cars",
+                        "animations":  [
+                                           {
+                                               "anim":  "car-0",
+                                               "name":  "car-0",
+                                               "fps":  24,
+                                               "loop":  false,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           },
+                                           {
+                                               "anim":  "car-1",
+                                               "name":  "car-1",
+                                               "fps":  24,
+                                               "loop":  false,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           },
+                                           {
+                                               "anim":  "car-2",
+                                               "name":  "car-2",
+                                               "fps":  24,
+                                               "loop":  false,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           },
+                                           {
+                                               "anim":  "car-3",
+                                               "name":  "car-3",
+                                               "fps":  24,
+                                               "loop":  false,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           }
+                                       ]
+                    },
+                    {
+                        "name":  "pole2",
+                        "x":  1848,
+                        "y":  -135.5,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       0.93,
+                                       0.93
+                                   ],
+                        "type":  "sprite",
+                        "image":  "outskirts/light_pole2"
+                    },
+                    {
+                        "name":  "pole1",
+                        "x":  238,
+                        "y":  -140,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       0.93,
+                                       0.93
+                                   ],
+                        "type":  "sprite",
+                        "image":  "outskirts/light_pole1"
+                    },
+                    {
+                        "name":  "stopBus",
+                        "x":  1157,
+                        "y":  -59,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       0.96,
+                                       0.96
+                                   ],
+                        "type":  "sprite",
+                        "image":  "outskirts/bus_stop"
+                    },
+                    {
+                        "name":  "wall",
+                        "x":  -58.5,
+                        "y":  99,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "sprite",
+                        "image":  "outskirts/wall"
+                    },
+                    {
+                        "name":  "bridge",
+                        "x":  -926,
+                        "y":  -366,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "sprite",
+                        "image":  "outskirts/bridge"
+                    },
+                    {
+                        "name":  "floorGrass",
+                        "x":  158,
+                        "y":  460,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "sprite",
+                        "image":  "outskirts/grass"
+                    },
+                    {
+                        "name":  "lucky",
+                        "x":  -411,
+                        "y":  489,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       0.98,
+                                       0.98
+                                   ],
+                        "type":  "sprite",
+                        "image":  "outskirts/lucky"
+                    },
+                    {
+                        "name":  "tvs",
+                        "x":  -852,
+                        "y":  242,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "sprite",
+                        "image":  "outskirts/tvs"
+                    },
+                    {
+                        "name":  "addOv",
+                        "x":  -924,
+                        "y":  -344.5,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "sprite",
+                        "image":  "outskirts/overlay_add"
+                    },
+                    {
+                        "name":  "multOv",
+                        "x":  -901,
+                        "y":  -331,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "sprite",
+                        "image":  "outskirts/overlay_multiply"
+                    },
+                    {
+                        "name":  "speakerGrass",
+                        "x":  199,
+                        "y":  708,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "sprite",
+                        "image":  "outskirts/speakerGrass"
+                    },
+                    {
+                        "name":  "picoGrass",
+                        "x":  394,
+                        "y":  691,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "sprite",
+                        "image":  "outskirts/grass_pico"
+                    },
+                    {
+                        "name":  "reeds",
+                        "x":  397,
+                        "y":  700,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1.15,
+                                       1.15
+                                   ],
+                        "type":  "sprite",
+                        "image":  "outskirts/foreground_reeds"
+                    },
+                    {
+                        "name":  "tvFG",
+                        "x":  -770,
+                        "y":  790,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1.2,
+                                       1.2
+                                   ],
+                        "type":  "sprite",
+                        "image":  "outskirts/tvFg"
+                    },
+                    {
+                        "name":  "difOv",
+                        "x":  -917.5,
+                        "y":  458.5,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "sprite",
+                        "image":  "outskirts/overlay_difference"
+                    },
+                    {
+                        "name":  "sunOv",
+                        "x":  -811,
+                        "y":  -683,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1.04,
+                                       1.04
+                                   ],
+                        "type":  "sprite",
+                        "image":  "outskirts/sunlight_add"
+                    }
+                ],
+    "_editorMeta":  {
+                        "dad":  "dad",
+                        "boyfriend":  "bf",
+                        "gf":  "gf"
+                    }
+}

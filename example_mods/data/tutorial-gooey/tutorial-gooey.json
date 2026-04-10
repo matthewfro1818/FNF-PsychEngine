@@ -1,0 +1,812 @@
+﻿{
+    "song":  "Tutorial (Gooey Mix) (gooey)",
+    "notes":  [
+                  {
+                      "sectionNotes":  [
+
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               9600,
+                                               4,
+                                               0
+                                           ],
+                                           [
+                                               10800,
+                                               7,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               12000,
+                                               4,
+                                               0
+                                           ],
+                                           [
+                                               13200,
+                                               7,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               14400,
+                                               0,
+                                               0
+                                           ],
+                                           [
+                                               15600,
+                                               3,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               16800,
+                                               0,
+                                               0
+                                           ],
+                                           [
+                                               18000,
+                                               3,
+                                               0
+                                           ],
+                                           [
+                                               18000,
+                                               6,
+                                               0
+                                           ],
+                                           [
+                                               18225,
+                                               7,
+                                               0
+                                           ],
+                                           [
+                                               18375,
+                                               5,
+                                               0
+                                           ],
+                                           [
+                                               18525,
+                                               4,
+                                               0
+                                           ],
+                                           [
+                                               18600,
+                                               1,
+                                               0
+                                           ],
+                                           [
+                                               18675,
+                                               7,
+                                               0
+                                           ],
+                                           [
+                                               18900,
+                                               2,
+                                               0,
+                                               "hey"
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               19200,
+                                               6,
+                                               0
+                                           ],
+                                           [
+                                               20400,
+                                               5,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               21600,
+                                               6,
+                                               0
+                                           ],
+                                           [
+                                               22800,
+                                               5,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               24000,
+                                               2,
+                                               0
+                                           ],
+                                           [
+                                               25200,
+                                               1,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               26400,
+                                               2,
+                                               0
+                                           ],
+                                           [
+                                               27600,
+                                               1,
+                                               0
+                                           ],
+                                           [
+                                               27600,
+                                               6,
+                                               0
+                                           ],
+                                           [
+                                               27825,
+                                               7,
+                                               0
+                                           ],
+                                           [
+                                               27975,
+                                               5,
+                                               0
+                                           ],
+                                           [
+                                               28125,
+                                               4,
+                                               0
+                                           ],
+                                           [
+                                               28200,
+                                               3,
+                                               0
+                                           ],
+                                           [
+                                               28275,
+                                               7,
+                                               0
+                                           ],
+                                           [
+                                               28500,
+                                               0,
+                                               0,
+                                               "hey"
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               29100,
+                                               5,
+                                               0
+                                           ],
+                                           [
+                                               29400,
+                                               5,
+                                               0
+                                           ],
+                                           [
+                                               29700,
+                                               6,
+                                               0
+                                           ],
+                                           [
+                                               29850,
+                                               5,
+                                               0
+                                           ],
+                                           [
+                                               30150,
+                                               5,
+                                               0
+                                           ],
+                                           [
+                                               30450,
+                                               4,
+                                               0
+                                           ],
+                                           [
+                                               30600,
+                                               5,
+                                               0
+                                           ],
+                                           [
+                                               30900,
+                                               6,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               31500,
+                                               5,
+                                               0
+                                           ],
+                                           [
+                                               31800,
+                                               5,
+                                               0
+                                           ],
+                                           [
+                                               32100,
+                                               6,
+                                               0
+                                           ],
+                                           [
+                                               32250,
+                                               5,
+                                               0
+                                           ],
+                                           [
+                                               32550,
+                                               5,
+                                               0
+                                           ],
+                                           [
+                                               32850,
+                                               4,
+                                               0
+                                           ],
+                                           [
+                                               33000,
+                                               7,
+                                               0
+                                           ],
+                                           [
+                                               33150,
+                                               6,
+                                               0
+                                           ],
+                                           [
+                                               33300,
+                                               5,
+                                               0
+                                           ],
+                                           [
+                                               33450,
+                                               6,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               33900,
+                                               3,
+                                               0
+                                           ],
+                                           [
+                                               34200,
+                                               3,
+                                               0
+                                           ],
+                                           [
+                                               34500,
+                                               0,
+                                               0
+                                           ],
+                                           [
+                                               34650,
+                                               3,
+                                               0
+                                           ],
+                                           [
+                                               34950,
+                                               3,
+                                               0
+                                           ],
+                                           [
+                                               35250,
+                                               0,
+                                               0
+                                           ],
+                                           [
+                                               35700,
+                                               2,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               36300,
+                                               3,
+                                               0
+                                           ],
+                                           [
+                                               36600,
+                                               3,
+                                               0
+                                           ],
+                                           [
+                                               36900,
+                                               0,
+                                               0
+                                           ],
+                                           [
+                                               37050,
+                                               3,
+                                               0
+                                           ],
+                                           [
+                                               37350,
+                                               3,
+                                               0
+                                           ],
+                                           [
+                                               37800,
+                                               0,
+                                               0
+                                           ],
+                                           [
+                                               38100,
+                                               2,
+                                               0,
+                                               "hey"
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               38400,
+                                               5,
+                                               0
+                                           ],
+                                           [
+                                               39000,
+                                               5,
+                                               0
+                                           ],
+                                           [
+                                               39600,
+                                               2,
+                                               750
+                                           ],
+                                           [
+                                               39600,
+                                               6,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               40800,
+                                               3,
+                                               750
+                                           ],
+                                           [
+                                               40800,
+                                               5,
+                                               0
+                                           ],
+                                           [
+                                               41400,
+                                               5,
+                                               0
+                                           ],
+                                           [
+                                               42000,
+                                               2,
+                                               750
+                                           ],
+                                           [
+                                               42000,
+                                               7,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               43200,
+                                               1,
+                                               1500
+                                           ],
+                                           [
+                                               43200,
+                                               5,
+                                               0
+                                           ],
+                                           [
+                                               43800,
+                                               5,
+                                               0
+                                           ],
+                                           [
+                                               44400,
+                                               6,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               45600,
+                                               3,
+                                               1050
+                                           ],
+                                           [
+                                               45600,
+                                               5,
+                                               0
+                                           ],
+                                           [
+                                               46200,
+                                               5,
+                                               0
+                                           ],
+                                           [
+                                               46800,
+                                               0,
+                                               450
+                                           ],
+                                           [
+                                               46800,
+                                               7,
+                                               0
+                                           ],
+                                           [
+                                               47400,
+                                               1,
+                                               450
+                                           ],
+                                           [
+                                               47400,
+                                               7,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               48000,
+                                               3,
+                                               450
+                                           ],
+                                           [
+                                               48000,
+                                               5,
+                                               0
+                                           ],
+                                           [
+                                               48300,
+                                               6,
+                                               0
+                                           ],
+                                           [
+                                               48600,
+                                               2,
+                                               450
+                                           ],
+                                           [
+                                               48600,
+                                               7,
+                                               0
+                                           ],
+                                           [
+                                               48900,
+                                               6,
+                                               0
+                                           ],
+                                           [
+                                               49200,
+                                               0,
+                                               0
+                                           ],
+                                           [
+                                               49650,
+                                               1,
+                                               300
+                                           ],
+                                           [
+                                               49800,
+                                               7,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               50400,
+                                               2,
+                                               300
+                                           ],
+                                           [
+                                               50850,
+                                               1,
+                                               300
+                                           ],
+                                           [
+                                               51300,
+                                               3,
+                                               150
+                                           ],
+                                           [
+                                               51600,
+                                               0,
+                                               0
+                                           ],
+                                           [
+                                               51900,
+                                               1,
+                                               0
+                                           ],
+                                           [
+                                               52200,
+                                               7,
+                                               450
+                                           ],
+                                           [
+                                               52200,
+                                               3,
+                                               150
+                                           ],
+                                           [
+                                               52500,
+                                               1,
+                                               150
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               52800,
+                                               3,
+                                               0
+                                           ],
+                                           [
+                                               52800,
+                                               4,
+                                               0
+                                           ],
+                                           [
+                                               53400,
+                                               0,
+                                               0
+                                           ],
+                                           [
+                                               53400,
+                                               5,
+                                               0
+                                           ],
+                                           [
+                                               54000,
+                                               2,
+                                               0
+                                           ],
+                                           [
+                                               54000,
+                                               7,
+                                               0
+                                           ],
+                                           [
+                                               54600,
+                                               1,
+                                               0
+                                           ],
+                                           [
+                                               54600,
+                                               5,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               55200,
+                                               2,
+                                               0
+                                           ],
+                                           [
+                                               55200,
+                                               6,
+                                               0
+                                           ],
+                                           [
+                                               55800,
+                                               3,
+                                               0
+                                           ],
+                                           [
+                                               55800,
+                                               4,
+                                               0
+                                           ],
+                                           [
+                                               56400,
+                                               0,
+                                               0
+                                           ],
+                                           [
+                                               56400,
+                                               7,
+                                               0
+                                           ],
+                                           [
+                                               57000,
+                                               2,
+                                               0
+                                           ],
+                                           [
+                                               57000,
+                                               6,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               57600,
+                                               5,
+                                               1050
+                                           ],
+                                           [
+                                               57600,
+                                               1,
+                                               1500
+                                           ],
+                                           [
+                                               59700,
+                                               2,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               60000,
+                                               3,
+                                               0
+                                           ],
+                                           [
+                                               60300,
+                                               2,
+                                               0
+                                           ],
+                                           [
+                                               60600,
+                                               0,
+                                               0
+                                           ],
+                                           [
+                                               60900,
+                                               1,
+                                               0
+                                           ],
+                                           [
+                                               61200,
+                                               3,
+                                               1650
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  }
+              ],
+    "events":  [
+
+               ],
+    "bpm":  100,
+    "needsVoices":  true,
+    "speed":  1.5,
+    "offset":  0,
+    "player1":  "gooey",
+    "player2":  "flora",
+    "gfVersion":  "gf",
+    "stage":  "mainStageErect",
+    "format":  "psych_v1_convert",
+    "artist":  "LeGooey",
+    "charter":  "LeGooey",
+    "generatedBy":  "Ported from Funkin V-Slice metadata"
+}

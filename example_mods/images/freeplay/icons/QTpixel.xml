@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="QTpixel.png" width="169" height="39">
+	<SubTexture name="confirm0000" x="1" y="1" width="43" height="37" frameX="-0" frameY="-9" frameWidth="43" frameHeight="46"/>
+	<SubTexture name="confirm0001" x="47" y="1" width="40" height="37" rotated="true" frameX="-4" frameY="-0" frameWidth="43" frameHeight="46"/>
+	<SubTexture name="confirm0002" x="90" y="1" width="39" height="35" rotated="true" frameX="-5" frameY="-2" frameWidth="43" frameHeight="46"/>
+	<SubTexture name="confirm-hold0000" x="90" y="1" width="39" height="35" rotated="true" frameX="-5" frameY="-2" frameWidth="43" frameHeight="46"/>
+	<SubTexture name="idle0000" x="132" y="1" width="36" height="35" rotated="true" frameX="-3" frameY="-7" frameWidth="43" frameHeight="46"/>
+</TextureAtlas>

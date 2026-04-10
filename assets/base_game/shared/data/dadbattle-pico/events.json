@@ -1,0 +1,313 @@
+﻿{
+    "events":  [
+                   {
+                       "value":  [
+                                     10666.6666666667,
+                                     [
+                                         "ZoomCamera",
+                                         "0.75",
+                                         "32|expoOut|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     13333.3333333333,
+                                     [
+                                         "ZoomCamera",
+                                         "0.85",
+                                         "32|expoOut|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     21666.6666666667,
+                                     [
+                                         "ZoomCamera",
+                                         "0.75",
+                                         "32|expoOut|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     26666.6666666667,
+                                     [
+                                         "ZoomCamera",
+                                         "0.85",
+                                         "32|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     28000,
+                                     [
+                                         "ZoomCamera",
+                                         "0.9",
+                                         "32|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     29333,
+                                     [
+                                         "ZoomCamera",
+                                         "0.95",
+                                         "32|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     30666,
+                                     [
+                                         "ZoomCamera",
+                                         "0.85",
+                                         "32|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     31333.3333333333,
+                                     [
+                                         "PlayAnimation",
+                                         "hey",
+                                         "boyfriend|force=False"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     31666.6666666667,
+                                     [
+                                         "PlayAnimation",
+                                         "cheer",
+                                         "boyfriend|force=False"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     41000,
+                                     [
+                                         "ZoomCamera",
+                                         "0.75",
+                                         "32|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     42833.3333333333,
+                                     [
+                                         "ZoomCamera",
+                                         "0.85",
+                                         "32|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     48000,
+                                     [
+                                         "ZoomCamera",
+                                         "0.9",
+                                         "32|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     49333,
+                                     [
+                                         "ZoomCamera",
+                                         "0.94",
+                                         "32|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     50666,
+                                     [
+                                         "ZoomCamera",
+                                         "0.98",
+                                         "32|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     51333,
+                                     [
+                                         "ZoomCamera",
+                                         "1.02",
+                                         "32|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     51833,
+                                     [
+                                         "ZoomCamera",
+                                         "1.06",
+                                         "32|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     52333,
+                                     [
+                                         "ZoomCamera",
+                                         "1.12",
+                                         "32|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     53333.3333333333,
+                                     [
+                                         "ZoomCamera",
+                                         "0.85",
+                                         "32|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     54333.3333333333,
+                                     [
+                                         "ZoomCamera",
+                                         "0.75",
+                                         "32|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     56000,
+                                     [
+                                         "ZoomCamera",
+                                         "0.85",
+                                         "32|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     62666.6666666667,
+                                     [
+                                         "ZoomCamera",
+                                         "0.75",
+                                         "32|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     69333.3333333333,
+                                     [
+                                         "ZoomCamera",
+                                         "0.85",
+                                         "32|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     70667,
+                                     [
+                                         "ZoomCamera",
+                                         "0.9",
+                                         "32|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     72000,
+                                     [
+                                         "ZoomCamera",
+                                         "0.95",
+                                         "32|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     73333,
+                                     [
+                                         "ZoomCamera",
+                                         "0.85",
+                                         "32|expo|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     82666.6666666667,
+                                     [
+                                         "ZoomCamera",
+                                         "0.85",
+                                         "32|expoOut|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     83666.6666666667,
+                                     [
+                                         "ZoomCamera",
+                                         "0.9",
+                                         "32|expoOut|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   },
+                   {
+                       "value":  [
+                                     85333,
+                                     [
+                                         "ZoomCamera",
+                                         "0.8",
+                                         "32|expoOut|direct"
+                                     ]
+                                 ],
+                       "Count":  2
+                   }
+               ],
+    "format":  "psych_v1_convert"
+}

@@ -1,0 +1,70 @@
+import funkin.play.PlayState;
+import funkin.play.song.Song;
+import funkin.save.Save;
+import funkin.play.cutscene.VideoCutscene;
+import funkin.play.cutscene.CutsceneType;
+import funkin.play.PlayStatePlaylist;
+import funkin.graphics.FunkinSprite;
+import Date;
+
+class StarcraftSong extends Song {
+	public function new() {
+		super('starcraft');
+
+		this.hasPlayedCutscene = false;
+	}
+
+	function onCreate(event:ScriptEvent):Void {
+		super.onCreate(event);
+		this.hasPlayedCutscene = false;
+
+		if (!FlxG.onMobile) {
+			PlayState.instance.discordRPCAlbum = "https://raw.githubusercontent.com/LeGooeyy/GooeyMixDiscordIcons/refs/heads/main/assets/album-covers/"
+				+ PlayState.instance.currentChart.album
+				+ ".png?raw=true";
+			PlayState.instance.discordRPCIcon = "https://raw.githubusercontent.com/LeGooeyy/GooeyMixDiscordIcons/refs/heads/main/assets/icons/"
+				+ PlayState.instance.currentChart.characters.opponent
+				+ ".png?raw=true?t="
+				+ Date.now().getTime();
+		}
+	}
+
+	var hasPlayedCutscene:Bool = false;
+
+	public override function onSongEnd(event:CountdownScriptEvent):Void {
+		super.onSongEnd(event);
+
+		// Keep the cutscene from playing outside of story mode.
+		if (!PlayStatePlaylist.isStoryMode)
+			hasPlayedCutscene = true;
+
+		if (!hasPlayedCutscene) {
+			trace('Pausing ending to play a video cutscene (`starcraft`)');
+
+			hasPlayedCutscene = true;
+
+			// Add a black background behind the cutscene to fix a transition bug!
+			trace('Adding black background behind cutscene over UI');
+			var bgSprite = new FunkinSprite(-100, -100);
+			bgSprite.makeSolidColor(2000, 2500, 0xFF000000);
+			bgSprite.cameras = [PlayState.instance.camHUD]; // Show over the HUD.
+			bgSprite.zIndex = 1000000;
+			PlayState.instance.add(bgSprite);
+			PlayState.instance.refresh();
+
+			event.cancel(); // CANCEL THE COUNTDOWN!
+
+			startVideo();
+		} else {
+			// Make sure the cutscene can play again next time!
+			hasPlayedCutscene = false;
+			// DO NOT CANCEL THE EVENT!
+		}
+	}
+
+	function startVideo() {
+		VideoCutscene.play(Paths.videos('Starcraftcutscene'), CutsceneType.ENDING);
+		// This will call onSongEnd() again so make sure the flag is set!
+		hasPlayedCutscene = true;
+	}
+}

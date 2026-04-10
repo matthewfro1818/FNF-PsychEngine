@@ -1,0 +1,72 @@
+import funkin.modding.module.Module;
+import flixel.FlxG;
+import funkin.ui.freeplay.FreeplayState;
+import funkin.util.DateUtil;
+
+class FreeplayTextTweaksModule extends Module
+{
+  public function new()
+  {
+    super('FreeplayTextTweaksModule', 999999, {state: FreeplayState});
+  }
+
+  function areWeFunny()
+  {
+    var stamp = DateUtil.generateTimestamp();
+    var month = Std.int(stamp.substring(0, 10).substring(6, 7));
+    var day = Std.int(stamp.substring(0, 10).substring(8, 10));
+    return (month == 4 && (day == 1 || day == 2 || day == 3));
+  }
+
+  public function onCapsuleSelected(event:CapsuleScriptEvent):Void
+  {
+    if (event.capsule.freeplayData == null) return;
+
+    if (areWeFunny()
+      && event.capsule.freeplayData.data.id.toLowerCase().indexOf("blissful") != -1
+      && event.variationId == "default")
+    {
+      event.capsule.freeplayData.data.id = "blissful-2021";
+      event.capsule.pixelIcon.setCharacter("qt-legacy");
+      event.capsule.songText.text = "Blissful (Legacy)";
+    }
+  }
+
+  public function onSongSelected(event:CapsuleScriptEvent):Void
+  {
+    if (event.capsule.freeplayData == null) return;
+
+    if (areWeFunny()
+      && event.capsule.freeplayData.data.id.toLowerCase().indexOf("blissful") != -1
+      && event.variationId == "default")
+    {
+      event.capsule.freeplayData.data.id = "blissful-2021";
+      event.capsule.pixelIcon.setCharacter("qt-legacy");
+      event.capsule.songText.text = "Blissful (Legacy)";
+    }
+  }
+
+  override function onUpdate(event)
+  {
+    super.onUpdate(event);
+
+    var sub = FlxG.state.subState;
+    if (sub == null) return;
+
+    var capsule = sub.grpCapsules.members[sub.curSelected];
+    var data = capsule.freeplayData;
+
+    if (sub.instSelectMenu != null)
+    {
+      var label = sub.instSelectMenu.members[3];
+      if (data != null && data.data != null && data.data.id == "obliterated" && label.text == "INSTRUMENTAL")
+      {
+        label.text = "VOICE TRACK";
+        sub.instSelectMenu.instrumentalIds = ["", "Revox"];
+        sub.instSelectMenu.currentInstrumentalIndex = 1;
+        sub.instSelectMenu.currentInstrumental.text = sub.instSelectMenu.instrumentalIds[sub.instSelectMenu.currentInstrumentalIndex];
+        sub.instSelectMenu.onConfirm = (targetInstId:String) -> sub.capsuleOnConfirmDefault(sub.currentCapsule, targetInstId == "Revox" ? "" : "legacy");
+      }
+    }
+  }
+}

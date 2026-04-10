@@ -1,0 +1,59 @@
+{
+	"songs": [
+		[
+			"Drippypop gooey mix",
+			"drippypop-gooey",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"Mixd up",
+			"mix",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"Comedian rad mix",
+			"rad",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"Saloonatic",
+			"eduardo-gooey",
+			[
+				146,
+				113,
+				253
+			]
+		]
+	],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"difficulties": "Normal, Hard",
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
+	"storyName": "Your New Week",
+	"weekName": "Custom Week",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": true,
+	"weekBefore": "tutorial",
+	"startUnlocked": true
+}

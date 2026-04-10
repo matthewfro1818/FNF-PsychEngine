@@ -1,0 +1,577 @@
+﻿{
+    "directory":  "",
+    "defaultZoom":  0.5,
+    "stageUI":  "normal",
+    "boyfriend":  [
+                      1050,
+                      1500
+                  ],
+    "girlfriend":  [
+                       950,
+                       1500
+                   ],
+    "opponent":  [
+                     2050,
+                     580
+                 ],
+    "hide_girlfriend":  false,
+    "camera_boyfriend":  [
+                             300,
+                             -250
+                         ],
+    "camera_opponent":  [
+                            -230,
+                            0
+                        ],
+    "camera_girlfriend":  [
+                              400,
+                              -250
+                          ],
+    "camera_speed":  1,
+    "objects":  [
+                    {
+                        "name":  "sky",
+                        "x":  -400,
+                        "y":  -1800,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       0.5,
+                                       0.5
+                                   ],
+                        "type":  "sprite",
+                        "image":  "gooeyMix/extra/spitbucket/sky"
+                    },
+                    {
+                        "name":  "mountain",
+                        "x":  1900,
+                        "y":  100,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       0.9,
+                                       0.9
+                                   ],
+                        "type":  "sprite",
+                        "image":  "gooeyMix/extra/spitbucket/mountain"
+                    },
+                    {
+                        "name":  "sand",
+                        "x":  -400,
+                        "y":  800,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "sprite",
+                        "image":  "gooeyMix/extra/spitbucket/iDontLikeSand"
+                    },
+                    {
+                        "name":  "saloon",
+                        "x":  -400,
+                        "y":  -950,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "sprite",
+                        "image":  "gooeyMix/extra/spitbucket/saloon"
+                    },
+                    {
+                        "name":  "juan",
+                        "x":  1400,
+                        "y":  120,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "animatedSprite",
+                        "image":  "characters/extra/saloonatic/Juan",
+                        "animations":  [
+                                           {
+                                               "anim":  "shoot",
+                                               "name":  "juanShoot",
+                                               "fps":  12,
+                                               "loop":  false,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           },
+                                           {
+                                               "anim":  "dodge1",
+                                               "name":  "juanDodge1",
+                                               "fps":  12,
+                                               "loop":  false,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           },
+                                           {
+                                               "anim":  "dodge2",
+                                               "name":  "juanDodge2",
+                                               "fps":  12,
+                                               "loop":  false,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           },
+                                           {
+                                               "anim":  "dodge3",
+                                               "name":  "juanDodge3",
+                                               "fps":  12,
+                                               "loop":  false,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           }
+                                       ],
+                        "firstAnimation":  "shoot"
+                    },
+                    {
+                        "name":  "marco",
+                        "x":  1620,
+                        "y":  125,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "animatedSprite",
+                        "image":  "characters/extra/saloonatic/Marco",
+                        "animations":  [
+                                           {
+                                               "anim":  "shoot",
+                                               "name":  "marcoShoot",
+                                               "fps":  12,
+                                               "loop":  false,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           },
+                                           {
+                                               "anim":  "dodge1",
+                                               "name":  "marcoDodge1",
+                                               "fps":  12,
+                                               "loop":  false,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           },
+                                           {
+                                               "anim":  "dodge2",
+                                               "name":  "marcoDodge2",
+                                               "fps":  12,
+                                               "loop":  false,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           },
+                                           {
+                                               "anim":  "dodge3",
+                                               "name":  "marcoDodge3",
+                                               "fps":  12,
+                                               "loop":  false,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           }
+                                       ],
+                        "firstAnimation":  "shoot"
+                    },
+                    {
+                        "name":  "railing",
+                        "x":  895,
+                        "y":  385,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "sprite",
+                        "image":  "gooeyMix/extra/spitbucket/railing"
+                    },
+                    {
+                        "name":  "rock",
+                        "x":  -100,
+                        "y":  -200,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1.3,
+                                       1.3
+                                   ],
+                        "type":  "sprite",
+                        "image":  "gooeyMix/extra/spitbucket/rock"
+                    },
+                    {
+                        "name":  "lighting1",
+                        "x":  -400,
+                        "y":  -1800,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "sprite",
+                        "image":  "gooeyMix/extra/spitbucket/lighting"
+                    },
+                    {
+                        "name":  "lighting2",
+                        "x":  -400,
+                        "y":  -1800,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "sprite",
+                        "image":  "gooeyMix/extra/spitbucket/lighting"
+                    },
+                    {
+                        "name":  "itsHighNoon",
+                        "x":  -2000,
+                        "y":  -1000,
+                        "scale":  [
+                                      6000,
+                                      4000
+                                  ],
+                        "scroll":  [
+                                       0,
+                                       0
+                                   ],
+                        "type":  "square",
+                        "color":  "#F3C269"
+                    },
+                    {
+                        "name":  "targetFour",
+                        "x":  1770,
+                        "y":  390,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "animatedSprite",
+                        "image":  "gooeyMix/extra/spitbucket/targets",
+                        "animations":  [
+                                           {
+                                               "anim":  "xFour",
+                                               "name":  "xFour",
+                                               "fps":  24,
+                                               "loop":  false,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           },
+                                           {
+                                               "anim":  "blank",
+                                               "name":  "blank",
+                                               "fps":  24,
+                                               "loop":  false,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           }
+                                       ],
+                        "firstAnimation":  "blank"
+                    },
+                    {
+                        "name":  "targetFive",
+                        "x":  1630,
+                        "y":  380,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "animatedSprite",
+                        "image":  "gooeyMix/extra/spitbucket/targets",
+                        "animations":  [
+                                           {
+                                               "anim":  "xFive",
+                                               "name":  "xFive",
+                                               "fps":  24,
+                                               "loop":  false,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           },
+                                           {
+                                               "anim":  "blank",
+                                               "name":  "blank",
+                                               "fps":  24,
+                                               "loop":  false,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           }
+                                       ],
+                        "firstAnimation":  "blank"
+                    },
+                    {
+                        "name":  "targetSix",
+                        "x":  1970,
+                        "y":  465,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "animatedSprite",
+                        "image":  "gooeyMix/extra/spitbucket/targets",
+                        "animations":  [
+                                           {
+                                               "anim":  "xSix",
+                                               "name":  "xSix",
+                                               "fps":  24,
+                                               "loop":  false,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           },
+                                           {
+                                               "anim":  "blank",
+                                               "name":  "blank",
+                                               "fps":  24,
+                                               "loop":  false,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           }
+                                       ],
+                        "firstAnimation":  "blank"
+                    },
+                    {
+                        "name":  "targetOne",
+                        "x":  2092,
+                        "y":  290,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "animatedSprite",
+                        "image":  "gooeyMix/extra/spitbucket/targets",
+                        "animations":  [
+                                           {
+                                               "anim":  "xOne",
+                                               "name":  "xOne",
+                                               "fps":  24,
+                                               "loop":  false,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           },
+                                           {
+                                               "anim":  "blank",
+                                               "name":  "blank",
+                                               "fps":  24,
+                                               "loop":  false,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           }
+                                       ],
+                        "firstAnimation":  "blank"
+                    },
+                    {
+                        "name":  "targetTwo",
+                        "x":  1560,
+                        "y":  323,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "animatedSprite",
+                        "image":  "gooeyMix/extra/spitbucket/targets",
+                        "animations":  [
+                                           {
+                                               "anim":  "xTwo",
+                                               "name":  "xTwo",
+                                               "fps":  24,
+                                               "loop":  false,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           },
+                                           {
+                                               "anim":  "blank",
+                                               "name":  "blank",
+                                               "fps":  24,
+                                               "loop":  false,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           }
+                                       ],
+                        "firstAnimation":  "blank"
+                    },
+                    {
+                        "name":  "targetThree",
+                        "x":  1861,
+                        "y":  293,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "animatedSprite",
+                        "image":  "gooeyMix/extra/spitbucket/targets",
+                        "animations":  [
+                                           {
+                                               "anim":  "xThree",
+                                               "name":  "xThree",
+                                               "fps":  24,
+                                               "loop":  false,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           },
+                                           {
+                                               "anim":  "blank",
+                                               "name":  "blank",
+                                               "fps":  24,
+                                               "loop":  false,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           }
+                                       ],
+                        "firstAnimation":  "blank"
+                    }
+                ],
+    "_editorMeta":  {
+                        "dad":  "dad",
+                        "boyfriend":  "bf",
+                        "gf":  "gf"
+                    }
+}

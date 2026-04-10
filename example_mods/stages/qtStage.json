@@ -1,0 +1,455 @@
+﻿{
+    "directory":  "",
+    "defaultZoom":  0.8,
+    "stageUI":  "normal",
+    "boyfriend":  [
+                      1040,
+                      913
+                  ],
+    "girlfriend":  [
+                       727,
+                       795
+                   ],
+    "opponent":  [
+                     380,
+                     920
+                 ],
+    "hide_girlfriend":  false,
+    "camera_boyfriend":  [
+                             -175,
+                             -113
+                         ],
+    "camera_opponent":  [
+                            290,
+                            -50
+                        ],
+    "camera_girlfriend":  [
+                              25,
+                              165
+                          ],
+    "camera_speed":  1,
+    "objects":  [
+                    {
+                        "name":  "tvStaticRight",
+                        "x":  1231,
+                        "y":  523,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       0.99,
+                                       0.99
+                                   ],
+                        "type":  "animatedSprite",
+                        "image":  "obliterated/tv_static_assets",
+                        "animations":  [
+                                           {
+                                               "anim":  "static",
+                                               "name":  "static anim",
+                                               "fps":  24,
+                                               "loop":  true,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           }
+                                       ],
+                        "firstAnimation":  "static"
+                    },
+                    {
+                        "name":  "warningScreen",
+                        "x":  -115,
+                        "y":  581,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       0.99,
+                                       0.99
+                                   ],
+                        "type":  "sprite",
+                        "image":  "obliterated/screen_danger"
+                    },
+                    {
+                        "name":  "tvStaticLeft",
+                        "x":  -230,
+                        "y":  523,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       0.99,
+                                       0.99
+                                   ],
+                        "type":  "animatedSprite",
+                        "image":  "obliterated/tv_static_assets",
+                        "animations":  [
+                                           {
+                                               "anim":  "static",
+                                               "name":  "static anim",
+                                               "fps":  24,
+                                               "loop":  true,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           }
+                                       ],
+                        "firstAnimation":  "static"
+                    },
+                    {
+                        "name":  "tv_shadow",
+                        "x":  -150,
+                        "y":  530,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       0.99,
+                                       0.99
+                                   ],
+                        "type":  "sprite",
+                        "image":  "obliterated/tv_shadow"
+                    },
+                    {
+                        "name":  "blueScreen",
+                        "x":  -115,
+                        "y":  581,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       0.99,
+                                       0.99
+                                   ],
+                        "type":  "sprite",
+                        "image":  "obliterated/blue_screens"
+                    },
+                    {
+                        "name":  "wall",
+                        "x":  -649,
+                        "y":  -42,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       0.99,
+                                       0.99
+                                   ],
+                        "type":  "sprite",
+                        "image":  "obliterated/bg"
+                    },
+                    {
+                        "name":  "tvShine",
+                        "x":  -306,
+                        "y":  572,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       0.99,
+                                       0.99
+                                   ],
+                        "type":  "sprite",
+                        "image":  "obliterated/tv_shine"
+                    },
+                    {
+                        "name":  "TVFrontShine",
+                        "x":  45,
+                        "y":  873,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1.35,
+                                       1.35
+                                   ],
+                        "type":  "sprite",
+                        "image":  "obliterated/fg_shine"
+                    },
+                    {
+                        "name":  "TVFront",
+                        "x":  -314,
+                        "y":  873,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1.35,
+                                       1.35
+                                   ],
+                        "type":  "sprite",
+                        "image":  "obliterated/fg"
+                    },
+                    {
+                        "name":  "tvLights",
+                        "x":  -332,
+                        "y":  214,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "animatedSprite",
+                        "image":  "obliterated/tv_lights_assets",
+                        "animations":  [
+                                           {
+                                               "anim":  "Normal",
+                                               "name":  "tv lights animated",
+                                               "fps":  24,
+                                               "loop":  true,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           },
+                                           {
+                                               "anim":  "Killer",
+                                               "name":  "tv lights animated",
+                                               "fps":  24,
+                                               "loop":  true,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           },
+                                           {
+                                               "anim":  "Blue",
+                                               "name":  "blue",
+                                               "fps":  24,
+                                               "loop":  true,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           },
+                                           {
+                                               "anim":  "Red",
+                                               "name":  "red",
+                                               "fps":  24,
+                                               "loop":  true,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           }
+                                       ],
+                        "firstAnimation":  "Normal"
+                    },
+                    {
+                        "name":  "fgWireFront",
+                        "x":  -361,
+                        "y":  -51,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1.8,
+                                       1.8
+                                   ],
+                        "type":  "sprite",
+                        "image":  "obliterated/wire2"
+                    },
+                    {
+                        "name":  "fgWireBack",
+                        "x":  -331,
+                        "y":  -48,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1.5,
+                                       1.5
+                                   ],
+                        "type":  "sprite",
+                        "image":  "obliterated/wire1"
+                    },
+                    {
+                        "name":  "lightOverlay",
+                        "x":  -654,
+                        "y":  -60,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "animatedSprite",
+                        "image":  "common/gradientManager",
+                        "animations":  [
+                                           {
+                                               "anim":  "Normal",
+                                               "name":  "overlay-Normal",
+                                               "fps":  24,
+                                               "loop":  true,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           },
+                                           {
+                                               "anim":  "Killer",
+                                               "name":  "overlay-Killer",
+                                               "fps":  24,
+                                               "loop":  true,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           },
+                                           {
+                                               "anim":  "Red",
+                                               "name":  "overlay-Killer",
+                                               "fps":  24,
+                                               "loop":  true,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           },
+                                           {
+                                               "anim":  "Blue",
+                                               "name":  "overlay-Killer",
+                                               "fps":  24,
+                                               "loop":  true,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           }
+                                       ],
+                        "firstAnimation":  "Normal"
+                    },
+                    {
+                        "name":  "redScreen",
+                        "x":  -649,
+                        "y":  -342,
+                        "scale":  [
+                                      2589,
+                                      1506
+                                  ],
+                        "scroll":  [
+                                       0,
+                                       0
+                                   ],
+                        "alpha":  0,
+                        "type":  "square",
+                        "color":  "#b81404"
+                    },
+                    {
+                        "name":  "spotLight",
+                        "x":  -10,
+                        "y":  -390,
+                        "scale":  [
+                                      1,
+                                      1
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "alpha":  0,
+                        "type":  "sprite",
+                        "image":  "cutscene/lightFocus"
+                    },
+                    {
+                        "name":  "blackScreenR",
+                        "x":  0,
+                        "y":  0,
+                        "scale":  [
+                                      1280,
+                                      720
+                                  ],
+                        "scroll":  [
+                                       0,
+                                       0
+                                   ],
+                        "alpha":  0,
+                        "type":  "square",
+                        "color":  "#000000"
+                    },
+                    {
+                        "name":  "blackScreen",
+                        "x":  -649,
+                        "y":  -42,
+                        "scale":  [
+                                      2589,
+                                      1306
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "alpha":  1,
+                        "type":  "square",
+                        "color":  "#000000"
+                    },
+                    {
+                        "name":  "blackScreenVideo",
+                        "x":  -726,
+                        "y":  -50,
+                        "scale":  [
+                                      2674,
+                                      1309
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "alpha":  1,
+                        "type":  "square",
+                        "color":  "#000000"
+                    }
+                ],
+    "_editorMeta":  {
+                        "dad":  "dad",
+                        "boyfriend":  "bf",
+                        "gf":  "gf"
+                    }
+}

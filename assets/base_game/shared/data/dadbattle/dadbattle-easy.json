@@ -1,0 +1,1131 @@
+﻿{
+    "song":  "DadBattle [Easy]",
+    "notes":  [
+                  {
+                      "sectionNotes":  [
+
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               10666,
+                                               6,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               11333,
+                                               6,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               12000,
+                                               6,
+                                               0
+                                           ],
+                                           [
+                                               12333,
+                                               4,
+                                               0
+                                           ],
+                                           [
+                                               12666.6666666667,
+                                               6,
+                                               583.333333333298
+                                           ],
+                                           [
+                                               13333,
+                                               2,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               14000,
+                                               2,
+                                               0
+                                           ],
+                                           [
+                                               14666,
+                                               2,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               15000,
+                                               0,
+                                               0
+                                           ],
+                                           [
+                                               15333.3333333333,
+                                               2,
+                                               583.333333333366
+                                           ],
+                                           [
+                                               16000,
+                                               5,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               16666,
+                                               5,
+                                               0
+                                           ],
+                                           [
+                                               17333,
+                                               5,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               17666,
+                                               4,
+                                               0
+                                           ],
+                                           [
+                                               18000,
+                                               7,
+                                               625
+                                           ],
+                                           [
+                                               18666,
+                                               1,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               19333,
+                                               1,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               20000,
+                                               1,
+                                               0
+                                           ],
+                                           [
+                                               20333.3333333333,
+                                               0,
+                                               0
+                                           ],
+                                           [
+                                               20666.6666666667,
+                                               3,
+                                               624.999999999962
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               21666,
+                                               6,
+                                               0
+                                           ],
+                                           [
+                                               22000,
+                                               7,
+                                               729.166666666667
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               23000,
+                                               5,
+                                               208.333333333333
+                                           ],
+                                           [
+                                               23333.3333333333,
+                                               4,
+                                               520.833333333366
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               24333.3333333333,
+                                               6,
+                                               229.1666666667
+                                           ],
+                                           [
+                                               24666.6666666667,
+                                               5,
+                                               229.166666666633
+                                           ],
+                                           [
+                                               25333.3333333333,
+                                               6,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               25666.6666666667,
+                                               4,
+                                               0
+                                           ],
+                                           [
+                                               26000,
+                                               6,
+                                               604.166666666667
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               27000,
+                                               2,
+                                               0
+                                           ],
+                                           [
+                                               27333.3333333333,
+                                               3,
+                                               729.1666666667
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               28333.3333333333,
+                                               1,
+                                               208.333333333366
+                                           ],
+                                           [
+                                               28666.6666666667,
+                                               0,
+                                               520.833333333295
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               29666.6666666667,
+                                               2,
+                                               229.166666666667
+                                           ],
+                                           [
+                                               30000,
+                                               1,
+                                               229.166666666667
+                                           ],
+                                           [
+                                               30666,
+                                               2,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               30666.6666666667,
+                                               4,
+                                               625
+                                           ],
+                                           [
+                                               31000,
+                                               0,
+                                               0
+                                           ],
+                                           [
+                                               31333.3333333333,
+                                               6,
+                                               708.333333333333
+                                           ],
+                                           [
+                                               31333.3333333333,
+                                               2,
+                                               604.1666666667
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               32166.6666666667,
+                                               4,
+                                               416.666666666667
+                                           ],
+                                           [
+                                               33000,
+                                               6,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               33500,
+                                               6,
+                                               375
+                                           ],
+                                           [
+                                               34333,
+                                               4,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               34666.6666666667,
+                                               4,
+                                               0
+                                           ],
+                                           [
+                                               35000,
+                                               7,
+                                               0
+                                           ],
+                                           [
+                                               35333.3333333333,
+                                               5,
+                                               541.6666666667
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               36000,
+                                               6,
+                                               520.833333333329
+                                           ],
+                                           [
+                                               36666.6666666667,
+                                               4,
+                                               645.833333333295
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               37500,
+                                               5,
+                                               208.333333333329
+                                           ],
+                                           [
+                                               38000,
+                                               4,
+                                               0
+                                           ],
+                                           [
+                                               38333,
+                                               5,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               38666.6666666667,
+                                               7,
+                                               541.666666666624
+                                           ],
+                                           [
+                                               39333.3333333333,
+                                               4,
+                                               0
+                                           ],
+                                           [
+                                               39666,
+                                               5,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               40166.6666666667,
+                                               6,
+                                               395.833333333295
+                                           ],
+                                           [
+                                               40666.6666666667,
+                                               7,
+                                               0
+                                           ],
+                                           [
+                                               41000,
+                                               5,
+                                               0
+                                           ],
+                                           [
+                                               41333.3333333333,
+                                               4,
+                                               583.333333333338
+                                           ],
+                                           [
+                                               41333.3333333333,
+                                               0,
+                                               625.000000000028
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               42000,
+                                               2,
+                                               708.333333333329
+                                           ],
+                                           [
+                                               42333,
+                                               7,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               42833.6666666667,
+                                               0,
+                                               416.666666666667
+                                           ],
+                                           [
+                                               43666,
+                                               2,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               44166,
+                                               2,
+                                               375
+                                           ],
+                                           [
+                                               45000,
+                                               0,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               45333.6666666667,
+                                               0,
+                                               0
+                                           ],
+                                           [
+                                               45667,
+                                               3,
+                                               0
+                                           ],
+                                           [
+                                               46000.3333333333,
+                                               1,
+                                               541.6666666667
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               46666.6666666667,
+                                               2,
+                                               520.833333333295
+                                           ],
+                                           [
+                                               47333.3333333333,
+                                               0,
+                                               645.833333333362
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               48166,
+                                               1,
+                                               208.333333333329
+                                           ],
+                                           [
+                                               48666,
+                                               0,
+                                               0
+                                           ],
+                                           [
+                                               48999,
+                                               1,
+                                               0
+                                           ],
+                                           [
+                                               49332.6666666667,
+                                               3,
+                                               541.666666666624
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               49999.3333333333,
+                                               0,
+                                               0
+                                           ],
+                                           [
+                                               50332,
+                                               1,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               50833.6666666667,
+                                               2,
+                                               395.833333333295
+                                           ],
+                                           [
+                                               51333.6666666667,
+                                               3,
+                                               0
+                                           ],
+                                           [
+                                               51667,
+                                               1,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               52000.3333333333,
+                                               0,
+                                               583.333333333338
+                                           ],
+                                           [
+                                               53000,
+                                               3,
+                                               0
+                                           ],
+                                           [
+                                               53333,
+                                               6,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               54000,
+                                               6,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               54667,
+                                               6,
+                                               0
+                                           ],
+                                           [
+                                               55000,
+                                               4,
+                                               0
+                                           ],
+                                           [
+                                               55333.6666666667,
+                                               6,
+                                               583.333333333298
+                                           ],
+                                           [
+                                               56000,
+                                               2,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               56667,
+                                               2,
+                                               0
+                                           ],
+                                           [
+                                               57333,
+                                               2,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               57667,
+                                               0,
+                                               0
+                                           ],
+                                           [
+                                               58000.3333333333,
+                                               2,
+                                               583.333333333366
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               58667,
+                                               5,
+                                               0
+                                           ],
+                                           [
+                                               59333,
+                                               5,
+                                               0
+                                           ],
+                                           [
+                                               60000,
+                                               5,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               60333,
+                                               4,
+                                               0
+                                           ],
+                                           [
+                                               60667,
+                                               7,
+                                               625
+                                           ],
+                                           [
+                                               61333,
+                                               1,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               62000,
+                                               1,
+                                               0
+                                           ],
+                                           [
+                                               62666.6666666667,
+                                               4,
+                                               625
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               62667,
+                                               1,
+                                               0
+                                           ],
+                                           [
+                                               63000.3333333333,
+                                               0,
+                                               0
+                                           ],
+                                           [
+                                               63333.3333333333,
+                                               6,
+                                               291.666666666667
+                                           ],
+                                           [
+                                               63333.6666666667,
+                                               3,
+                                               624.999999999962
+                                           ],
+                                           [
+                                               63666.6666666667,
+                                               4,
+                                               625
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               64333,
+                                               6,
+                                               0
+                                           ],
+                                           [
+                                               64667,
+                                               7,
+                                               729.166666666667
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               65667,
+                                               5,
+                                               208.333333333333
+                                           ],
+                                           [
+                                               66000.3333333333,
+                                               4,
+                                               520.833333333366
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               67000.3333333333,
+                                               6,
+                                               229.1666666667
+                                           ],
+                                           [
+                                               67333.6666666667,
+                                               5,
+                                               229.166666666633
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               68000.3333333333,
+                                               6,
+                                               0
+                                           ],
+                                           [
+                                               68000.6666666667,
+                                               0,
+                                               625
+                                           ],
+                                           [
+                                               68333.6666666667,
+                                               4,
+                                               0
+                                           ],
+                                           [
+                                               68667,
+                                               6,
+                                               604.166666666667
+                                           ],
+                                           [
+                                               68667.3333333333,
+                                               2,
+                                               291.666666666667
+                                           ],
+                                           [
+                                               69000.6666666667,
+                                               0,
+                                               625
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               69667,
+                                               2,
+                                               0
+                                           ],
+                                           [
+                                               70000.3333333333,
+                                               3,
+                                               729.1666666667
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               71000.3333333333,
+                                               1,
+                                               208.333333333366
+                                           ],
+                                           [
+                                               71333.6666666667,
+                                               0,
+                                               520.833333333295
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               72333.6666666667,
+                                               2,
+                                               229.166666666667
+                                           ],
+                                           [
+                                               72667,
+                                               1,
+                                               229.166666666667
+                                           ],
+                                           [
+                                               73333.3333333333,
+                                               2,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               73666.6666666667,
+                                               0,
+                                               0
+                                           ],
+                                           [
+                                               74000.3333333333,
+                                               2,
+                                               604.1666666667
+                                           ],
+                                           [
+                                               74666,
+                                               6,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               75333,
+                                               6,
+                                               0
+                                           ],
+                                           [
+                                               76000,
+                                               6,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               76333,
+                                               4,
+                                               0
+                                           ],
+                                           [
+                                               76666.6666666667,
+                                               6,
+                                               791.666666666629
+                                           ],
+                                           [
+                                               77333,
+                                               2,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               78000,
+                                               2,
+                                               0
+                                           ],
+                                           [
+                                               78666,
+                                               2,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               79000,
+                                               0,
+                                               0
+                                           ],
+                                           [
+                                               79333.3333333333,
+                                               2,
+                                               791.666666666695
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  true
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               80000,
+                                               5,
+                                               0
+                                           ],
+                                           [
+                                               80666.6666666667,
+                                               4,
+                                               0
+                                           ],
+                                           [
+                                               81333.3333333333,
+                                               5,
+                                               541.666666666695
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               82000,
+                                               5,
+                                               0
+                                           ],
+                                           [
+                                               82666,
+                                               1,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               83333.3333333333,
+                                               0,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  },
+                  {
+                      "sectionNotes":  [
+                                           [
+                                               84000,
+                                               1,
+                                               541.666666666648
+                                           ],
+                                           [
+                                               84666,
+                                               1,
+                                               0
+                                           ]
+                                       ],
+                      "sectionBeats":  4,
+                      "mustHitSection":  false
+                  }
+              ],
+    "events":  [
+
+               ],
+    "bpm":  180,
+    "needsVoices":  true,
+    "speed":  1.6,
+    "offset":  0,
+    "player1":  "bf",
+    "player2":  "dad",
+    "gfVersion":  "gf",
+    "stage":  "stage",
+    "format":  "psych_v1_convert",
+    "artist":  "Kawai Sprite",
+    "charter":  "ninjamuffin99 + MtH",
+    "generatedBy":  "Ported from Funkin V-Slice metadata"
+}

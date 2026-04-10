@@ -1,0 +1,184 @@
+import funkin.modding.module.Module;
+import funkin.ui.freeplay.FreeplayState;
+import funkin.save.Save;
+import flixel.util.FlxTimer;
+
+class GooeyFreeplayHiding extends Module {
+	var songs:Array<String> = ['drippypop-gooey-mix', 'mixd-up', 'comedian-rad-mix','saloonatic'];
+
+	var variations:Array<String> = ['default', 'default', 'default', 'default'];
+
+	var saveVariations:Array<String> = ['', '', '', ''];
+
+	var saveDiffs:Array<Array<String>> = [['extra'], ['extra'], ['extra'], ['extra']];
+
+	var fakeAlbums:Array<String> = [null, null, null, null];
+
+	var fakeTexts:Array<String> = ['???', '???', '???', '???' ];
+
+	var fakeIcons:Array<String> = ['', '', '', ''];
+
+	var playMusic:Array<Bool> = [false, false, false, false];
+
+	public function new() {
+		super('FreeplayGooeyHiding');
+	}
+
+	var curCap(get, null):SongMenuItem;
+
+	function get_curCap() {
+		return FlxG.state.subState.currentCapsule;
+	}
+
+	var theCaps(get, null):Array<SongMenuItem>;
+
+	function get_theCaps() {
+		var caps = [];
+
+		for (cap in FlxG.state.subState.grpCapsules.members) {
+			if (cap?.freeplayData != null
+				&& songs.contains(cap?.freeplayData?.data.id)
+				&& cap?.freeplayData?.curVariation == variations[songs.indexOf(cap?.freeplayData?.data.id)]) {
+				caps.push(cap);
+			}
+		}
+
+		return caps;
+	}
+
+	function songId(cap:SongMenuItem):String {
+		return cap?.freeplayData?.data.id;
+	}
+
+	function indOf(cap:SongMenuItem):Int {
+		return songs.indexOf(songId(cap));
+	}
+
+	public function onSongSelected(event) {
+		super.onSubStateOpenEnd(event);
+
+		if (!theCaps.contains(event.capsule))
+			return;
+
+		var cap = event.capsule;
+
+		if (Save.instance.hasBeatenSong(songId(cap), saveDiffs[indOf(cap)], saveVariations[indOf(cap)]))
+			return;
+
+		if (FlxG.state.subState.albumRoll.albumId != fakeAlbums[indOf(cap)])
+			FlxG.state.subState.albumRoll.albumId = fakeAlbums[indOf(cap)];
+
+		if (FlxG.sound.music != null && !playMusic[indOf(cap)])
+			FlxG.sound.music.stop();
+
+		if (cap != null) {
+			if (cap.pixelIcon?.char != fakeIcons[indOf(cap)]) {
+				if (fakeIcons[indOf(cap)] == '' || fakeIcons[indOf(cap)] == null)
+					cap.pixelIcon?.alpha = 0;
+				else
+					cap.pixelIcon?.setCharacter(fakeIcons[indOf(cap)]);
+			}
+
+			if (cap.songText?.text != fakeTexts[indOf(cap)])
+				cap.songText?.text = fakeTexts[indOf(cap)];
+		}
+	}
+
+	public function onSubStateOpenEnd(event) {
+		super.onSubStateOpenEnd(event);
+
+		if (!Std.isOfType(FlxG.state.subState, FreeplayState))
+			return;
+
+		for (cap in theCaps) {
+			if (Save.instance.hasBeatenSong(songId(cap), saveDiffs[indOf(cap)], saveVariations[indOf(cap)]))
+				continue;
+
+			if (cap != null) {
+				if (cap.pixelIcon?.char != fakeIcons[indOf(cap)])
+					cap.pixelIcon?.setCharacter(fakeIcons[indOf(cap)]);
+
+				if (cap.songText?.text != fakeTexts[indOf(cap)])
+					cap.songText?.text = fakeTexts[indOf(cap)];
+
+				if (curCap == cap) {
+					if (FlxG.state.subState.albumRoll.albumId != fakeAlbums[indOf(cap)])
+						FlxG.state.subState.albumRoll.albumId = fakeAlbums[indOf(cap)];
+
+					if (FlxG.sound.music != null && !playMusic[indOf(cap)])
+						FlxG.sound.music.stop();
+				}
+			}
+		}
+	}
+
+	public function onCapsuleSelected(event):Void {
+		super.onCapsuleSelected(event);
+
+		if (!theCaps.contains(event.capsule))
+			return;
+
+		var cap = event.capsule;
+
+		if (Save.instance.hasBeatenSong(songId(cap), saveDiffs[indOf(cap)], saveVariations[indOf(cap)]))
+			return;
+
+		if (FlxG.state.subState.albumRoll.albumId != fakeAlbums[indOf(cap)])
+			FlxG.state.subState.albumRoll.albumId = fakeAlbums[indOf(cap)];
+
+		if (FlxG.sound.music != null && !playMusic[indOf(cap)])
+			FlxG.sound.music.stop();
+
+		if (cap != null) {
+			if (cap.pixelIcon?.char != fakeIcons[indOf(cap)])
+				cap.pixelIcon?.setCharacter(fakeIcons[indOf(cap)]);
+
+			if (cap.songText?.text != fakeTexts[indOf(cap)])
+				cap.songText?.text = fakeTexts[indOf(cap)];
+		}
+	}
+
+	public function onDifficultySwitch(event):Void {
+		super.onDifficultySwitch(event);
+
+		for (cap in theCaps) {
+			if (Save.instance.hasBeatenSong(songId(cap), saveDiffs[indOf(cap)], saveVariations[indOf(cap)]))
+				continue;
+
+			if (cap != null) {
+				if (cap.pixelIcon?.char != fakeIcons[indOf(cap)])
+					cap.pixelIcon?.setCharacter(fakeIcons[indOf(cap)]);
+
+				if (cap.songText?.text != fakeTexts[indOf(cap)])
+					cap.songText?.text = fakeTexts[indOf(cap)];
+
+				if (curCap == cap) {
+					if (FlxG.state.subState.albumRoll.albumId != fakeAlbums[indOf(cap)])
+						FlxG.state.subState.albumRoll.albumId = fakeAlbums[indOf(cap)];
+
+					if (FlxG.sound.music != null && !playMusic[indOf(cap)])
+						FlxG.sound.music.stop();
+				}
+			}
+		}
+	}
+
+	public function onUpdate(event):Void {
+		super.onUpdate(event);
+
+		if (Std.isOfType(FlxG.state.subState, FreeplayState)) {
+			for (cap in theCaps) {
+				if (Save.instance.hasBeatenSong(songId(cap), saveDiffs[indOf(cap)], saveVariations[indOf(cap)]))
+					continue;
+
+				if (curCap == cap) {
+					if (FlxG.state.subState.albumRoll.albumId != fakeAlbums[indOf(cap)])
+						FlxG.state.subState.albumRoll.albumId = fakeAlbums[indOf(cap)];
+
+					if (FlxG.sound.music != null && !playMusic[indOf(cap)])
+						FlxG.sound.music.stop();
+				}
+			}
+		}
+	}
+}

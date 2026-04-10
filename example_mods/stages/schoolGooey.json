@@ -1,0 +1,246 @@
+﻿{
+    "directory":  "",
+    "defaultZoom":  1,
+    "stageUI":  "normal",
+    "boyfriend":  [
+                      1168,
+                      900
+                  ],
+    "girlfriend":  [
+                       724,
+                       763
+                   ],
+    "opponent":  [
+                     306,
+                     960
+                 ],
+    "hide_girlfriend":  false,
+    "camera_boyfriend":  [
+                             -200,
+                             -94
+                         ],
+    "camera_opponent":  [
+                            160,
+                            0
+                        ],
+    "camera_girlfriend":  [
+                              40,
+                              40
+                          ],
+    "camera_speed":  1,
+    "objects":  [
+                    {
+                        "name":  "freaks",
+                        "x":  -100,
+                        "y":  190,
+                        "scale":  [
+                                      6,
+                                      6
+                                  ],
+                        "scroll":  [
+                                       0.9,
+                                       0.9
+                                   ],
+                        "alpha":  0,
+                        "type":  "animatedSprite",
+                        "image":  "weeb/bgFreaks",
+                        "animations":  [
+                                           {
+                                               "anim":  "danceLeft",
+                                               "name":  "BG girls group",
+                                               "fps":  24,
+                                               "loop":  true,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           },
+                                           {
+                                               "anim":  "danceRight",
+                                               "name":  "BG girls group",
+                                               "fps":  24,
+                                               "loop":  true,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           },
+                                           {
+                                               "anim":  "danceLeft-scared",
+                                               "name":  "BG fangirls dissuaded",
+                                               "fps":  24,
+                                               "loop":  true,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           },
+                                           {
+                                               "anim":  "danceRight-scared",
+                                               "name":  "BG fangirls dissuaded",
+                                               "fps":  24,
+                                               "loop":  true,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           }
+                                       ],
+                        "firstAnimation":  "danceLeft"
+                    },
+                    {
+                        "name":  "sky",
+                        "x":  -626,
+                        "y":  -78,
+                        "scale":  [
+                                      6,
+                                      6
+                                  ],
+                        "scroll":  [
+                                       0.2,
+                                       0.2
+                                   ],
+                        "type":  "sprite",
+                        "image":  "weeb/erect/weebSky"
+                    },
+                    {
+                        "name":  "backTrees",
+                        "x":  -842,
+                        "y":  -80,
+                        "scale":  [
+                                      6,
+                                      6
+                                  ],
+                        "scroll":  [
+                                       0.5,
+                                       0.5
+                                   ],
+                        "type":  "sprite",
+                        "image":  "weeb/erect/weebBackTrees"
+                    },
+                    {
+                        "name":  "school",
+                        "x":  -816,
+                        "y":  -38,
+                        "scale":  [
+                                      6,
+                                      6
+                                  ],
+                        "scroll":  [
+                                       0.75,
+                                       0.75
+                                   ],
+                        "type":  "sprite",
+                        "image":  "weeb/erect/weebSchool"
+                    },
+                    {
+                        "name":  "street",
+                        "x":  -662,
+                        "y":  6,
+                        "scale":  [
+                                      6,
+                                      6
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "sprite",
+                        "image":  "weeb/erect/weebStreet"
+                    },
+                    {
+                        "name":  "treesFG",
+                        "x":  -500,
+                        "y":  6,
+                        "scale":  [
+                                      6,
+                                      6
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "sprite",
+                        "image":  "weeb/erect/weebTreesBack"
+                    },
+                    {
+                        "name":  "treesBG",
+                        "x":  -806,
+                        "y":  -1050,
+                        "scale":  [
+                                      6,
+                                      6
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "animatedSprite",
+                        "image":  "weeb/erect/weebTrees",
+                        "animations":  [
+                                           {
+                                               "anim":  "treeLoop",
+                                               "name":  "",
+                                               "fps":  12,
+                                               "loop":  true,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           }
+                                       ],
+                        "firstAnimation":  "treeLoop"
+                    },
+                    {
+                        "name":  "petals",
+                        "x":  -20,
+                        "y":  -40,
+                        "scale":  [
+                                      6,
+                                      6
+                                  ],
+                        "scroll":  [
+                                       0.85,
+                                       0.85
+                                   ],
+                        "type":  "animatedSprite",
+                        "image":  "weeb/erect/petals",
+                        "animations":  [
+                                           {
+                                               "anim":  "leaves",
+                                               "name":  "PETALS ALL",
+                                               "fps":  24,
+                                               "loop":  true,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           }
+                                       ],
+                        "firstAnimation":  "leaves"
+                    }
+                ],
+    "_editorMeta":  {
+                        "dad":  "dad",
+                        "boyfriend":  "bf",
+                        "gf":  "gf"
+                    }
+}

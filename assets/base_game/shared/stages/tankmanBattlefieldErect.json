@@ -1,0 +1,144 @@
+﻿{
+    "directory":  "",
+    "defaultZoom":  0.7,
+    "stageUI":  "normal",
+    "boyfriend":  [
+                      1340.5,
+                      885
+                  ],
+    "girlfriend":  [
+                       800.5,
+                       775
+                   ],
+    "opponent":  [
+                     230.5,
+                     996
+                 ],
+    "hide_girlfriend":  false,
+    "camera_boyfriend":  [
+                             -220,
+                             -100
+                         ],
+    "camera_opponent":  [
+                            250,
+                            -100
+                        ],
+    "camera_girlfriend":  [
+                              0,
+                              0
+                          ],
+    "camera_speed":  1,
+    "objects":  [
+                    {
+                        "name":  "bg",
+                        "x":  -985,
+                        "y":  -805,
+                        "scale":  [
+                                      1.15,
+                                      1.15
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "sprite",
+                        "image":  "erect/bg"
+                    },
+                    {
+                        "name":  "guy",
+                        "x":  -50,
+                        "y":  -150,
+                        "scale":  [
+                                      1.15,
+                                      1.15
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "animatedSprite",
+                        "image":  "erect/rando",
+                        "animations":  [
+                                           {
+                                               "anim":  "idle",
+                                               "name":  "rando",
+                                               "fps":  24,
+                                               "loop":  false,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           }
+                                       ],
+                        "firstAnimation":  "idle"
+                    },
+                    {
+                        "name":  "sniper",
+                        "x":  -240,
+                        "y":  -165,
+                        "scale":  [
+                                      1.15,
+                                      1.15
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "type":  "animatedSprite",
+                        "image":  "erect/sniper",
+                        "animations":  [
+                                           {
+                                               "anim":  "idle",
+                                               "name":  "Idle",
+                                               "fps":  24,
+                                               "loop":  false,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           },
+                                           {
+                                               "anim":  "sip",
+                                               "name":  "Sip",
+                                               "fps":  24,
+                                               "loop":  false,
+                                               "indices":  [
+
+                                                           ],
+                                               "offsets":  [
+                                                               0,
+                                                               0
+                                                           ]
+                                           }
+                                       ],
+                        "firstAnimation":  "idle"
+                    },
+                    {
+                        "name":  "tankBricks",
+                        "x":  465,
+                        "y":  760,
+                        "scale":  [
+                                      1.15,
+                                      1.15
+                                  ],
+                        "scroll":  [
+                                       1,
+                                       1
+                                   ],
+                        "flipX":  true,
+                        "type":  "sprite",
+                        "image":  "erect/bricksGround"
+                    }
+                ],
+    "_editorMeta":  {
+                        "dad":  "dad",
+                        "boyfriend":  "bf",
+                        "gf":  "gf"
+                    }
+}

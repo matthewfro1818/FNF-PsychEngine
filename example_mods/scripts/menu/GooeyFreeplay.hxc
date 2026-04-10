@@ -1,0 +1,31 @@
+import funkin.modding.module.Module;
+import funkin.ui.freeplay.FreeplayState;
+import StringTools;
+
+class GooeyFreeplay extends Module {
+	public function new() {
+		super('GooeyFreeplay');
+	}
+
+	override function onUpdate(event:UpdateScriptEvent) {
+		super.onUpdate(event);
+
+		if (FlxG.state.subState == null || !(FlxG.state.subState is FreeplayState))
+			return;
+
+		if (FlxG.state.subState.instSelectMenu != null) {
+			if (StringTools.startsWith(FlxG.state.subState.instSelectMenu.currentInstrumental.text, "Truegooey"))
+				FlxG.state.subState.instSelectMenu.currentInstrumental.text = "Gooey";
+		}
+	}
+
+	override function onSubStateOpenEnd(event) {
+        super.onSubStateOpenEnd(event);
+		if (!Std.isOfType(event.targetState, FreeplayState)) return;
+		for (dot in event.targetState.difficultyDots.members) {
+			// switch normalColors to nightColors if difficulty is an erect variation
+			// deselected, selected, deselected pulse, selected pulse
+			if (dot.difficultyId == 'extra') dot.normalColors = [0xFF1A525E, 0xFF6EFCC1, 0xFF375252, 0xFF143E47];
+		}
+	}
+}

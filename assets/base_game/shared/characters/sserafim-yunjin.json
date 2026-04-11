@@ -1,75 +1,155 @@
 {
-  "version": "1.0.0",
-  "name": "Huh Yunjin",
-  "assetPath": "shared:characters/sserafim/yunjin",
-  "renderType": "animateatlas",
-  "healthIcon": {
-    "id": "bf"
-  },
-  "flipX": false,
-  "offsets": [2, 347],
-  "cameraOffsets": [2, 347],
-  "animations": [
-    {
-      "name": "doorclosed",
-      "prefix": "doorclosed",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "kick1",
-      "prefix": "kick1",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "kick2",
-      "prefix": "kick2",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "idle",
-      "prefix": "idle",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "singLEFT",
-      "prefix": "left",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "singDOWN",
-      "prefix": "down",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "singUP",
-      "prefix": "up",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "singRIGHT",
-      "prefix": "right",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "singLEFTmiss",
-      "prefix": "left miss",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "singDOWNmiss",
-      "prefix": "down miss",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "singUPmiss",
-      "prefix": "up miss",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "singRIGHTmiss",
-      "prefix": "right miss",
-      "offsets": [0, 0]
-    }
-  ],
-  "startingAnimation": "doorclosed"
+    "animations": [
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "doorclosed",
+            "indices": [],
+            "name": "doorclosed"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "kick1",
+            "indices": [],
+            "name": "kick1"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "kick2",
+            "indices": [],
+            "name": "kick2"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "idle",
+            "indices": [],
+            "name": "idle"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "left",
+            "indices": [],
+            "name": "singLEFT"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "down",
+            "indices": [],
+            "name": "singDOWN"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "up",
+            "indices": [],
+            "name": "singUP"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "right",
+            "indices": [],
+            "name": "singRIGHT"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "left miss",
+            "indices": [],
+            "name": "singLEFTmiss"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "down miss",
+            "indices": [],
+            "name": "singDOWNmiss"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "up miss",
+            "indices": [],
+            "name": "singUPmiss"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "right miss",
+            "indices": [],
+            "name": "singRIGHTmiss"
+        }
+    ],
+    "no_antialiasing": false,
+    "image": "characters/sserafim/yunjin",
+    "position": [
+        2,
+        347
+    ],
+    "healthicon": "bf",
+    "flip_x": false,
+    "healthbar_colors": [
+        49,
+        176,
+        209
+    ],
+    "camera_position": [
+        2,
+        347
+    ],
+    "sing_duration": 4,
+    "scale": 1
 }

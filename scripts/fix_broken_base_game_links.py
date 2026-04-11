@@ -4,11 +4,11 @@ import shutil
 base = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'assets', 'base_game'))
 backup_root = os.path.abspath(os.path.join(os.path.dirname(__file__), 'broken_links_backup'))
 
-print 'Base dir:', base
-print 'Backup root:', backup_root
+print('Base dir:', base)
+print('Backup root:', backup_root)
 
 if not os.path.isdir(base):
-    print 'Base directory missing:', base
+    print('Base directory missing:', base)
     raise SystemExit(1)
 
 os.makedirs(backup_root, exist_ok=True)
@@ -36,21 +36,21 @@ for name in os.listdir(base):
                 # Use shutil.move which works for files, dirs, and junctions
                 shutil.move(child, dest)
                 moved.append((name, dest))
-                print 'Moved broken entry:', child, '->', dest
+                print('Moved broken entry:', child, '->', dest)
             except Exception as e2:
                 errors.append((name, 'move failed: ' + str(e2)))
     else:
         # Not a dir (file). skip
         continue
 
-print '\nSummary:'
-print 'Moved:', len(moved)
+print('\nSummary:')
+print('Moved:', len(moved))
 for m in moved:
-    print ' -', m[0], '->', m[1]
+    print(' -', m[0], '->', m[1])
 
 if errors:
-    print '\nErrors:'
+    print('\nErrors:')
     for e in errors:
-        print ' -', e[0], e[1]
+        print(' -', e[0], e[1])
 else:
-    print 'No errors.'
+    print('No errors.')

@@ -26,13 +26,15 @@ class SpookyMansionErect extends BaseStage
 		bgLight = cast getStageObject('bgLight');
 		stairsLight = cast getStageObject('stairsLight');
 
-		if(bgLight != null) bgLight.alpha = 0.0001;
-		if(stairsLight != null) stairsLight.alpha = 0.0001;
+		if (bgLight != null)
+			bgLight.alpha = 0.0001;
+		if (stairsLight != null)
+			stairsLight.alpha = 0.0001;
 	}
 
 	override function beatHit()
 	{
-		if(songName == 'spookeez' && curBeat == 4)
+		if (songName == 'spookeez' && curBeat == 4)
 			doLightningStrike(false);
 
 		if (FlxG.random.bool(10) && curBeat > lightningStrikeBeat + lightningStrikeOffset)
@@ -41,10 +43,10 @@ class SpookyMansionErect extends BaseStage
 
 	override function stepHit()
 	{
-		if(postShockActive)
+		if (postShockActive)
 		{
 			postShockCounter++;
-			if(postShockCounter >= 10)
+			if (postShockCounter >= 10)
 			{
 				postShockCounter = 0;
 				postShockActive = false;
@@ -54,47 +56,57 @@ class SpookyMansionErect extends BaseStage
 
 	function doLightningStrike(playSound:Bool):Void
 	{
-		if(playSound)
+		if (playSound)
 			FlxG.sound.play(Paths.soundRandom('thunder_', 1, 2));
 
-		if(bgLight != null) bgLight.alpha = 1;
-		if(stairsLight != null) stairsLight.alpha = 1;
-		if(boyfriend != null) boyfriend.alpha = 0;
-		if(dad != null) dad.alpha = 0;
-		if(gf != null) gf.alpha = 0;
+		if (bgLight != null)
+			bgLight.alpha = 1;
+		if (stairsLight != null)
+			stairsLight.alpha = 1;
+		if (boyfriend != null)
+			boyfriend.alpha = 0;
+		if (dad != null)
+			dad.alpha = 0;
+		if (gf != null)
+			gf.alpha = 0;
 
 		new FlxTimer().start(0.06, function(_)
 		{
-			if(bgLight != null) bgLight.alpha = 0;
-			if(stairsLight != null) stairsLight.alpha = 0;
-			if(boyfriend != null) boyfriend.alpha = 1;
-			if(dad != null) dad.alpha = 1;
-			if(gf != null) gf.alpha = 1;
+			if (bgLight != null)
+				bgLight.alpha = 0;
+			if (stairsLight != null)
+				stairsLight.alpha = 0;
+			if (boyfriend != null)
+				boyfriend.alpha = 1;
+			if (dad != null)
+				dad.alpha = 1;
+			if (gf != null)
+				gf.alpha = 1;
 		});
 
 		new FlxTimer().start(0.12, function(_)
 		{
-			if(bgLight != null)
+			if (bgLight != null)
 			{
 				bgLight.alpha = 1;
 				FlxTween.tween(bgLight, {alpha: 0}, 1.5);
 			}
-			if(stairsLight != null)
+			if (stairsLight != null)
 			{
 				stairsLight.alpha = 1;
 				FlxTween.tween(stairsLight, {alpha: 0}, 1.5);
 			}
-			if(boyfriend != null)
+			if (boyfriend != null)
 			{
 				boyfriend.alpha = 0;
 				FlxTween.tween(boyfriend, {alpha: 1}, 1.5);
 			}
-			if(dad != null)
+			if (dad != null)
 			{
 				dad.alpha = 0;
 				FlxTween.tween(dad, {alpha: 1}, 1.5);
 			}
-			if(gf != null)
+			if (gf != null)
 			{
 				gf.alpha = 0;
 				FlxTween.tween(gf, {alpha: 1}, 1.5);
@@ -104,11 +116,14 @@ class SpookyMansionErect extends BaseStage
 		lightningStrikeBeat = curBeat;
 		lightningStrikeOffset = FlxG.random.int(8, 24);
 
-		if(boyfriend != null && boyfriend.hasAnimation('scared') && boyfriend.animation.curAnim != null && boyfriend.animation.curAnim.name != 'cheer')
+		if (boyfriend != null
+			&& boyfriend.hasAnimation('scared')
+			&& boyfriend.animation.curAnim != null
+			&& boyfriend.animation.curAnim.name != 'cheer')
 			boyfriend.playAnim('scared', true);
-		if(dad != null && dad.hasAnimation('scared'))
+		if (dad != null && dad.hasAnimation('scared'))
 			dad.playAnim('scared', true);
-		if(gf != null && gf.hasAnimation('scared'))
+		if (gf != null && gf.hasAnimation('scared'))
 			gf.playAnim('scared', true);
 
 		postShockCounter = 0;

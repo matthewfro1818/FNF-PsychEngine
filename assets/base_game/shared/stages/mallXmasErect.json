@@ -1,221 +1,215 @@
-﻿{
-    "directory":  "",
-    "defaultZoom":  0.8,
-    "stageUI":  "normal",
-    "boyfriend":  [
-                      1177.5,
-                      871
-                  ],
-    "girlfriend":  [
-                       808.5,
-                       854
-                   ],
-    "opponent":  [
-                     42,
-                     882
-                 ],
-    "hide_girlfriend":  false,
-    "camera_boyfriend":  [
-                             -300,
-                             -200
-                         ],
-    "camera_opponent":  [
-                            150,
-                            -100
-                        ],
-    "camera_girlfriend":  [
-                              0,
-                              0
-                          ],
-    "camera_speed":  1,
-    "objects":  [
-                    {
-                        "name":  "bgWalls",
-                        "x":  -726,
-                        "y":  -566,
-                        "scale":  [
-                                      0.9,
-                                      0.9
-                                  ],
-                        "scroll":  [
-                                       0.2,
-                                       0.2
-                                   ],
-                        "type":  "sprite",
-                        "image":  "christmas/erect/bgWalls"
-                    },
-                    {
-                        "name":  "upperBoppers",
-                        "x":  -374,
-                        "y":  -98,
-                        "scale":  [
-                                      0.85,
-                                      0.85
-                                  ],
-                        "scroll":  [
-                                       0.28,
-                                       0.28
-                                   ],
-                        "type":  "animatedSprite",
-                        "image":  "christmas/erect/upperBop",
-                        "animations":  [
-                                           {
-                                               "anim":  "idle",
-                                               "name":  "upperBop",
-                                               "fps":  24,
-                                               "loop":  false,
-                                               "indices":  [
-
-                                                           ],
-                                               "offsets":  [
-                                                               0,
-                                                               0
-                                                           ]
-                                           }
-                                       ],
-                        "firstAnimation":  "idle"
-                    },
-                    {
-                        "name":  "bgEscalator",
-                        "x":  -1100,
-                        "y":  -540,
-                        "scale":  [
-                                      0.9,
-                                      0.9
-                                  ],
-                        "scroll":  [
-                                       0.3,
-                                       0.3
-                                   ],
-                        "type":  "sprite",
-                        "image":  "christmas/erect/bgEscalator"
-                    },
-                    {
-                        "name":  "christmasTree",
-                        "x":  370,
-                        "y":  -250,
-                        "scale":  [
-                                      1,
-                                      1
-                                  ],
-                        "scroll":  [
-                                       0.4,
-                                       0.4
-                                   ],
-                        "type":  "sprite",
-                        "image":  "christmas/erect/christmasTree"
-                    },
-                    {
-                        "name":  "fog",
-                        "x":  -1000,
-                        "y":  100,
-                        "scale":  [
-                                      0.9,
-                                      0.9
-                                  ],
-                        "scroll":  [
-                                       0.85,
-                                       0.85
-                                   ],
-                        "type":  "sprite",
-                        "image":  "christmas/erect/white"
-                    },
-                    {
-                        "name":  "bottomBoppers",
-                        "x":  -300,
-                        "y":  -200,
-                        "scale":  [
-                                      1,
-                                      1
-                                  ],
-                        "scroll":  [
-                                       0.9,
-                                       0.9
-                                   ],
-                        "type":  "animatedSprite",
-                        "image":  "christmas/erect/bottomBop",
-                        "animations":  [
-                                           {
-                                               "anim":  "idle",
-                                               "name":  "BOPPERS_EXPORT",
-                                               "fps":  24,
-                                               "loop":  false,
-                                               "indices":  [
-
-                                                           ],
-                                               "offsets":  [
-                                                               0,
-                                                               0
-                                                           ]
-                                           }
-                                       ],
-                        "firstAnimation":  "idle"
-                    },
-                    {
-                        "name":  "snowUnder",
-                        "x":  -1500,
-                        "y":  800,
-                        "scale":  [
-                                      5700,
-                                      3000
-                                  ],
-                        "scroll":  [
-                                       1,
-                                       1
-                                   ],
-                        "type":  "square",
-                        "color":  "#F3F4F5"
-                    },
-                    {
-                        "name":  "fgSnow",
-                        "x":  -1350,
-                        "y":  680,
-                        "scale":  [
-                                      1.1,
-                                      1
-                                  ],
-                        "scroll":  [
-                                       1,
-                                       1
-                                   ],
-                        "type":  "sprite",
-                        "image":  "christmas/fgSnow"
-                    },
-                    {
-                        "name":  "santa",
-                        "x":  -840,
-                        "y":  150,
-                        "scale":  [
-                                      1,
-                                      1
-                                  ],
-                        "scroll":  [
-                                       1,
-                                       1
-                                   ],
-                        "type":  "animatedSprite",
-                        "image":  "christmas/santa",
-                        "animations":  [
-                                           {
-                                               "anim":  "idle",
-                                               "name":  "santa idle in fear",
-                                               "fps":  24,
-                                               "loop":  false,
-                                               "indices":  [
-
-                                                           ],
-                                               "offsets":  [
-                                                               0,
-                                                               0
-                                                           ]
-                                           }
-                                       ],
-                        "firstAnimation":  "idle"
-                    }
-                ],
-    "_editorMeta":  {
-                        "dad":  "dad",
-                        "boyfriend":  "bf",
-                        "gf":  "gf"
-                    }
+{
+    "directory": "",
+    "defaultZoom": 0.8,
+    "stageUI": "normal",
+    "boyfriend": [
+        1177.5,
+        871
+    ],
+    "girlfriend": [
+        808.5,
+        854
+    ],
+    "opponent": [
+        42,
+        882
+    ],
+    "hide_girlfriend": false,
+    "camera_boyfriend": [
+        -300,
+        -200
+    ],
+    "camera_opponent": [
+        150,
+        -100
+    ],
+    "camera_girlfriend": [
+        0,
+        0
+    ],
+    "camera_speed": 1,
+    "objects": [
+        {
+            "name": "bgWalls",
+            "x": -726,
+            "y": -566,
+            "scale": [
+                0.9,
+                0.9
+            ],
+            "scroll": [
+                0.2,
+                0.2
+            ],
+            "type": "sprite",
+            "image": "christmas/erect/bgWalls"
+        },
+        {
+            "name": "upperBoppers",
+            "x": -374,
+            "y": -98,
+            "scale": [
+                0.85,
+                0.85
+            ],
+            "scroll": [
+                0.28,
+                0.28
+            ],
+            "type": "animatedSprite",
+            "image": "christmas/erect/upperBop",
+            "animations": [
+                {
+                    "anim": "idle",
+                    "name": "upperBop",
+                    "fps": 24,
+                    "loop": false,
+                    "indices": [],
+                    "offsets": [
+                        0,
+                        0
+                    ]
+                }
+            ],
+            "firstAnimation": "idle"
+        },
+        {
+            "name": "bgEscalator",
+            "x": -1100,
+            "y": -540,
+            "scale": [
+                0.9,
+                0.9
+            ],
+            "scroll": [
+                0.3,
+                0.3
+            ],
+            "type": "sprite",
+            "image": "christmas/erect/bgEscalator"
+        },
+        {
+            "name": "christmasTree",
+            "x": 370,
+            "y": -250,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                0.4,
+                0.4
+            ],
+            "type": "sprite",
+            "image": "christmas/erect/christmasTree"
+        },
+        {
+            "name": "fog",
+            "x": -1000,
+            "y": 100,
+            "scale": [
+                0.9,
+                0.9
+            ],
+            "scroll": [
+                0.85,
+                0.85
+            ],
+            "type": "sprite",
+            "image": "christmas/erect/white"
+        },
+        {
+            "name": "bottomBoppers",
+            "x": -300,
+            "y": -200,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                0.9,
+                0.9
+            ],
+            "type": "animatedSprite",
+            "image": "christmas/erect/bottomBop",
+            "animations": [
+                {
+                    "anim": "idle",
+                    "name": "BOPPERS_EXPORT",
+                    "fps": 24,
+                    "loop": false,
+                    "indices": [],
+                    "offsets": [
+                        0,
+                        0
+                    ]
+                }
+            ],
+            "firstAnimation": "idle"
+        },
+        {
+            "name": "snowUnder",
+            "x": -1500,
+            "y": 800,
+            "scale": [
+                5700,
+                3000
+            ],
+            "scroll": [
+                1,
+                1
+            ],
+            "type": "square",
+            "color": "#F3F4F5"
+        },
+        {
+            "name": "fgSnow",
+            "x": -1350,
+            "y": 680,
+            "scale": [
+                1.1,
+                1
+            ],
+            "scroll": [
+                1,
+                1
+            ],
+            "type": "sprite",
+            "image": "christmas/fgSnow"
+        },
+        {
+            "name": "santa",
+            "x": -840,
+            "y": 150,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                1,
+                1
+            ],
+            "type": "animatedSprite",
+            "image": "christmas/santa",
+            "animations": [
+                {
+                    "anim": "idle",
+                    "name": "santa idle in fear",
+                    "fps": 24,
+                    "loop": false,
+                    "indices": [],
+                    "offsets": [
+                        0,
+                        0
+                    ]
+                }
+            ],
+            "firstAnimation": "idle"
+        }
+    ],
+    "_editorMeta": {
+        "dad": "dad",
+        "boyfriend": "bf",
+        "gf": "gf"
+    }
 }

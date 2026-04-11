@@ -1,46 +1,100 @@
 {
-  "version": "1.0.0",
-  "name": "Spooky Kids (Dark)",
-  "assetPath": "characters/spooky_dark",
-  "healthIcon": {
-    "id": "spooky"
-  },
-  "startingAnimation": "danceRight",
-  "animations": [
-    {
-      "name": "danceLeft",
-      "prefix": "spooky dance idle0",
-      "frameIndices": [0, 1, 2, 3, 4, 5, 6, 7]
-    },
-    {
-      "name": "danceRight",
-      "prefix": "spooky dance idle0",
-      "frameIndices": [8, 9, 10, 11, 12, 13, 14, 15]
-    },
-    {
-      "name": "singLEFT",
-      "prefix": "note sing left",
-      "offsets": [130, -15]
-    },
-    {
-      "name": "singDOWN",
-      "prefix": "spooky DOWN note",
-      "offsets": [-50, -140]
-    },
-    {
-      "name": "singUP",
-      "prefix": "spooky UP NOTE",
-      "offsets": [-20, 26]
-    },
-    {
-      "name": "singRIGHT",
-      "prefix": "spooky sing right",
-      "offsets": [-130, -15]
-    },
-    {
-      "name": "cheer",
-      "prefix": "Spookiez YEAH cheer",
-      "offsets": [60, 30]
-    }
-  ]
+    "animations": [
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "spooky dance idle0",
+            "indices": [],
+            "name": "danceLeft"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "spooky dance idle0",
+            "indices": [],
+            "name": "danceRight"
+        },
+        {
+            "offsets": [
+                130,
+                -15
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "note sing left",
+            "indices": [],
+            "name": "singLEFT"
+        },
+        {
+            "offsets": [
+                -50,
+                -140
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "spooky DOWN note",
+            "indices": [],
+            "name": "singDOWN"
+        },
+        {
+            "offsets": [
+                -20,
+                26
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "spooky UP NOTE",
+            "indices": [],
+            "name": "singUP"
+        },
+        {
+            "offsets": [
+                -130,
+                -15
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "spooky sing right",
+            "indices": [],
+            "name": "singRIGHT"
+        },
+        {
+            "offsets": [
+                60,
+                30
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "Spookiez YEAH cheer",
+            "indices": [],
+            "name": "cheer"
+        }
+    ],
+    "no_antialiasing": false,
+    "image": "characters/spooky_dark",
+    "position": [
+        0,
+        0
+    ],
+    "healthicon": "spooky",
+    "flip_x": false,
+    "healthbar_colors": [
+        49,
+        176,
+        209
+    ],
+    "camera_position": [
+        0,
+        0
+    ],
+    "sing_duration": 4,
+    "scale": 1
 }

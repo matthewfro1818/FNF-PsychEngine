@@ -1,165 +1,213 @@
 {
-  "props": [
-    {
-      "danceEvery": 0,
-      "zIndex": 10,
-      "position": [-1000, -570],
-      "animType": "sparrow",
-      "name": "Sky",
-      "isPixel": false,
-      "assetPath": "gooeyMix/extra/phillyCity/Sky",
-      "scroll": [0.2, 0.2],
-      "animations": []
-    },
-    {
-      "danceEvery": 0,
-      "zIndex": 20,
-      "position": [-700, -300],
-      "animType": "FarCity",
-      "name": "City",
-      "isPixel": false,
-      "assetPath": "gooeyMix/extra/phillyCity/farCity",
-      "scroll": [0.4, 0.6],
-      "animations": []
-    },
-    {
-      "danceEvery": 0,
-      "zIndex": 30,
-      "position": [-400, -100],
-      "animType": "sparrow",
-      "name": "City",
-      "isPixel": false,
-      "assetPath": "gooeyMix/extra/phillyCity/City",
-      "scroll": [0.6, 0.9],
-      "animations": []
-    },
-    {
-      "danceEvery": 0,
-      "zIndex": 40,
-      "position": [-100, 0],
-      "animType": "sparrow",
-      "name": "911",
-      "isPixel": false,
-      "assetPath": "gooeyMix/extra/phillyCity/911",
-      "scroll": [0.85, 1],
-      "animations": []
-    },
-    {
-      "zIndex": 42,
-      "danceEvery": 0,
-      "position": [1000, 680],
-      "name": "picoWalk",
-      "animType": "sparrow",
-      "isPixel": false,
-      "startingAnimation": "walk",
-      "scroll": [0.85, 1],
-      "assetPath": "gooeyMix/extra/phillyCity/picowalk",
-      "animations": [
+    "directory": "",
+    "defaultZoom": 0.65,
+    "stageUI": "normal",
+    "boyfriend": [
+        2650,
+        1650
+    ],
+    "girlfriend": [
+        1915,
+        1550
+    ],
+    "opponent": [
+        1250,
+        1650
+    ],
+    "hide_girlfriend": false,
+    "camera_boyfriend": [
+        -100,
+        -200
+    ],
+    "camera_opponent": [
+        150,
+        -200
+    ],
+    "camera_girlfriend": [
+        0,
+        -200
+    ],
+    "camera_speed": 1,
+    "objects": [
         {
-          "offsets": [0, 0],
-          "flipY": false,
-          "frameRate": 24,
-          "prefix": "picoWalk",
-          "name": "walk",
-          "looped": false,
-          "flipX": false
+            "name": "Sky",
+            "x": -1000,
+            "y": -570,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                0.2,
+                0.2
+            ],
+            "type": "sparrow",
+            "image": "gooeyMix/extra/phillyCity/Sky"
+        },
+        {
+            "name": "City",
+            "x": -700,
+            "y": -300,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                0.4,
+                0.6
+            ],
+            "type": "sprite",
+            "image": "gooeyMix/extra/phillyCity/farCity"
+        },
+        {
+            "name": "City",
+            "x": -400,
+            "y": -100,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                0.6,
+                0.9
+            ],
+            "type": "sparrow",
+            "image": "gooeyMix/extra/phillyCity/City"
+        },
+        {
+            "name": "911",
+            "x": -100,
+            "y": 0,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                0.85,
+                1
+            ],
+            "type": "sparrow",
+            "image": "gooeyMix/extra/phillyCity/911"
+        },
+        {
+            "name": "picoWalk",
+            "x": 1000,
+            "y": 680,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                0.85,
+                1
+            ],
+            "type": "sparrow",
+            "image": "gooeyMix/extra/phillyCity/picowalk"
+        },
+        {
+            "name": "backCar",
+            "x": 100,
+            "y": 710,
+            "scale": [
+                0.45,
+                0.45
+            ],
+            "scroll": [
+                0.85,
+                1
+            ],
+            "type": "sprite",
+            "image": "gooeyMix/extra/phillyCity/MixCar"
+        },
+        {
+            "name": "MainCity",
+            "x": -500,
+            "y": 0,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                1,
+                1
+            ],
+            "type": "sprite",
+            "image": "gooeyMix/extra/phillyCity/MainBG"
+        },
+        {
+            "name": "frontCar",
+            "x": -3000,
+            "y": 1400,
+            "scale": [
+                1.5,
+                1.5
+            ],
+            "scroll": [
+                1,
+                1
+            ],
+            "type": "sprite",
+            "image": "gooeyMix/extra/phillyCity/MixCar"
+        },
+        {
+            "name": "plant",
+            "x": 500,
+            "y": 300,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                1.5,
+                1.5
+            ],
+            "type": "sprite",
+            "image": "gooeyMix/extra/phillyCity/plant"
+        },
+        {
+            "name": "sotp",
+            "x": 3500,
+            "y": 1800,
+            "scale": [
+                0.5,
+                0.5
+            ],
+            "scroll": [
+                1.5,
+                1.5
+            ],
+            "type": "sprite",
+            "image": "gooeyMix/extra/phillyCity/sotp sign"
+        },
+        {
+            "name": "lighting",
+            "x": 0,
+            "y": 0,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                1,
+                1
+            ],
+            "type": "sprite",
+            "image": "gooeyMix/extra/phillyCity/MixLighting"
+        },
+        {
+            "name": "MainCity",
+            "x": -500,
+            "y": 0,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                1,
+                1
+            ],
+            "type": "sprite",
+            "image": "gooeyMix/extra/phillyCity/lazyFix"
         }
-      ]
-    },
-    {
-      "danceEvery": 0,
-      "zIndex": 45,
-      "position": [100, 710],
-      "scale": [0.45, 0.45],
-      "name": "backCar",
-      "isPixel": false,
-      "assetPath": "gooeyMix/extra/phillyCity/MixCar",
-      "scroll": [0.85, 1],
-      "animations": []
-    },
-    {
-      "danceEvery": 0,
-      "zIndex": 50,
-      "position": [-500, 0],
-      "name": "MainCity",
-      "isPixel": false,
-      "assetPath": "gooeyMix/extra/phillyCity/MainBG",
-      "scroll": [1, 1],
-      "animations": []
-    },
-    {
-      "danceEvery": 0,
-      "zIndex": 85,
-      "position": [-3000, 1400],
-      "scale": [1.5, 1.5],
-      "name": "frontCar",
-      "isPixel": false,
-      "assetPath": "gooeyMix/extra/phillyCity/MixCar",
-      "scroll": [1, 1],
-      "animations": []
-    },
-    {
-      "danceEvery": 0,
-      "zIndex": 90,
-      "position": [500, 300],
-      "name": "plant",
-      "isPixel": false,
-      "assetPath": "gooeyMix/extra/phillyCity/plant",
-      "scroll": [1.5, 1.5],
-      "animations": []
-    },
-    {
-      "danceEvery": 0,
-      "zIndex": 100,
-      "position": [3500, 1800],
-      "scale": [0.5, 0.5],
-      "name": "sotp",
-      "isPixel": false,
-      "assetPath": "gooeyMix/extra/phillyCity/sotp sign",
-      "scroll": [1.5, 1.5],
-      "animations": []
-    },
-    {
-      "danceEvery": 0,
-      "zIndex": 110,
-      "position": [0, 0],
-      "name": "lighting",
-      "isPixel": false,
-      "assetPath": "gooeyMix/extra/phillyCity/MixLighting",
-      "scroll": [1, 1],
-      "animations": []
-    },
-    {
-      "danceEvery": 0,
-      "zIndex": 150,
-      "position": [-500, 0],
-      "scale": [1, 1],
-      "name": "MainCity",
-      "isPixel": false,
-      "assetPath": "gooeyMix/extra/phillyCity/lazyFix",
-      "scroll": [1, 1],
-      "animations": []
-    }
-  ],
-  "cameraZoom": 0.65,
-  "version": "1.0.0",
-  "characters": {
-    "bf": {
-      "zIndex": 80,
-      "position": [2650, 1650],
-      "cameraOffsets": [-100, -200]
-    },
-    "dad": {
-      "zIndex": 70,
-      "position": [1250, 1650],
-      "cameraOffsets": [150, -200]
-    },
-    "gf": {
-      "zIndex": 60,
-      "cameraOffsets": [0, -200],
-      "position": [1915, 1550]
-    }
-  },
-  "name": "Philly City",
-  "directory": ""
+    ]
 }

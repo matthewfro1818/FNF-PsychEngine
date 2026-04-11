@@ -1,31 +1,31 @@
 {
-	"songs": [
-		[
-			"Spaghetti",
-			"bf",
-			[
-				146,
-				113,
-				253
-			]
-		]
-	],
-	"hiddenUntilUnlocked": false,
-	"hideFreeplay": false,
-	"weekBackground": "stage",
-	"weekCharacters": [
-		"Spaghetti",
-		"bf",
-		"gf"
-	],
-	"storyName": "LE SSERAFIM",
-	"weekName": "LE SSERAFIM",
-	"freeplayColor": [
-		146,
-		113,
-		253
-	],
-	"hideStoryMode": false,
-	"weekBefore": "tutorial",
-	"startUnlocked": true
+    "songs": [
+        [
+            "Spaghetti",
+            "bf",
+            [
+                146,
+                113,
+                253
+            ]
+        ]
+    ],
+    "hiddenUntilUnlocked": false,
+    "hideFreeplay": false,
+    "weekBackground": "stage",
+    "weekCharacters": [
+        "Spaghetti",
+        "bf",
+        "gf"
+    ],
+    "storyName": "LE SSERAFIM",
+    "weekName": "LE SSERAFIM",
+    "freeplayColor": [
+        146,
+        113,
+        253
+    ],
+    "hideStoryMode": false,
+    "weekBefore": "tutorial",
+    "startUnlocked": true
 }

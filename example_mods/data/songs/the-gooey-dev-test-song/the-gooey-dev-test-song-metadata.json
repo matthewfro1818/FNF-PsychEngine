@@ -1,27 +1,48 @@
 {
-  "version": "2.2.4",
-  "songName": "The Gooey Dev Test Song",
-  "artist": "ChessBrabo",
-  "charter": "LeGooey",
-  "timeFormat": "ms",
-  "divisions": 96,
-  "offsets": {"instrumental": 0},
-  "timeChanges": [{ "t": 0, "bpm": 130, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }],
-  "looped": false,
-  "playData": {
-    "songVariations": [],
-    "difficulties": ["extra"],
-    "characters": {
-      "player": "gooey-christmas","girlfriend": "gooey","opponent": "bf",
-      "instrumental": ""
+    "version": "2.2.4",
+    "songName": "The Gooey Dev Test Song",
+    "artist": "ChessBrabo",
+    "charter": "LeGooey",
+    "timeFormat": "ms",
+    "divisions": 96,
+    "offsets": {
+        "instrumental": 0
     },
-    "stage": "gooeyDevTestStage",
-    "noteStyle": "funkin",
-    "ratings": { "extra": 69},
-    "album": "gooeyplaceholder",
-    "stickerPack": null
-  },
-  "previewStart": 0,
-  "previewEnd": 15000,
-  "generatedBy": "LeGooey (by hand)"
+    "timeChanges": [
+        {
+            "t": 0,
+            "bpm": 130,
+            "n": 4,
+            "d": 4,
+            "bt": [
+                4,
+                4,
+                4,
+                4
+            ]
+        }
+    ],
+    "looped": false,
+    "playData": {
+        "songVariations": [],
+        "difficulties": [
+            "extra"
+        ],
+        "characters": {
+            "player": "gooey-christmas",
+            "girlfriend": "gooey",
+            "opponent": "bf",
+            "instrumental": ""
+        },
+        "stage": "gooeyDevTestStage",
+        "noteStyle": "funkin",
+        "ratings": {
+            "extra": 69
+        },
+        "album": "gooeyplaceholder",
+        "stickerPack": null
+    },
+    "previewStart": 0,
+    "previewEnd": 15000,
+    "generatedBy": "LeGooey (by hand)"
 }

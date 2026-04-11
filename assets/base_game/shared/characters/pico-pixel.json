@@ -1,84 +1,155 @@
 {
-  "version": "1.0.0",
-  "name": "Pico (Pixel)",
-  "assetPath": "characters/picoPixel/picoPixel",
-  "healthIcon": {
-    "id": "pico-pixel",
-    "flipX": false,
-    "isPixel": true
-  },
-  "death": {
-    "cameraOffsets": [10, -40],
-    "cameraZoom": 1.0
-  },
-  "singTime": 8.0,
-  "isPixel": true,
-  "scale": 6,
-  "flipX": true,
-  "renderType": "sparrow",
-  "offsets": [15, 0],
-  "cameraOffsets": [15, 0],
-  "animations": [
-    {
-      "name": "idle",
-      "prefix": "idle0",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "singLEFT",
-      "prefix": "left0",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "singDOWN",
-      "prefix": "down0",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "singUP",
-      "prefix": "up0",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "singRIGHT",
-      "prefix": "right0",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "singLEFTmiss",
-      "prefix": "leftmiss0",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "singDOWNmiss",
-      "prefix": "downmiss0",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "singUPmiss",
-      "prefix": "upmiss0",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "singRIGHTmiss",
-      "prefix": "rightmiss0",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "firstDeath",
-      "prefix": "firstDeath0",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "deathLoop",
-      "prefix": "deathLoop0",
-      "looped": true,
-      "offsets": [0, 0]
-    },
-    {
-      "name": "deathConfirm",
-      "prefix": "deathConfirm0",
-      "offsets": [0, 0]
-    }
-  ]
+    "animations": [
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "idle0",
+            "indices": [],
+            "name": "idle"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "left0",
+            "indices": [],
+            "name": "singLEFT"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "down0",
+            "indices": [],
+            "name": "singDOWN"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "up0",
+            "indices": [],
+            "name": "singUP"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "right0",
+            "indices": [],
+            "name": "singRIGHT"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "leftmiss0",
+            "indices": [],
+            "name": "singLEFTmiss"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "downmiss0",
+            "indices": [],
+            "name": "singDOWNmiss"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "upmiss0",
+            "indices": [],
+            "name": "singUPmiss"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "rightmiss0",
+            "indices": [],
+            "name": "singRIGHTmiss"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "firstDeath0",
+            "indices": [],
+            "name": "firstDeath"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": true,
+            "fps": 24,
+            "anim": "deathLoop0",
+            "indices": [],
+            "name": "deathLoop"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "deathConfirm0",
+            "indices": [],
+            "name": "deathConfirm"
+        }
+    ],
+    "no_antialiasing": false,
+    "image": "characters/picoPixel/picoPixel",
+    "position": [
+        15,
+        0
+    ],
+    "healthicon": "pico-pixel",
+    "flip_x": true,
+    "healthbar_colors": [
+        49,
+        176,
+        209
+    ],
+    "camera_position": [
+        15,
+        0
+    ],
+    "sing_duration": 4,
+    "scale": 1
 }

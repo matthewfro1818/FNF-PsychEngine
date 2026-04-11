@@ -32,7 +32,7 @@ class Sserafim extends BaseStage
 
 	override function update(elapsed:Float)
 	{
-		if(!opponentStrumsHidden)
+		if (!opponentStrumsHidden)
 		{
 			hideOpponentStrums();
 			opponentStrumsHidden = true;
@@ -41,7 +41,7 @@ class Sserafim extends BaseStage
 
 	override function destroy()
 	{
-		if(storedComboOffset != null)
+		if (storedComboOffset != null)
 			ClientPrefs.data.comboOffset = storedComboOffset.copy();
 
 		super.destroy();
@@ -49,7 +49,7 @@ class Sserafim extends BaseStage
 
 	override function eventCalled(eventName:String, value1:String, value2:String, flValue1:Null<Float>, flValue2:Null<Float>, strumTime:Float)
 	{
-		switch(eventName)
+		switch (eventName)
 		{
 			case 'sserafimShow':
 				currentVisible = parseBoolArray(value1, currentVisible);
@@ -64,9 +64,9 @@ class Sserafim extends BaseStage
 				applyGFAnimationState();
 
 			case 'sserafimKick':
-				if(stringToBool(value1))
+				if (stringToBool(value1))
 				{
-					if(gf != null)
+					if (gf != null)
 						gf.visible = true;
 					applyGFAnimationState();
 				}
@@ -75,23 +75,28 @@ class Sserafim extends BaseStage
 
 	function createLipSyncSprite(char:Character, charGroup:FlxSpriteGroup, isBoyfriend:Bool):Void
 	{
-		if(char == null || !SserafimLipSyncSprite.supportsCharacter(char.curCharacter))
+		if (char == null || !SserafimLipSyncSprite.supportsCharacter(char.curCharacter))
 			return;
 
 		var lipSync:SserafimLipSyncSprite = new SserafimLipSyncSprite(char);
 		var targetIndex:Int = members.indexOf(charGroup);
-		if(targetIndex >= 0) insert(targetIndex + 1, lipSync);
-		else add(lipSync);
+		if (targetIndex >= 0)
+			insert(targetIndex + 1, lipSync);
+		else
+			add(lipSync);
 
-		if(isBoyfriend) boyfriendLipSync = lipSync;
-		else dadLipSync = lipSync;
+		if (isBoyfriend)
+			boyfriendLipSync = lipSync;
+		else
+			dadLipSync = lipSync;
 	}
 
 	function hideOpponentStrums():Void
 	{
-		for(strum in PlayState.instance.opponentStrums.members)
+		for (strum in PlayState.instance.opponentStrums.members)
 		{
-			if(strum == null) continue;
+			if (strum == null)
+				continue;
 			strum.visible = false;
 			strum.alpha = 0.0001;
 			strum.active = false;
@@ -100,13 +105,13 @@ class Sserafim extends BaseStage
 
 	function applyVisibleState():Void
 	{
-		if(dad != null)
+		if (dad != null)
 			dad.visible = currentVisible[1];
 
-		if(boyfriend != null)
+		if (boyfriend != null)
 			boyfriend.visible = currentVisible[4];
 
-		if(gf != null)
+		if (gf != null)
 			gf.visible = currentVisible[5];
 
 		applyGFAnimationState();
@@ -114,23 +119,24 @@ class Sserafim extends BaseStage
 
 	function applySingingState():Void
 	{
-		if(dadLipSync != null)
+		if (dadLipSync != null)
 			dadLipSync.shouldSing = currentSinging[1];
 
-		if(boyfriendLipSync != null)
+		if (boyfriendLipSync != null)
 			boyfriendLipSync.shouldSing = currentSinging[4];
 	}
 
 	function applyGFAnimationState():Void
 	{
-		if(gf == null) return;
-		if(beautifulGF && gf.hasAnimation('idle-beautiful'))
+		if (gf == null)
+			return;
+		if (beautifulGF && gf.hasAnimation('idle-beautiful'))
 		{
 			gf.idleSuffix = '-beautiful';
 			gf.recalculateDanceIdle();
 			gf.dance();
 		}
-		else if(gf.idleSuffix.length > 0)
+		else if (gf.idleSuffix.length > 0)
 		{
 			gf.idleSuffix = '';
 			gf.recalculateDanceIdle();
@@ -140,24 +146,27 @@ class Sserafim extends BaseStage
 
 	function parseBoolArray(value:String, fallback:Array<Bool>):Array<Bool>
 	{
-		if(value == null) return fallback.copy();
+		if (value == null)
+			return fallback.copy();
 
 		var trimmed:String = value.trim();
-		if(trimmed.length < 1) return fallback.copy();
+		if (trimmed.length < 1)
+			return fallback.copy();
 
 		var parsed:Array<Bool> = [];
-		for(token in ~/[\s,|]+/g.split(trimmed))
+		for (token in ~/[\s,|]+/g.split(trimmed))
 		{
-			if(token.length < 1) continue;
+			if (token.length < 1)
+				continue;
 			parsed.push(stringToBool(token));
 		}
 
-		if(parsed.length < fallback.length)
+		if (parsed.length < fallback.length)
 		{
-			while(parsed.length < fallback.length)
+			while (parsed.length < fallback.length)
 				parsed.push(fallback[parsed.length]);
 		}
-		else if(parsed.length > fallback.length)
+		else if (parsed.length > fallback.length)
 		{
 			parsed.resize(fallback.length);
 		}
@@ -167,8 +176,9 @@ class Sserafim extends BaseStage
 
 	function stringToBool(value:String):Bool
 	{
-		if(value == null) return false;
-		return switch(value.trim().toLowerCase())
+		if (value == null)
+			return false;
+		return switch (value.trim().toLowerCase())
 		{
 			case 'true', '1', 'yes', 'on': true;
 			default: false;

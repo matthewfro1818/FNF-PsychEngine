@@ -1,68 +1,155 @@
 {
-  "version": "1.0.0",
-  "name": "Pico (Christmas)",
-  "assetPath": "shared:characters/pico-christmas",
-  "healthIcon": {
-    "id": "pico",
-    "flipX": false
-  },
-  "death": {
-    "cameraOffsets": [-18, 68],
-    "cameraZoom": 1.0
-  },
-  "flipX": true,
-  "renderType": "multianimateatlas",
-  "offsets": [43, 32],
-  "cameraOffsets": [47, 132],
-  "animations": [
-    {
-      "name": "idle",
-      "prefix": "Idle"
-    },
-    {
-      "name": "singRIGHT",
-      "prefix": "Right"
-    },
-    {
-      "name": "singDOWN",
-      "prefix": "Down"
-    },
-    {
-      "name": "singUP",
-      "prefix": "Up"
-    },
-    {
-      "name": "singLEFT",
-      "prefix": "Left"
-    },
-    {
-      "name": "singLEFTmiss",
-      "prefix": "Left Miss"
-    },
-    {
-      "name": "singDOWNmiss",
-      "prefix": "Down Miss"
-    },
-    {
-      "name": "singUPmiss",
-      "prefix": "Up Miss"
-    },
-    {
-      "name": "singRIGHTmiss",
-      "prefix": "Right Miss"
-    },
-    {
-      "name": "firstDeath",
-      "prefix": "Death Intro"
-    },
-    {
-      "name": "deathLoop",
-      "prefix": "Death Loop",
-      "looped": true
-    },
-    {
-      "name": "deathConfirm",
-      "prefix": "Death Confirm"
-    }
-  ]
+    "animations": [
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "Idle",
+            "indices": [],
+            "name": "idle"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "Right",
+            "indices": [],
+            "name": "singRIGHT"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "Down",
+            "indices": [],
+            "name": "singDOWN"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "Up",
+            "indices": [],
+            "name": "singUP"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "Left",
+            "indices": [],
+            "name": "singLEFT"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "Left Miss",
+            "indices": [],
+            "name": "singLEFTmiss"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "Down Miss",
+            "indices": [],
+            "name": "singDOWNmiss"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "Up Miss",
+            "indices": [],
+            "name": "singUPmiss"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "Right Miss",
+            "indices": [],
+            "name": "singRIGHTmiss"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "Death Intro",
+            "indices": [],
+            "name": "firstDeath"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": true,
+            "fps": 24,
+            "anim": "Death Loop",
+            "indices": [],
+            "name": "deathLoop"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "Death Confirm",
+            "indices": [],
+            "name": "deathConfirm"
+        }
+    ],
+    "no_antialiasing": false,
+    "image": "characters/pico-christmas",
+    "position": [
+        43,
+        32
+    ],
+    "healthicon": "pico",
+    "flip_x": true,
+    "healthbar_colors": [
+        49,
+        176,
+        209
+    ],
+    "camera_position": [
+        47,
+        132
+    ],
+    "sing_duration": 4,
+    "scale": 1
 }

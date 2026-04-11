@@ -1,474 +1,310 @@
 {
-  "props": [
-    {
-      "danceEvery": 0,
-      "zIndex": -1,
-      "position": [
-        -230,
-        523
-      ],
-      "scale": [
-        1,
-        1
-      ],
-      "animType": "sparrow",
-      "name": "tvStaticLeft",
-      "isPixel": false,
-      "assetPath": "obliterated/tv_static_assets",
-      "scroll": [
-        0.99,
-        0.99
-      ],
-      "startingAnimation": "static",
-      "animations": [
-        {
-          "name": "static",
-          "prefix": "static anim",
-          "looped": true
-        }
-      ]
-    },
-    {
-      "danceEvery": 0,
-      "zIndex": -1,
-      "position": [
-        -115,
-        581
-      ],
-      "scale": [
-        1,
-        1
-      ],
-      "animType": "sparrow",
-      "name": "warningScreen",
-      "isPixel": false,
-      "assetPath": "obliterated/screen_danger",
-      "scroll": [
-        0.99,
-        0.99
-      ],
-      "startingAnimation": "Normal",
-      "animations": []
-    },
-    {
-      "danceEvery": 0,
-      "zIndex": -1,
-      "position": [
-        1231,
-        523
-      ],
-      "scale": [
-        1,
-        1
-      ],
-      "animType": "sparrow",
-      "name": "tvStaticRight",
-      "isPixel": false,
-      "assetPath": "obliterated/tv_static_assets",
-      "scroll": [
-        0.99,
-        0.99
-      ],
-      "startingAnimation": "static",
-      "animations": [
-        {
-          "name": "static",
-          "prefix": "static anim",
-          "looped": true
-        }
-      ]
-    },
-    {
-      "danceEvery": 0,
-      "zIndex": 0,
-      "position": [
-        -115,
-        581
-      ],
-      "scale": [
-        1,
-        1
-      ],
-      "animType": "sparrow",
-      "name": "blueScreen",
-      "isPixel": false,
-      "assetPath": "obliterated/blue_screens",
-      "scroll": [
-        0.99,
-        0.99
-      ],
-      "startingAnimation": "Normal",
-      "animations": []
-    },
-    {
-      "danceEvery": 0,
-      "zIndex": 0,
-      "position": [
-        -150,
-        530
-      ],
-      "scale": [
-        1,
-        1
-      ],
-      "animType": "sparrow",
-      "name": "tv_shadow",
-      "isPixel": false,
-      "assetPath": "obliterated/tv_shadow",
-      "scroll": [
-        0.99,
-        0.99
-      ],
-      "startingAnimation": "Normal",
-      "animations": []
-    },
-    {
-      "danceEvery": 0,
-      "zIndex": 1,
-      "position": [
-        -649,
-        -42
-      ],
-      "scale": [
-        1,
-        1
-      ],
-      "animType": "sparrow",
-      "name": "wall",
-      "isPixel": false,
-      "assetPath": "obliterated/bg",
-      "scroll": [
-        0.99,
-        0.99
-      ],
-      "animations": []
-    },
-    {
-      "danceEvery": 0,
-      "zIndex": 2,
-      "position": [
-        -306,
-        572
-      ],
-      "scale": [
-        1,
-        1
-      ],
-      "animType": "sparrow",
-      "name": "tvShine",
-      "isPixel": false,
-      "assetPath": "obliterated/tv_shine",
-      "scroll": [
-        0.99,
-        0.99
-      ],
-      "animations": []
-    },
-    {
-      "danceEvery": 0,
-      "zIndex": 301,
-      "position": [
-        -332,
-        214
-      ],
-      "scale": [
-        1,
-        1
-      ],
-      "animType": "sparrow",
-      "name": "tvLights",
-      "blend": "add",
-      "isPixel": false,
-      "assetPath": "obliterated/tv_lights_assets",
-      "scroll": [
-        1,
-        1
-      ],
-      "startingAnimation": "Normal",
-      "animations": [
-        {
-          "name": "Normal",
-          "prefix": "tv lights animated",
-          "looped": true
-        },
-        {
-          "name": "Killer",
-          "prefix": "tv lights animated",
-          "looped": true
-        },
-        {
-          "name": "Blue",
-          "prefix": "blue",
-          "looped": true
-        },
-        {
-          "name": "Red",
-          "prefix": "red",
-          "looped": true
-        }
-      ]
-    },
-    {
-      "danceEvery": 0,
-      "zIndex": 301,
-      "position": [
-        -314,
-        873
-      ],
-      "scale": [
-        1,
-        1
-      ],
-      "animType": "sparrow",
-      "name": "TVFront",
-      "isPixel": false,
-      "assetPath": "obliterated/fg",
-      "scroll": [
-        1.35,
-        1.35
-      ],
-      "animations": []
-    },
-    {
-      "danceEvery": 0,
-      "zIndex": 301,
-      "position": [
-        45,
-        873
-      ],
-      "scale": [
-        1,
-        1
-      ],
-      "animType": "sparrow",
-      "name": "TVFrontShine",
-      "isPixel": false,
-      "assetPath": "obliterated/fg_shine",
-      "scroll": [
-        1.35,
-        1.35
-      ],
-      "animations": []
-    },
-    {
-      "danceEvery": 0,
-      "zIndex": 302,
-      "position": [
-        -331,
-        -48
-      ],
-      "scale": [
-        1,
-        1
-      ],
-      "animType": "sparrow",
-      "name": "fgWireBack",
-      "isPixel": false,
-      "assetPath": "obliterated/wire1",
-      "scroll": [
-        1.5,
-        1.5
-      ],
-      "animations": []
-    },
-    {
-      "danceEvery": 0,
-      "zIndex": 302,
-      "position": [
-        -361,
-        -51
-      ],
-      "scale": [
-        1,
-        1
-      ],
-      "animType": "sparrow",
-      "name": "fgWireFront",
-      "isPixel": false,
-      "assetPath": "obliterated/wire2",
-      "scroll": [
-        1.8,
-        1.8
-      ],
-      "animations": []
-    },
-    {
-      "danceEvery": 0,
-      "zIndex": 399,
-      "position": [
-        -649,
-        -42
-      ],
-      "scale": [
-        2589,
-        1306
-      ],
-      "name": "blackScreen",
-      "alpha": 1,
-      "isPixel": false,
-      "assetPath": "#000000",
-      "scroll": [
-        1,
-        1
-      ],
-      "animations": []
-    },
-    {
-      "danceEvery": 0,
-      "zIndex": 399,
-      "position": [
-        -726,
-        -50
-      ],
-      "scale": [
-        2674,
-        1309
-      ],
-      "name": "blackScreenVideo",
-      "alpha": 1,
-      "isPixel": false,
-      "assetPath": "#000000",
-      "scroll": [
-        1,
-        1
-      ],
-      "animations": []
-    },
-    {
-      "danceEvery": 0,
-      "zIndex": 390,
-      "position": [
-        -654,
-        -60
-      ],
-      "scale": [
-        1,
-        1
-      ],
-      "animType": "sparrow",
-      "name": "lightOverlay",
-      "isPixel": false,
-      "blend": "add",
-      "assetPath": "common/gradientManager",
-      "scroll": [
-        1,
-        1
-      ],
-      "startingAnimation": "Normal",
-      "animations": [
-        {
-          "name": "Normal",
-          "prefix": "overlay-Normal",
-          "looped": true
-        },
-        {
-          "name": "Killer",
-          "prefix": "overlay-Killer",
-          "looped": true
-        },
-        {
-          "name": "Red",
-          "prefix": "overlay-Killer",
-          "looped": true
-        },
-        {
-          "name": "Blue",
-          "prefix": "overlay-Killer",
-          "looped": true
-        }
-      ]
-    },
-    {
-      "danceEvery": 0,
-      "zIndex": 399,
-      "position": [
-        0,
-        0
-      ],
-      "scale": [
-        1280,
-        720
-      ],
-      "name": "blackScreenR",
-      "alpha": 0,
-      "isPixel": false,
-      "assetPath": "#000000",
-      "scroll": [
-        0,
-        0
-      ],
-      "animations": []
-    },
-    {
-      "zIndex": 399,
-      "position": [
-        -10,
-        -390
-      ],
-      "name": "spotLight",
-      "alpha": 0,
-      "assetPath": "cutscene/lightFocus",
-      "startingAnimation": "static",
-      "animations": []
-    },
-    {
-      "danceEvery": 0,
-      "zIndex": 399,
-      "position": [
-        -649,
-        -342
-      ],
-      "scale": [
-        2589,
-        1506
-      ],
-      "name": "redScreen",
-      "alpha": 0,
-      "isPixel": false,
-      "assetPath": "#b81404",
-      "scroll": [
-        0,
-        0
-      ],
-      "animations": []
-    }
-  ],
-  "cameraZoom": 0.8,
-  "version": "1.0.0",
-  "characters": {
-    "bf": {
-      "zIndex": 200,
-      "position": [
+    "directory": "",
+    "defaultZoom": 0.8,
+    "stageUI": "normal",
+    "boyfriend": [
         1040,
         913
-      ],
-      "cameraOffsets": [
-        -175,
-        -113
-      ]
-    },
-    "dad": {
-      "zIndex": 300,
-      "position": [
-        380,
-        920
-      ],
-      "cameraOffsets": [
-        290,
-        -50
-      ]
-    },
-    "gf": {
-      "zIndex": 100,
-      "cameraOffsets": [
-        25,
-        165
-      ],
-      "position": [
+    ],
+    "girlfriend": [
         727,
         795
-      ]
-    }
-  },
-  "name": "QT Stage (Trash Alley)"
+    ],
+    "opponent": [
+        380,
+        920
+    ],
+    "hide_girlfriend": false,
+    "camera_boyfriend": [
+        -175,
+        -113
+    ],
+    "camera_opponent": [
+        290,
+        -50
+    ],
+    "camera_girlfriend": [
+        25,
+        165
+    ],
+    "camera_speed": 1,
+    "objects": [
+        {
+            "name": "tvStaticLeft",
+            "x": -230,
+            "y": 523,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                0.99,
+                0.99
+            ],
+            "type": "sparrow",
+            "image": "obliterated/tv_static_assets"
+        },
+        {
+            "name": "warningScreen",
+            "x": -115,
+            "y": 581,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                0.99,
+                0.99
+            ],
+            "type": "sparrow",
+            "image": "obliterated/screen_danger"
+        },
+        {
+            "name": "tvStaticRight",
+            "x": 1231,
+            "y": 523,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                0.99,
+                0.99
+            ],
+            "type": "sparrow",
+            "image": "obliterated/tv_static_assets"
+        },
+        {
+            "name": "blueScreen",
+            "x": -115,
+            "y": 581,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                0.99,
+                0.99
+            ],
+            "type": "sparrow",
+            "image": "obliterated/blue_screens"
+        },
+        {
+            "name": "tv_shadow",
+            "x": -150,
+            "y": 530,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                0.99,
+                0.99
+            ],
+            "type": "sparrow",
+            "image": "obliterated/tv_shadow"
+        },
+        {
+            "name": "wall",
+            "x": -649,
+            "y": -42,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                0.99,
+                0.99
+            ],
+            "type": "sparrow",
+            "image": "obliterated/bg"
+        },
+        {
+            "name": "tvShine",
+            "x": -306,
+            "y": 572,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                0.99,
+                0.99
+            ],
+            "type": "sparrow",
+            "image": "obliterated/tv_shine"
+        },
+        {
+            "name": "tvLights",
+            "x": -332,
+            "y": 214,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                1,
+                1
+            ],
+            "type": "sparrow",
+            "image": "obliterated/tv_lights_assets",
+            "blend": "add"
+        },
+        {
+            "name": "TVFront",
+            "x": -314,
+            "y": 873,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                1.35,
+                1.35
+            ],
+            "type": "sparrow",
+            "image": "obliterated/fg"
+        },
+        {
+            "name": "TVFrontShine",
+            "x": 45,
+            "y": 873,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                1.35,
+                1.35
+            ],
+            "type": "sparrow",
+            "image": "obliterated/fg_shine"
+        },
+        {
+            "name": "fgWireBack",
+            "x": -331,
+            "y": -48,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                1.5,
+                1.5
+            ],
+            "type": "sparrow",
+            "image": "obliterated/wire1"
+        },
+        {
+            "name": "fgWireFront",
+            "x": -361,
+            "y": -51,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                1.8,
+                1.8
+            ],
+            "type": "sparrow",
+            "image": "obliterated/wire2"
+        },
+        {
+            "name": "blackScreen",
+            "x": -649,
+            "y": -42,
+            "scale": [
+                2589,
+                1306
+            ],
+            "scroll": [
+                1,
+                1
+            ],
+            "type": "sprite",
+            "image": "#000000",
+            "alpha": 1
+        },
+        {
+            "name": "blackScreenVideo",
+            "x": -726,
+            "y": -50,
+            "scale": [
+                2674,
+                1309
+            ],
+            "scroll": [
+                1,
+                1
+            ],
+            "type": "sprite",
+            "image": "#000000",
+            "alpha": 1
+        },
+        {
+            "name": "lightOverlay",
+            "x": -654,
+            "y": -60,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                1,
+                1
+            ],
+            "type": "sparrow",
+            "image": "common/gradientManager",
+            "blend": "add"
+        },
+        {
+            "name": "blackScreenR",
+            "x": 0,
+            "y": 0,
+            "scale": [
+                1280,
+                720
+            ],
+            "scroll": [
+                0,
+                0
+            ],
+            "type": "sprite",
+            "image": "#000000",
+            "alpha": 0
+        },
+        {
+            "name": "spotLight",
+            "x": -10,
+            "y": -390,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                1,
+                1
+            ],
+            "type": "sprite",
+            "image": "cutscene/lightFocus",
+            "alpha": 0
+        },
+        {
+            "name": "redScreen",
+            "x": -649,
+            "y": -342,
+            "scale": [
+                2589,
+                1506
+            ],
+            "scroll": [
+                0,
+                0
+            ],
+            "type": "sprite",
+            "image": "#b81404",
+            "alpha": 0
+        }
+    ]
 }

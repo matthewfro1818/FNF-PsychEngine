@@ -1,60 +1,122 @@
 {
-  "version": "1.0.0",
-  "name": "Kazuha",
-  "assetPath": "shared:characters/sserafim/kazuha",
-  "renderType": "animateatlas",
-  "healthIcon": {
-    "id": "kazuha",
-    "offsets": [0, 5000]
-  },
-  "flipX": false,
-  "offsets": [0, 200],
-  "cameraOffsets": [0, 200],
-  "animations": [
-    {
-      "name": "idle",
-      "prefix": "idle",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "singLEFT",
-      "prefix": "left",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "singDOWN",
-      "prefix": "down",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "singUP",
-      "prefix": "up",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "singRIGHT",
-      "prefix": "right",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "singLEFTmiss",
-      "prefix": "left miss",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "singDOWNmiss",
-      "prefix": "down miss",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "singUPmiss",
-      "prefix": "up miss",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "singRIGHTmiss",
-      "prefix": "right miss",
-      "offsets": [0, 0]
-    }
-  ]
+    "animations": [
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "idle",
+            "indices": [],
+            "name": "idle"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "left",
+            "indices": [],
+            "name": "singLEFT"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "down",
+            "indices": [],
+            "name": "singDOWN"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "up",
+            "indices": [],
+            "name": "singUP"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "right",
+            "indices": [],
+            "name": "singRIGHT"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "left miss",
+            "indices": [],
+            "name": "singLEFTmiss"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "down miss",
+            "indices": [],
+            "name": "singDOWNmiss"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "up miss",
+            "indices": [],
+            "name": "singUPmiss"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "right miss",
+            "indices": [],
+            "name": "singRIGHTmiss"
+        }
+    ],
+    "no_antialiasing": false,
+    "image": "characters/sserafim/kazuha",
+    "position": [
+        0,
+        200
+    ],
+    "healthicon": "kazuha",
+    "flip_x": false,
+    "healthbar_colors": [
+        49,
+        176,
+        209
+    ],
+    "camera_position": [
+        0,
+        200
+    ],
+    "sing_duration": 4,
+    "scale": 1
 }

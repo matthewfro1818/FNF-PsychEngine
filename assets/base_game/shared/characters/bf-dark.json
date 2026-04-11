@@ -1,83 +1,177 @@
 {
-  "version": "1.0.0",
-  "name": "Boyfriend (Dark)",
-  "renderType": "multianimateatlas",
-  "assetPath": "shared:characters/bf-dark",
-  "flipX": true,
-  "offsets": [16, 3],
-  "cameraOffsets": [-16, 36],
-  "death": {
-    "cameraOffsets": [-73, 42]
-  },
-  "healthIcon": {
-    "id": "bf"
-  },
-  "atlasSettings": {
-    "useRenderTexture": true
-  },
-  "animations": [
-    {
-      "name": "idle",
-      "prefix": "Idle"
-    },
-    {
-      "name": "singLEFT",
-      "prefix": "Left"
-    },
-    {
-      "name": "singDOWN",
-      "prefix": "Down"
-    },
-    {
-      "name": "singUP",
-      "prefix": "Up"
-    },
-    {
-      "name": "singRIGHT",
-      "prefix": "Right"
-    },
-    {
-      "name": "singLEFTmiss",
-      "prefix": "Left Miss"
-    },
-    {
-      "name": "singDOWNmiss",
-      "prefix": "Down Miss"
-    },
-    {
-      "name": "singUPmiss",
-      "prefix": "Up Miss"
-    },
-    {
-      "name": "singRIGHTmiss",
-      "prefix": "Right Miss"
-    },
-    {
-      "name": "hey",
-      "prefix": "Hey"
-    },
-    {
-      "assetPath": "shared:characters/bf-death",
-      "name": "firstDeath",
-      "prefix": "Death Intro",
-      "offsets": [22, 15]
-    },
-    {
-      "assetPath": "shared:characters/bf-death",
-      "name": "deathLoop",
-      "prefix": "Death Loop",
-      "looped": true,
-      "offsets": [22, 15]
-    },
-    {
-      "assetPath": "shared:characters/bf-death",
-      "name": "deathConfirm",
-      "prefix": "Death Confirm",
-      "offsets": [22, 15]
-    },
-    {
-      "name": "scared",
-      "prefix": "Scared"
-    }
-  ]
+    "animations": [
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "Idle",
+            "indices": [],
+            "name": "idle"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "Left",
+            "indices": [],
+            "name": "singLEFT"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "Down",
+            "indices": [],
+            "name": "singDOWN"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "Up",
+            "indices": [],
+            "name": "singUP"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "Right",
+            "indices": [],
+            "name": "singRIGHT"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "Left Miss",
+            "indices": [],
+            "name": "singLEFTmiss"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "Down Miss",
+            "indices": [],
+            "name": "singDOWNmiss"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "Up Miss",
+            "indices": [],
+            "name": "singUPmiss"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "Right Miss",
+            "indices": [],
+            "name": "singRIGHTmiss"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "Hey",
+            "indices": [],
+            "name": "hey"
+        },
+        {
+            "offsets": [
+                22,
+                15
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "Death Intro",
+            "indices": [],
+            "name": "firstDeath"
+        },
+        {
+            "offsets": [
+                22,
+                15
+            ],
+            "loop": true,
+            "fps": 24,
+            "anim": "Death Loop",
+            "indices": [],
+            "name": "deathLoop"
+        },
+        {
+            "offsets": [
+                22,
+                15
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "Death Confirm",
+            "indices": [],
+            "name": "deathConfirm"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "Scared",
+            "indices": [],
+            "name": "scared"
+        }
+    ],
+    "no_antialiasing": false,
+    "image": "characters/bf-dark",
+    "position": [
+        16,
+        3
+    ],
+    "healthicon": "bf",
+    "flip_x": true,
+    "healthbar_colors": [
+        49,
+        176,
+        209
+    ],
+    "camera_position": [
+        -16,
+        36
+    ],
+    "sing_duration": 4,
+    "scale": 1
 }

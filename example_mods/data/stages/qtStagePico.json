@@ -1,172 +1,188 @@
 {
-    "version": "1.0.2",
-    "name": "QT Stage [Pico]",
-    "props": [
+    "directory": "",
+    "defaultZoom": 0.69,
+    "stageUI": "normal",
+    "boyfriend": [
+        1025,
+        848
+    ],
+    "girlfriend": [
+        495,
+        786.5
+    ],
+    "opponent": [
+        -29,
+        864
+    ],
+    "hide_girlfriend": false,
+    "camera_boyfriend": [
+        -226,
+        -110
+    ],
+    "camera_opponent": [
+        330,
+        -100
+    ],
+    "camera_girlfriend": [
+        35,
+        17
+    ],
+    "camera_speed": 1,
+    "objects": [
         {
-            "assetPath": "outskirts/sky",
             "name": "sky",
-            "position": [
-                -270,
-                -356
-            ],
+            "x": -270,
+            "y": -356,
             "scale": [
                 1,
                 1
             ],
-            "zIndex": 6
+            "scroll": [
+                1,
+                1
+            ],
+            "type": "sprite",
+            "image": "outskirts/sky"
         },
         {
-            "assetPath": "outskirts/city_behind",
             "name": "cityBehind",
-            "position": [
-                -977,
-                -57
+            "x": -977,
+            "y": -57,
+            "scale": [
+                1,
+                1
             ],
             "scroll": [
                 0.6,
                 0.6
             ],
+            "type": "sprite",
+            "image": "outskirts/city_behind"
+        },
+        {
+            "name": "cityFront",
+            "x": 66,
+            "y": -177,
             "scale": [
                 1,
                 1
-            ],
-            "zIndex": 8
-        },
-        {
-            "assetPath": "outskirts/city_front",
-            "name": "cityFront",
-            "position": [
-                66,
-                -177
             ],
             "scroll": [
                 0.7,
                 0.7
             ],
+            "type": "sprite",
+            "image": "outskirts/city_front"
+        },
+        {
+            "name": "tree",
+            "x": 537,
+            "y": -73.5,
             "scale": [
                 1,
                 1
-            ],
-            "zIndex": 9
-        },
-        {
-            "assetPath": "outskirts/tree",
-            "name": "tree",
-            "position": [
-                537,
-                -73.5
             ],
             "scroll": [
                 0.85,
                 0.85
             ],
+            "type": "sprite",
+            "image": "outskirts/tree"
+        },
+        {
+            "name": "electricPoles",
+            "x": 101,
+            "y": -139,
             "scale": [
                 1,
                 1
-            ],
-            "zIndex": 10
-        },
-        {
-            "assetPath": "outskirts/electric_poles",
-            "name": "electricPoles",
-            "position": [
-                101,
-                -139
             ],
             "scroll": [
                 0.9,
                 0.9
             ],
-            "scale": [
-                1,
-                1
-            ],
-            "zIndex": 11
+            "type": "sprite",
+            "image": "outskirts/electric_poles"
         },
         {
-            "assetPath": "outskirts/light_pole2",
             "name": "pole2",
-            "position": [
-                1848,
-                -135.5
+            "x": 1848,
+            "y": -135.5,
+            "scale": [
+                1,
+                1
             ],
             "scroll": [
                 0.93,
                 0.93
             ],
-            "scale": [
-                1,
-                1
-            ],
-            "zIndex": 12
+            "type": "sprite",
+            "image": "outskirts/light_pole2"
         },
         {
-            "assetPath": "outskirts/light_pole1",
             "name": "pole1",
-            "position": [
-                238,
-                -140
+            "x": 238,
+            "y": -140,
+            "scale": [
+                1,
+                1
             ],
             "scroll": [
                 0.93,
                 0.93
             ],
+            "type": "sprite",
+            "image": "outskirts/light_pole1"
+        },
+        {
+            "name": "stopBus",
+            "x": 1157,
+            "y": -59,
             "scale": [
                 1,
                 1
-            ],
-            "zIndex": 12
-        },
-        {
-            "assetPath": "outskirts/bus_stop",
-            "name": "stopBus",
-            "position": [
-                1157,
-                -59
             ],
             "scroll": [
                 0.96,
                 0.96
             ],
-            "scale": [
-                1,
-                1
-            ],
-            "zIndex": 13
+            "type": "sprite",
+            "image": "outskirts/bus_stop"
         },
         {
-            "assetPath": "outskirts/wall",
             "name": "wall",
-            "position": [
-                -58.5,
-                99
-            ],
+            "x": -58.5,
+            "y": 99,
             "scale": [
                 1,
                 1
             ],
-            "zIndex": 14
+            "scroll": [
+                1,
+                1
+            ],
+            "type": "sprite",
+            "image": "outskirts/wall"
         },
         {
-            "assetPath": "outskirts/bridge",
             "name": "bridge",
-            "position": [
-                -926,
-                -366
-            ],
+            "x": -926,
+            "y": -366,
             "scale": [
                 1,
                 1
             ],
-            "zIndex": 15
+            "scroll": [
+                1,
+                1
+            ],
+            "type": "sprite",
+            "image": "outskirts/bridge"
         },
         {
             "name": "floorUnder",
-            "assetPath": "#4B7334",
-            "position": [
-                158,
-                460
-            ],
+            "x": 158,
+            "y": 460,
             "scale": [
                 2045,
                 728
@@ -175,275 +191,192 @@
                 1,
                 1
             ],
-            "zIndex": 1
+            "type": "sprite",
+            "image": "#4B7334"
         },
         {
-            "assetPath": "outskirts/grass",
             "name": "floorGrass",
-            "position": [
-                158,
-                460
-            ],
+            "x": 158,
+            "y": 460,
             "scale": [
                 1,
                 1
             ],
-            "zIndex": 16
+            "scroll": [
+                1,
+                1
+            ],
+            "type": "sprite",
+            "image": "outskirts/grass"
         },
         {
-            "assetPath": "outskirts/lucky",
             "name": "lucky",
-            "position": [
-                -411,
-                489
+            "x": -411,
+            "y": 489,
+            "scale": [
+                1,
+                1
             ],
             "scroll": [
                 0.98,
                 0.98
             ],
-            "scale": [
-                1,
-                1
-            ],
-            "zIndex": 20
+            "type": "sprite",
+            "image": "outskirts/lucky"
         },
         {
-            "assetPath": "outskirts/tvs",
             "name": "tvs",
-            "position": [
-                -852,
-                242
-            ],
+            "x": -852,
+            "y": 242,
             "scale": [
                 1,
                 1
             ],
-            "zIndex": 21
+            "scroll": [
+                1,
+                1
+            ],
+            "type": "sprite",
+            "image": "outskirts/tvs"
         },
         {
-            "assetPath": "outskirts/overlay_add",
-            "blend": "add",
             "name": "addOv",
-            "position": [
-                -924,
-                -344.5
-            ],
+            "x": -924,
+            "y": -344.5,
             "scale": [
                 1,
                 1
             ],
-            "zIndex": 98
+            "scroll": [
+                1,
+                1
+            ],
+            "type": "sprite",
+            "image": "outskirts/overlay_add",
+            "blend": "add"
         },
         {
-            "assetPath": "outskirts/overlay_multiply",
-            "blend": "multiply",
             "name": "multOv",
-            "position": [
-                -901,
-                -331
-            ],
+            "x": -901,
+            "y": -331,
             "scale": [
                 1,
                 1
             ],
-            "zIndex": 190
+            "scroll": [
+                1,
+                1
+            ],
+            "type": "sprite",
+            "image": "outskirts/overlay_multiply",
+            "blend": "multiply"
         },
         {
-            "assetPath": "outskirts/speakerGrass",
             "name": "speakerGrass",
-            "position": [
-                199,
-                708
-            ],
+            "x": 199,
+            "y": 708,
             "scale": [
                 1,
                 1
             ],
-            "zIndex": 299
+            "scroll": [
+                1,
+                1
+            ],
+            "type": "sprite",
+            "image": "outskirts/speakerGrass"
         },
         {
-            "assetPath": "outskirts/grass_pico",
             "name": "picoGrass",
-            "position": [
-                394,
-                691
-            ],
+            "x": 394,
+            "y": 691,
             "scale": [
                 1,
                 1
             ],
-            "zIndex": 501
+            "scroll": [
+                1,
+                1
+            ],
+            "type": "sprite",
+            "image": "outskirts/grass_pico"
         },
         {
-            "assetPath": "outskirts/foreground_reeds",
             "name": "reeds",
-            "position": [
-                397,
-                700
+            "x": 397,
+            "y": 700,
+            "scale": [
+                1,
+                1
             ],
             "scroll": [
                 1.15,
                 1.15
             ],
+            "type": "sprite",
+            "image": "outskirts/foreground_reeds"
+        },
+        {
+            "name": "tvFG",
+            "x": -770,
+            "y": 790,
             "scale": [
                 1,
                 1
-            ],
-            "zIndex": 509
-        },
-        {
-            "assetPath": "outskirts/tvFg",
-            "name": "tvFG",
-            "position": [
-                -770,
-                790
             ],
             "scroll": [
                 1.2,
                 1.2
             ],
-            "scale": [
-                1,
-                1
-            ],
-            "zIndex": 510
+            "type": "sprite",
+            "image": "outskirts/tvFg"
         },
         {
-            "assetPath": "outskirts/overlay_difference",
-            "blend": "subtract",
             "name": "difOv",
-            "position": [
-                -917.5,
-                458.5
-            ],
+            "x": -917.5,
+            "y": 458.5,
             "scale": [
                 1,
                 1
             ],
-            "zIndex": 900
+            "scroll": [
+                1,
+                1
+            ],
+            "type": "sprite",
+            "image": "outskirts/overlay_difference",
+            "blend": "subtract"
         },
         {
-            "assetPath": "outskirts/sunlight_add",
-            "blend": "add",
             "name": "sunOv",
-            "position": [
-                -811,
-                -683
+            "x": -811,
+            "y": -683,
+            "scale": [
+                1,
+                1
             ],
             "scroll": [
                 1.04,
                 1.04
             ],
-            "scale": [
-                1,
-                1
-            ],
-            "zIndex": 901
+            "type": "sprite",
+            "image": "outskirts/sunlight_add",
+            "blend": "add"
         },
         {
-            "danceEvery": 0,
-            "zIndex": 12,
-            "atlasSettings": {
-                "applyStageMatrix": false
-            },
-            "position": [
-                -600,
-                30
-            ],
+            "name": "randomCars",
+            "x": -600,
+            "y": 30,
             "scale": [
                 1,
                 1
             ],
-            "animType": "animateatlas",
-            "name": "randomCars",
-            "isPixel": false,
-            "assetPath": "outskirts/cars",
             "scroll": [
                 0.9,
                 1
             ],
-            "animations": [
-                {
-                    "name": "car-0",
-                    "offsets": [
-                        0,
-                        0
-                    ],
-                    "prefix": "car-0",
-                    "frameRate": 24,
-                    "flipX": false,
-                    "flipY": false
-                },
-                {
-                    "name": "car-1",
-                    "prefix": "car-1",
-                    "frameRate": 24,
-                    "flipX": false,
-                    "flipY": false,
-                    "offsets": [
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "name": "car-2",
-                    "offsets": [
-                        0,
-                        0
-                    ],
-                    "prefix": "car-2",
-                    "frameRate": 24,
-                    "flipX": false,
-                    "flipY": false
-                },
-                {
-                    "name": "car-3",
-                    "offsets": [
-                        0,
-                        0
-                    ],
-                    "prefix": "car-3",
-                    "frameRate": 24,
-                    "flipX": false,
-                    "flipY": false
-                }
-            ]
+            "type": "sprite",
+            "image": "outskirts/cars"
         }
-    ],
-    "characters": {
-        "bf": {
-            "cameraOffsets": [
-                -226,
-                -110
-            ],
-            "position": [
-                1025,
-                848
-            ],
-            "zIndex": 300
-        },
-        "dad": {
-            "cameraOffsets": [
-                330,
-                -100
-            ],
-            "position": [
-                -29,
-                864
-            ],
-            "zIndex": 200
-        },
-        "gf": {
-            "cameraOffsets": [
-                35,
-                17
-            ],
-            "position": [
-                495,
-                786.5
-            ],
-            "zIndex": 100
-        }
-    },
-    "cameraZoom": 0.69
+    ]
 }

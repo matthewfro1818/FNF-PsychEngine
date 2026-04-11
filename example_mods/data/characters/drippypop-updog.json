@@ -1,41 +1,62 @@
 {
-  "version": "1.0.0",
-  "name": "Drippypop (Updog)",
-  "renderType": "multisparrow",
-  "assetPath": "characters/extra/DrippypopUpdog",
-  "cameraOffsets": [-1, 93],
-  "flipX": false,
-  "healthIcon": {
-    "id": "drippypop-gooey"
-  },
-  "death": {
-    "cameraOffsets": [-40, 40]
-  },
-  "animations": [
-    {
-      "name": "idle",
-      "prefix": "DrippyIdle",
-      "offsets": [0,-120]
+    "version": "1.0.0",
+    "name": "Drippypop (Updog)",
+    "renderType": "multisparrow",
+    "assetPath": "characters/extra/DrippypopUpdog",
+    "cameraOffsets": [
+        -1,
+        93
+    ],
+    "flipX": false,
+    "healthIcon": {
+        "id": "drippypop-gooey"
     },
-    {
-      "name": "singLEFT",
-      "prefix": "DrippyLeft",
-      "offsets": [0,-120]
+    "death": {
+        "cameraOffsets": [
+            -40,
+            40
+        ]
     },
-    {
-      "name": "singDOWN",
-      "prefix": "DrippyDown",
-      "offsets": [0,-120]
-    },
-    {
-      "name": "singUP",
-      "prefix": "DrippyUp",
-      "offsets": [0,-120]
-    },
-    {
-      "name": "singRIGHT",
-      "prefix": "DrippyRight",
-      "offsets": [0,-120]
-    }
-  ]
+    "animations": [
+        {
+            "name": "idle",
+            "prefix": "DrippyIdle",
+            "offsets": [
+                0,
+                -120
+            ]
+        },
+        {
+            "name": "singLEFT",
+            "prefix": "DrippyLeft",
+            "offsets": [
+                0,
+                -120
+            ]
+        },
+        {
+            "name": "singDOWN",
+            "prefix": "DrippyDown",
+            "offsets": [
+                0,
+                -120
+            ]
+        },
+        {
+            "name": "singUP",
+            "prefix": "DrippyUp",
+            "offsets": [
+                0,
+                -120
+            ]
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "DrippyRight",
+            "offsets": [
+                0,
+                -120
+            ]
+        }
+    ]
 }

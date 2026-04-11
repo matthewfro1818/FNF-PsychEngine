@@ -2,7 +2,8 @@ package states.stages.objects;
 
 import objects.Character;
 
-typedef SserafimLipSyncPose = {
+typedef SserafimLipSyncPose =
+{
 	var offsetX:Float;
 	var offsetY:Float;
 	var angle:Float;
@@ -12,7 +13,7 @@ class SserafimLipSyncSprite extends FlxAnimate
 {
 	public static function supportsCharacter(char:String):Bool
 	{
-		return switch(char)
+		return switch (char)
 		{
 			case 'sserafim-yunjin', 'sserafim-kazuha', 'sserafim-chaewon', 'sserafim-eunchae', 'sserafim-sakura': true;
 			default: false;
@@ -43,7 +44,7 @@ class SserafimLipSyncSprite extends FlxAnimate
 	{
 		super.update(elapsed);
 
-		if(target == null || !supportsCharacter(target.curCharacter))
+		if (target == null || !supportsCharacter(target.curCharacter))
 		{
 			visible = false;
 			return;
@@ -52,7 +53,7 @@ class SserafimLipSyncSprite extends FlxAnimate
 		synchronizeTransform();
 		applyPose();
 
-		if(anim.curInstance != null)
+		if (anim.curInstance != null)
 		{
 			anim.curFrame = shouldSing ? getSongFrame() : 0;
 		}
@@ -84,21 +85,24 @@ class SserafimLipSyncSprite extends FlxAnimate
 	function getSongFrame():Int
 	{
 		var frameCount:Int = Std.int(Math.max(anim.length, 1));
-		if(frameCount <= 1) return 0;
+		if (frameCount <= 1)
+			return 0;
 
 		var frame:Int = Std.int(Math.floor((Conductor.songPosition / 1000) * 24)) - 1;
-		if(frame < 0) return 0;
+		if (frame < 0)
+			return 0;
 		return frame % frameCount;
 	}
 
 	static function getPose(char:String, anim:String):SserafimLipSyncPose
 	{
-		if(anim == null || anim.length < 1) anim = 'idle';
+		if (anim == null || anim.length < 1)
+			anim = 'idle';
 
-		return switch(char)
+		return switch (char)
 		{
 			case 'sserafim-yunjin':
-				switch(anim)
+				switch (anim)
 				{
 					case 'singUP': pose(6, 8, 22);
 					case 'singRIGHT', 'singLEFT': pose(6, 8, 23);
@@ -106,7 +110,7 @@ class SserafimLipSyncSprite extends FlxAnimate
 					default: pose(8, 6, 23);
 				}
 			case 'sserafim-kazuha':
-				switch(anim)
+				switch (anim)
 				{
 					case 'singUP': pose(7, 2, -14);
 					case 'singRIGHT': pose(7, 2, -13);
@@ -116,7 +120,7 @@ class SserafimLipSyncSprite extends FlxAnimate
 					default: pose(5, 4, -13);
 				}
 			case 'sserafim-chaewon':
-				switch(anim)
+				switch (anim)
 				{
 					case 'singUP': pose(38, 0, -168);
 					case 'singRIGHT': pose(39, 1, -165);
@@ -126,7 +130,7 @@ class SserafimLipSyncSprite extends FlxAnimate
 					default: pose(41, 3, -166);
 				}
 			case 'sserafim-eunchae':
-				switch(anim)
+				switch (anim)
 				{
 					case 'singUP': pose(45, 10, -166);
 					case 'singRIGHT': pose(42, 5, -166);
@@ -136,7 +140,7 @@ class SserafimLipSyncSprite extends FlxAnimate
 					default: pose(43, 6, -168);
 				}
 			case 'sserafim-sakura':
-				switch(anim)
+				switch (anim)
 				{
 					case 'singUP': pose(8, 1, -15);
 					case 'singRIGHT': pose(7, 2, -15);

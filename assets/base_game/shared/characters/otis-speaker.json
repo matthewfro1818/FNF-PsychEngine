@@ -1,32 +1,78 @@
 {
-  "version": "1.0.0",
-  "name": "Otis (Speaker Shooter)",
-  "assetPath": "shared:characters/otis",
-  "startingAnimation": "idle",
-  "renderType": "animateatlas",
-  "singTime": 4.0,
-  "offsets": [-13, -132],
-  "cameraOffsets": [-27, 57],
-  "animations": [
-    {
-      "name": "idle",
-      "prefix": "idle"
-    },
-    {
-      "name": "shoot1",
-      "prefix": "shoot right"
-    },
-    {
-      "name": "shoot2",
-      "prefix": "shoot right low"
-    },
-    {
-      "name": "shoot3",
-      "prefix": "shoot left"
-    },
-    {
-      "name": "shoot4",
-      "prefix": "shoot left low"
-    }
-  ]
+    "animations": [
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "idle",
+            "indices": [],
+            "name": "idle"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "shoot right",
+            "indices": [],
+            "name": "shoot1"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "shoot right low",
+            "indices": [],
+            "name": "shoot2"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "shoot left",
+            "indices": [],
+            "name": "shoot3"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "shoot left low",
+            "indices": [],
+            "name": "shoot4"
+        }
+    ],
+    "no_antialiasing": false,
+    "image": "characters/otis",
+    "position": [
+        -13,
+        -132
+    ],
+    "healthicon": "bf",
+    "flip_x": false,
+    "healthbar_colors": [
+        49,
+        176,
+        209
+    ],
+    "camera_position": [
+        -27,
+        57
+    ],
+    "sing_duration": 4,
+    "scale": 1
 }

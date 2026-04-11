@@ -1,9 +1,16 @@
 {
-  "version": "1.0.0",
-  "name": "Gooey Mix Detour 1",
-  "artists": ["FuryGTRX","LeGooey","SillyRetto"],
-  "albumArtAsset": "freeplay/albumRoll/gooeydetour1",
-  "albumTitleAsset": "freeplay/albumRoll/gooeydetour1-text",
-  "albumTitleOffsets": [-11, 0],
-  "albumOSTName": "GOOEY MIX OST"
+    "version": "1.0.0",
+    "name": "Gooey Mix Detour 1",
+    "artists": [
+        "FuryGTRX",
+        "LeGooey",
+        "SillyRetto"
+    ],
+    "albumArtAsset": "freeplay/albumRoll/gooeydetour1",
+    "albumTitleAsset": "freeplay/albumRoll/gooeydetour1-text",
+    "albumTitleOffsets": [
+        -11,
+        0
+    ],
+    "albumOSTName": "GOOEY MIX OST"
 }

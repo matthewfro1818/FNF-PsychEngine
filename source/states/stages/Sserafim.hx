@@ -1,6 +1,7 @@
 package states.stages;
 
 import states.stages.objects.SserafimLipSyncSprite;
+import objects.Character;
 
 class Sserafim extends BaseStage
 {

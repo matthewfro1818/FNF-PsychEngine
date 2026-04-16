@@ -100,14 +100,14 @@ class Character extends FlxSprite {
 				Paths.loadAnimateAtlas(atlas, 'characters/sserafim/chaewon');
 
 				atlas.anim.addBySymbol('idle', 'idle', 24, false);
-				atlas.anim.addBySymbol('singLEFT', 'left', 24, false);
-				atlas.anim.addBySymbol('singDOWN', 'down', 24, false);
-				atlas.anim.addBySymbol('singUP', 'up', 24, false);
-				atlas.anim.addBySymbol('singRIGHT', 'right', 24, false);
-				atlas.anim.addBySymbol('singLEFTmiss', 'left miss', 24, false);
-				atlas.anim.addBySymbol('singDOWNmiss', 'down miss', 24, false);
-				atlas.anim.addBySymbol('singUPmiss', 'up miss', 24, false);
-				atlas.anim.addBySymbol('singRIGHTmiss', 'right miss', 24, false);
+				atlas.anim.addBySymbol('kim left pose', 'singLEFT', 24, false);
+				atlas.anim.addBySymbol('kim down pose', 'singDOWN', 24, false);
+				atlas.anim.addBySymbol('kim up pose', 'singUP', 24, false);
+				atlas.anim.addBySymbol('kim right pose', 'singRIGHT', 24, false);
+				atlas.anim.addBySymbol('kim left miss', 'singLEFTmiss', 24, false);
+				atlas.anim.addBySymbol('kim down miss', 'singDOWNmiss', 24, false);
+				atlas.anim.addBySymbol('kim up miss', 'singUPmiss', 24, false);
+				atlas.anim.addBySymbol('kim right miss', 'singRIGHTmiss', 24, false);
 
 				addOffset('idle', 0, 0);
 				addOffset('singLEFT', 0, 0);
@@ -146,14 +146,14 @@ class Character extends FlxSprite {
 				Paths.loadAnimateAtlas(atlas, 'characters/sserafim/eunchae');
 
 				atlas.anim.addBySymbol('idle', 'idle', 24, false);
-				atlas.anim.addBySymbol('singLEFT', 'left', 24, false);
-				atlas.anim.addBySymbol('singDOWN', 'down', 24, false);
-				atlas.anim.addBySymbol('singUP', 'up', 24, false);
-				atlas.anim.addBySymbol('singRIGHT', 'right', 24, false);
-				atlas.anim.addBySymbol('singLEFTmiss', 'left miss', 24, false);
-				atlas.anim.addBySymbol('singDOWNmiss', 'down miss', 24, false);
-				atlas.anim.addBySymbol('singUPmiss', 'up miss', 24, false);
-				atlas.anim.addBySymbol('singRIGHTmiss', 'right miss', 24, false);
+				atlas.anim.addBySymbol('eunchae left', 'singLEFT', 24, false);
+				atlas.anim.addBySymbol('eunchae down', 'singDOWN', 24, false);
+				atlas.anim.addBySymbol('eunchae up', 'singUP', 24, false);
+				atlas.anim.addBySymbol('eunchae right', 'singRIGHT', 24, false);
+				atlas.anim.addBySymbol('eunchae left miss', 'singLEFTmiss', 24, false);
+				atlas.anim.addBySymbol('eunchae down miss', 'singDOWNmiss', 24, false);
+				atlas.anim.addBySymbol('eunchae up miss', 'singUPmiss', 24, false);
+				atlas.anim.addBySymbol('eunchae right miss', 'singRIGHTmiss', 24, false);
 
 				addOffset('idle', 0, 0);
 				addOffset('singLEFT', 0, 0);
@@ -192,14 +192,14 @@ class Character extends FlxSprite {
 				Paths.loadAnimateAtlas(atlas, 'characters/sserafim/kazuha');
 
 				atlas.anim.addBySymbol('idle', 'idle', 24, false);
-				atlas.anim.addBySymbol('singLEFT', 'left', 24, false);
-				atlas.anim.addBySymbol('singDOWN', 'down', 24, false);
-				atlas.anim.addBySymbol('singUP', 'up', 24, false);
-				atlas.anim.addBySymbol('singRIGHT', 'right', 24, false);
-				atlas.anim.addBySymbol('singLEFTmiss', 'left miss', 24, false);
-				atlas.anim.addBySymbol('singDOWNmiss', 'down miss', 24, false);
-				atlas.anim.addBySymbol('singUPmiss', 'up miss', 24, false);
-				atlas.anim.addBySymbol('singRIGHTmiss', 'right miss', 24, false);
+				atlas.anim.addBySymbol('kazuha left pose', 'singLEFT', 24, false);
+				atlas.anim.addBySymbol('kazuha down pose', 'singDOWN', 24, false);
+				atlas.anim.addBySymbol('kazuha up pose', 'singUP', 24, false);
+				atlas.anim.addBySymbol('kazuha right pose', 'singRIGHT', 24, false);
+				atlas.anim.addBySymbol('kazuha left miss', 'singLEFTmiss', 24, false);
+				atlas.anim.addBySymbol('kazuha down miss', 'singDOWNmiss', 24, false);
+				atlas.anim.addBySymbol('kazuha up miss', 'singUPmiss', 24, false);
+				atlas.anim.addBySymbol('kazuha right miss', 'singRIGHTmiss', 24, false);
 
 				addOffset('idle', 0, 0);
 				addOffset('singLEFT', 0, 0);
@@ -237,28 +237,26 @@ class Character extends FlxSprite {
 				atlas.showPivot = false;
 				Paths.loadAnimateAtlas(atlas, 'characters/sserafim/sserafim-gf');
 
-				atlas.anim.addBySymbol('danceLeft', 'danceLeft', 24, false);
-				atlas.anim.addBySymbol('danceRight', 'danceRight', 24, false);
-				atlas.anim.addBySymbol('danceLeft-beautiful', 'danceLeft', 24, false);
-				atlas.anim.addBySymbol('danceRight-beautiful', 'danceRight', 24, false);
+				atlas.anim.addBySymbol('gf idle', 'danceLeft', 24, false);
+				atlas.anim.addBySymbol('gf idle', 'danceRight', 24, false);
 
-				atlas.anim.addBySymbol('singLEFT', 'left 1', 24, false);
-				atlas.anim.addBySymbol('singDOWN', 'down 1', 24, false);
-				atlas.anim.addBySymbol('singUP', 'up 1', 24, false);
-				atlas.anim.addBySymbol('singRIGHT', 'right 1', 24, false);
-				atlas.anim.addBySymbol('singLEFTmiss', 'left miss 1', 24, false);
-				atlas.anim.addBySymbol('singDOWNmiss', 'down miss 1', 24, false);
-				atlas.anim.addBySymbol('singUPmiss', 'up miss 1', 24, false);
-				atlas.anim.addBySymbol('singRIGHTmiss', 'right miss 1', 24, false);
+				atlas.anim.addBySymbol('gf left 1', 'singLEFT', 24, false);
+				atlas.anim.addBySymbol('gf down 1', 'singDOWN', 24, false);
+				atlas.anim.addBySymbol('gf up 1', 'singUP', 24, false);
+				atlas.anim.addBySymbol('gf right 1', 'singRIGHT', 24, false);
+				atlas.anim.addBySymbol('gf left miss 1', 'singLEFTmiss', 24, false);
+				atlas.anim.addBySymbol('gf down miss 1', 'singDOWNmiss', 24, false);
+				atlas.anim.addBySymbol('gf up miss 1', 'singUPmiss', 24, false);
+				atlas.anim.addBySymbol('gf right miss 1', 'singRIGHTmiss', 24, false);
 
-				atlas.anim.addBySymbol('singLEFT-beautiful', 'left 2', 24, false);
-				atlas.anim.addBySymbol('singDOWN-beautiful', 'down 2', 24, false);
-				atlas.anim.addBySymbol('singUP-beautiful', 'up 2', 24, false);
-				atlas.anim.addBySymbol('singRIGHT-beautiful', 'right 2', 24, false);
-				atlas.anim.addBySymbol('singLEFTmiss-beautiful', 'left miss 2', 24, false);
-				atlas.anim.addBySymbol('singDOWNmiss-beautiful', 'down miss 2', 24, false);
-				atlas.anim.addBySymbol('singUPmiss-beautiful', 'up miss 2', 24, false);
-				atlas.anim.addBySymbol('singRIGHTmiss-beautiful', 'right miss 2', 24, false);
+				atlas.anim.addBySymbol('gf left 2', 'singLEFT-beautiful', 24, false);
+				atlas.anim.addBySymbol('gf down 2', 'singDOWN-beautiful', 24, false);
+				atlas.anim.addBySymbol('gf up 2', 'singUP-beautiful', 24, false);
+				atlas.anim.addBySymbol('gf right 2', 'singRIGHT-beautiful', 24, false);
+				atlas.anim.addBySymbol('gf left miss 2', 'singLEFTmiss-beautiful', 24, false);
+				atlas.anim.addBySymbol('gf down miss 2', 'singDOWNmiss-beautiful', 24, false);
+				atlas.anim.addBySymbol('gf up miss 2', 'singUPmiss-beautiful', 24, false);
+				atlas.anim.addBySymbol('gf right miss 2', 'singRIGHTmiss-beautiful', 24, false);
 
 				addOffset('danceLeft', 0, 0);
 				addOffset('danceRight', 0, 0);
@@ -326,19 +324,19 @@ class Character extends FlxSprite {
 				atlas.anim.addBySymbol('singUPmiss-joint', 'joint up miss', 24, false);
 				atlas.anim.addBySymbol('singRIGHTmiss-joint', 'joint right miss', 24, false);
 
-				atlas.anim.addBySymbol('singLEFT-bf1', 'bf left 1', 24, false);
-				atlas.anim.addBySymbol('singDOWN-bf1', 'bf down 1', 24, false);
-				atlas.anim.addBySymbol('singUP-bf1', 'bf up 1', 24, false);
-				atlas.anim.addBySymbol('singRIGHT-bf1', 'bf right 1', 24, false);
+				atlas.anim.addBySymbol('singLEFT-bf1', 'bf left pose 1', 24, false);
+				atlas.anim.addBySymbol('singDOWN-bf1', 'bf down pose 1', 24, false);
+				atlas.anim.addBySymbol('singUP-bf1', 'bf up pose 1', 24, false);
+				atlas.anim.addBySymbol('singRIGHT-bf1', 'bf right pose 1', 24, false);
 
-				atlas.anim.addBySymbol('singLEFT-bf2', 'bf left 2', 24, false);
-				atlas.anim.addBySymbol('singDOWN-bf2', 'bf down 2', 24, false);
-				atlas.anim.addBySymbol('singUP-bf2', 'bf up 2', 24, false);
-				atlas.anim.addBySymbol('singRIGHT-bf2', 'bf right 2', 24, false);
-				atlas.anim.addBySymbol('singLEFTmiss-bf2', 'style left miss', 24, false);
-				atlas.anim.addBySymbol('singDOWNmiss-bf2', 'style down miss', 24, false);
-				atlas.anim.addBySymbol('singUPmiss-bf2', 'style up miss', 24, false);
-				atlas.anim.addBySymbol('singRIGHTmiss-bf2', 'style right miss', 24, false);
+				atlas.anim.addBySymbol('singLEFT-bf2', 'bf left pose 2', 24, false);
+				atlas.anim.addBySymbol('singDOWN-bf2', 'bf down pose 2', 24, false);
+				atlas.anim.addBySymbol('singUP-bf2', 'bf up pose 2', 24, false);
+				atlas.anim.addBySymbol('singRIGHT-bf2', 'bf right pose 2', 24, false);
+				atlas.anim.addBySymbol('singLEFTmiss-bf2', 'bf left miss', 24, false);
+				atlas.anim.addBySymbol('singDOWNmiss-bf2', 'bf down miss', 24, false);
+				atlas.anim.addBySymbol('singUPmiss-bf2', 'bf up miss', 24, false);
+				atlas.anim.addBySymbol('singRIGHTmiss-bf2', 'bf right miss', 24, false);
 
 				atlas.anim.addBySymbol('firstDeath', 'Death Intro', 24, false);
 				atlas.anim.addBySymbol('deathLoop', 'Death Loop', 24, true);

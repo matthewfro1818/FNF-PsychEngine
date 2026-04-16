@@ -9,8 +9,7 @@ import haxe.Json;
 import backend.Song;
 import states.stages.objects.TankmenBG;
 
-typedef CharacterFile =
-{
+typedef CharacterFile = {
 	var animations:Array<AnimArray>;
 	var image:String;
 	var scale:Float;
@@ -19,7 +18,6 @@ typedef CharacterFile =
 
 	var position:Array<Float>;
 	var camera_position:Array<Float>;
-
 	var flip_x:Bool;
 	var no_antialiasing:Bool;
 	var healthbar_colors:Array<Int>;
@@ -27,8 +25,7 @@ typedef CharacterFile =
 	@:optional var _editor_isPlayer:Null<Bool>;
 }
 
-typedef AnimArray =
-{
+typedef AnimArray = {
 	var anim:String;
 	var name:String;
 	var fps:Int;
@@ -37,8 +34,7 @@ typedef AnimArray =
 	var offsets:Array<Int>;
 }
 
-class Character extends FlxSprite
-{
+class Character extends FlxSprite {
 	/**
 	 * In case a character is missing, it will use this on its place
 	**/
@@ -80,8 +76,7 @@ class Character extends FlxSprite
 	public var originalFlipX:Bool = false;
 	public var editorIsPlayer:Null<Bool> = null;
 
-	public function new(x:Float, y:Float, ?character:String = 'bf', ?isPlayer:Bool = false)
-	{
+	public function new(x:Float, y:Float, ?character:String = 'bf', ?isPlayer:Bool = false) {
 		super(x, y);
 
 		animation = new PsychAnimationController(this);
@@ -90,19 +85,351 @@ class Character extends FlxSprite
 		this.isPlayer = isPlayer;
 		changeCharacter(character);
 
-		switch (curCharacter)
-		{
+		switch (curCharacter) {
 			case 'pico-speaker':
 				skipDance = true;
 				loadMappedAnims();
 				playAnim("shoot1");
 			case 'pico-blazin', 'darnell-blazin':
 				skipDance = true;
+			case 'sserafim-chaewon':
+				#if flxanimate
+				isAnimateAtlas = true;
+				atlas = new FlxAnimate();
+				atlas.showPivot = false;
+				Paths.loadAnimateAtlas(atlas, 'characters/sserafim/chaewon');
+
+				atlas.anim.addBySymbol('idle', 'idle', 24, false);
+				atlas.anim.addBySymbol('singLEFT', 'left', 24, false);
+				atlas.anim.addBySymbol('singDOWN', 'down', 24, false);
+				atlas.anim.addBySymbol('singUP', 'up', 24, false);
+				atlas.anim.addBySymbol('singRIGHT', 'right', 24, false);
+				atlas.anim.addBySymbol('singLEFTmiss', 'left miss', 24, false);
+				atlas.anim.addBySymbol('singDOWNmiss', 'down miss', 24, false);
+				atlas.anim.addBySymbol('singUPmiss', 'up miss', 24, false);
+				atlas.anim.addBySymbol('singRIGHTmiss', 'right miss', 24, false);
+
+				addOffset('idle', 0, 0);
+				addOffset('singLEFT', 0, 0);
+				addOffset('singDOWN', 0, 0);
+				addOffset('singUP', 0, 0);
+				addOffset('singRIGHT', 0, 0);
+				addOffset('singLEFTmiss', 0, 0);
+				addOffset('singDOWNmiss', 0, 0);
+				addOffset('singUPmiss', 0, 0);
+				addOffset('singRIGHTmiss', 0, 0);
+
+				imageFile = 'characters/sserafim/chaewon';
+				jsonScale = 1;
+				scale.set(1, 1);
+				updateHitbox();
+				positionArray = [0, 330];
+				cameraPosition = [0, 330];
+				healthIcon = 'bf';
+				singDuration = 4;
+				flipX = (false != isPlayer);
+				healthColorArray = [49, 176, 209];
+				vocalsFile = '';
+				originalFlipX = false;
+				editorIsPlayer = null;
+				noAntialiasing = false;
+				antialiasing = ClientPrefs.data.antialiasing;
+				copyAtlasValues();
+				return;
+				#end
+
+			case 'sserafim-eunchae':
+				#if flxanimate
+				isAnimateAtlas = true;
+				atlas = new FlxAnimate();
+				atlas.showPivot = false;
+				Paths.loadAnimateAtlas(atlas, 'characters/sserafim/eunchae');
+
+				atlas.anim.addBySymbol('idle', 'idle', 24, false);
+				atlas.anim.addBySymbol('singLEFT', 'left', 24, false);
+				atlas.anim.addBySymbol('singDOWN', 'down', 24, false);
+				atlas.anim.addBySymbol('singUP', 'up', 24, false);
+				atlas.anim.addBySymbol('singRIGHT', 'right', 24, false);
+				atlas.anim.addBySymbol('singLEFTmiss', 'left miss', 24, false);
+				atlas.anim.addBySymbol('singDOWNmiss', 'down miss', 24, false);
+				atlas.anim.addBySymbol('singUPmiss', 'up miss', 24, false);
+				atlas.anim.addBySymbol('singRIGHTmiss', 'right miss', 24, false);
+
+				addOffset('idle', 0, 0);
+				addOffset('singLEFT', 0, 0);
+				addOffset('singDOWN', 0, 0);
+				addOffset('singUP', 0, 0);
+				addOffset('singRIGHT', 0, 0);
+				addOffset('singLEFTmiss', 0, 0);
+				addOffset('singDOWNmiss', 0, 0);
+				addOffset('singUPmiss', 0, 0);
+				addOffset('singRIGHTmiss', 0, 0);
+
+				imageFile = 'characters/sserafim/eunchae';
+				jsonScale = 1;
+				scale.set(1, 1);
+				updateHitbox();
+				positionArray = [0, 260];
+				cameraPosition = [0, 260];
+				healthIcon = 'bf';
+				singDuration = 4;
+				flipX = (false != isPlayer);
+				healthColorArray = [49, 176, 209];
+				vocalsFile = '';
+				originalFlipX = false;
+				editorIsPlayer = null;
+				noAntialiasing = false;
+				antialiasing = ClientPrefs.data.antialiasing;
+				copyAtlasValues();
+				return;
+				#end
+
+			case 'sserafim-kazuha':
+				#if flxanimate
+				isAnimateAtlas = true;
+				atlas = new FlxAnimate();
+				atlas.showPivot = false;
+				Paths.loadAnimateAtlas(atlas, 'characters/sserafim/kazuha');
+
+				atlas.anim.addBySymbol('idle', 'idle', 24, false);
+				atlas.anim.addBySymbol('singLEFT', 'left', 24, false);
+				atlas.anim.addBySymbol('singDOWN', 'down', 24, false);
+				atlas.anim.addBySymbol('singUP', 'up', 24, false);
+				atlas.anim.addBySymbol('singRIGHT', 'right', 24, false);
+				atlas.anim.addBySymbol('singLEFTmiss', 'left miss', 24, false);
+				atlas.anim.addBySymbol('singDOWNmiss', 'down miss', 24, false);
+				atlas.anim.addBySymbol('singUPmiss', 'up miss', 24, false);
+				atlas.anim.addBySymbol('singRIGHTmiss', 'right miss', 24, false);
+
+				addOffset('idle', 0, 0);
+				addOffset('singLEFT', 0, 0);
+				addOffset('singDOWN', 0, 0);
+				addOffset('singUP', 0, 0);
+				addOffset('singRIGHT', 0, 0);
+				addOffset('singLEFTmiss', 0, 0);
+				addOffset('singDOWNmiss', 0, 0);
+				addOffset('singUPmiss', 0, 0);
+				addOffset('singRIGHTmiss', 0, 0);
+
+				imageFile = 'characters/sserafim/kazuha';
+				jsonScale = 1;
+				scale.set(1, 1);
+				updateHitbox();
+				positionArray = [0, 200];
+				cameraPosition = [0, 200];
+				healthIcon = 'kazuha';
+				singDuration = 4;
+				flipX = (false != isPlayer);
+				healthColorArray = [49, 176, 209];
+				vocalsFile = '';
+				originalFlipX = false;
+				editorIsPlayer = null;
+				noAntialiasing = false;
+				antialiasing = ClientPrefs.data.antialiasing;
+				copyAtlasValues();
+				return;
+				#end
+
+			case 'sserafim-gf':
+				#if flxanimate
+				isAnimateAtlas = true;
+				atlas = new FlxAnimate();
+				atlas.showPivot = false;
+				Paths.loadAnimateAtlas(atlas, 'characters/sserafim/sserafim-gf');
+
+				atlas.anim.addBySymbol('danceLeft', 'danceLeft', 24, false);
+				atlas.anim.addBySymbol('danceRight', 'danceRight', 24, false);
+				atlas.anim.addBySymbol('danceLeft-beautiful', 'danceLeft', 24, false);
+				atlas.anim.addBySymbol('danceRight-beautiful', 'danceRight', 24, false);
+
+				atlas.anim.addBySymbol('singLEFT', 'left 1', 24, false);
+				atlas.anim.addBySymbol('singDOWN', 'down 1', 24, false);
+				atlas.anim.addBySymbol('singUP', 'up 1', 24, false);
+				atlas.anim.addBySymbol('singRIGHT', 'right 1', 24, false);
+				atlas.anim.addBySymbol('singLEFTmiss', 'left miss 1', 24, false);
+				atlas.anim.addBySymbol('singDOWNmiss', 'down miss 1', 24, false);
+				atlas.anim.addBySymbol('singUPmiss', 'up miss 1', 24, false);
+				atlas.anim.addBySymbol('singRIGHTmiss', 'right miss 1', 24, false);
+
+				atlas.anim.addBySymbol('singLEFT-beautiful', 'left 2', 24, false);
+				atlas.anim.addBySymbol('singDOWN-beautiful', 'down 2', 24, false);
+				atlas.anim.addBySymbol('singUP-beautiful', 'up 2', 24, false);
+				atlas.anim.addBySymbol('singRIGHT-beautiful', 'right 2', 24, false);
+				atlas.anim.addBySymbol('singLEFTmiss-beautiful', 'left miss 2', 24, false);
+				atlas.anim.addBySymbol('singDOWNmiss-beautiful', 'down miss 2', 24, false);
+				atlas.anim.addBySymbol('singUPmiss-beautiful', 'up miss 2', 24, false);
+				atlas.anim.addBySymbol('singRIGHTmiss-beautiful', 'right miss 2', 24, false);
+
+				addOffset('danceLeft', 0, 0);
+				addOffset('danceRight', 0, 0);
+				addOffset('danceLeft-beautiful', 0, 0);
+				addOffset('danceRight-beautiful', 0, 0);
+				addOffset('singLEFT', 0, 0);
+				addOffset('singDOWN', 0, 0);
+				addOffset('singUP', 0, 0);
+				addOffset('singRIGHT', 0, 0);
+				addOffset('singLEFTmiss', 0, 0);
+				addOffset('singDOWNmiss', 0, 0);
+				addOffset('singUPmiss', 0, 0);
+				addOffset('singRIGHTmiss', 0, 0);
+				addOffset('singLEFT-beautiful', 0, 0);
+				addOffset('singDOWN-beautiful', 0, 0);
+				addOffset('singUP-beautiful', 0, 0);
+				addOffset('singRIGHT-beautiful', 0, 0);
+				addOffset('singLEFTmiss-beautiful', 0, 0);
+				addOffset('singDOWNmiss-beautiful', 0, 0);
+				addOffset('singUPmiss-beautiful', 0, 0);
+				addOffset('singRIGHTmiss-beautiful', 0, 0);
+
+				imageFile = 'characters/sserafim/sserafim-gf';
+				jsonScale = 1;
+				scale.set(1, 1);
+				updateHitbox();
+				positionArray = [0, 0];
+				cameraPosition = [0, 0];
+				healthIcon = 'gf';
+				singDuration = 4;
+				flipX = (false != isPlayer);
+				healthColorArray = [49, 176, 209];
+				vocalsFile = '';
+				originalFlipX = false;
+				editorIsPlayer = null;
+				noAntialiasing = false;
+				antialiasing = ClientPrefs.data.antialiasing;
+				copyAtlasValues();
+				return;
+				#end
+
+			case 'sserafim-sakura':
+				#if flxanimate
+				isAnimateAtlas = true;
+				atlas = new FlxAnimate();
+				atlas.showPivot = false;
+				Paths.loadAnimateAtlas(atlas, 'characters/sserafim/sakura');
+
+				atlas.anim.addBySymbol('idle', 'idle', 24, false);
+				atlas.anim.addBySymbol('singLEFT', 'sakura pose left', 24, false);
+				atlas.anim.addBySymbol('singDOWN', 'sakura pose down', 24, false);
+				atlas.anim.addBySymbol('singUP', 'sakura pose up', 24, false);
+				atlas.anim.addBySymbol('singRIGHT', 'sakura pose right', 24, false);
+				atlas.anim.addBySymbol('singLEFTmiss', 'sakura left miss', 24, false);
+				atlas.anim.addBySymbol('singDOWNmiss', 'sakura down miss', 24, false);
+				atlas.anim.addBySymbol('singUPmiss', 'sakura up miss', 24, false);
+				atlas.anim.addBySymbol('singRIGHTmiss', 'sakura right miss', 24, false);
+
+				atlas.anim.addBySymbol('singLEFT-joint', 'joint pose left', 24, false);
+				atlas.anim.addBySymbol('singDOWN-joint', 'joint pose down', 24, false);
+				atlas.anim.addBySymbol('singUP-joint', 'joint pose up', 24, false);
+				atlas.anim.addBySymbol('singRIGHT-joint', 'joint pose right', 24, false);
+				atlas.anim.addBySymbol('singLEFTmiss-joint', 'joint left miss', 24, false);
+				atlas.anim.addBySymbol('singDOWNmiss-joint', 'joint down miss', 24, false);
+				atlas.anim.addBySymbol('singUPmiss-joint', 'joint up miss', 24, false);
+				atlas.anim.addBySymbol('singRIGHTmiss-joint', 'joint right miss', 24, false);
+
+				atlas.anim.addBySymbol('singLEFT-bf1', 'bf left 1', 24, false);
+				atlas.anim.addBySymbol('singDOWN-bf1', 'bf down 1', 24, false);
+				atlas.anim.addBySymbol('singUP-bf1', 'bf up 1', 24, false);
+				atlas.anim.addBySymbol('singRIGHT-bf1', 'bf right 1', 24, false);
+
+				atlas.anim.addBySymbol('singLEFT-bf2', 'bf left 2', 24, false);
+				atlas.anim.addBySymbol('singDOWN-bf2', 'bf down 2', 24, false);
+				atlas.anim.addBySymbol('singUP-bf2', 'bf up 2', 24, false);
+				atlas.anim.addBySymbol('singRIGHT-bf2', 'bf right 2', 24, false);
+				atlas.anim.addBySymbol('singLEFTmiss-bf2', 'style left miss', 24, false);
+				atlas.anim.addBySymbol('singDOWNmiss-bf2', 'style down miss', 24, false);
+				atlas.anim.addBySymbol('singUPmiss-bf2', 'style up miss', 24, false);
+				atlas.anim.addBySymbol('singRIGHTmiss-bf2', 'style right miss', 24, false);
+
+				atlas.anim.addBySymbol('firstDeath', 'Death Intro', 24, false);
+				atlas.anim.addBySymbol('deathLoop', 'Death Loop', 24, true);
+				atlas.anim.addBySymbol('deathConfirm', 'Death Confirm', 24, false);
+
+				for (animName in [
+					'idle', 'singLEFT', 'singDOWN', 'singUP', 'singRIGHT', 'singLEFTmiss', 'singDOWNmiss', 'singUPmiss', 'singRIGHTmiss', 'singLEFT-joint',
+					'singDOWN-joint', 'singUP-joint', 'singRIGHT-joint', 'singLEFTmiss-joint', 'singDOWNmiss-joint', 'singUPmiss-joint',
+					'singRIGHTmiss-joint', 'singLEFT-bf1', 'singDOWN-bf1', 'singUP-bf1', 'singRIGHT-bf1', 'singLEFT-bf2', 'singDOWN-bf2', 'singUP-bf2',
+					'singRIGHT-bf2', 'singLEFTmiss-bf2', 'singDOWNmiss-bf2', 'singUPmiss-bf2', 'singRIGHTmiss-bf2'
+				])
+					addOffset(animName, 0, 0);
+
+				addOffset('firstDeath', 20, -220);
+				addOffset('deathLoop', 20, -220);
+				addOffset('deathConfirm', 20, -220);
+
+				imageFile = 'characters/sserafim/sakura';
+				jsonScale = 1;
+				scale.set(1, 1);
+				updateHitbox();
+				positionArray = [0, 0];
+				cameraPosition = [0, 0];
+				healthIcon = 'bf';
+				singDuration = 4;
+				flipX = (true != isPlayer);
+				healthColorArray = [49, 176, 209];
+				vocalsFile = '';
+				originalFlipX = true;
+				editorIsPlayer = null;
+				noAntialiasing = false;
+				antialiasing = ClientPrefs.data.antialiasing;
+				copyAtlasValues();
+				return;
+				#end
+
+			case 'sserafim-yunjin':
+				#if flxanimate
+				isAnimateAtlas = true;
+				atlas = new FlxAnimate();
+				atlas.showPivot = false;
+				Paths.loadAnimateAtlas(atlas, 'characters/sserafim/yunjin');
+
+				atlas.anim.addBySymbol('doorclosed', 'doorclosed', 24, false);
+				atlas.anim.addBySymbol('kick1', 'kick1', 24, false);
+				atlas.anim.addBySymbol('kick2', 'kick2', 24, false);
+				atlas.anim.addBySymbol('idle', 'idle', 24, false);
+				atlas.anim.addBySymbol('singLEFT', 'left', 24, false);
+				atlas.anim.addBySymbol('singDOWN', 'down', 24, false);
+				atlas.anim.addBySymbol('singUP', 'up', 24, false);
+				atlas.anim.addBySymbol('singRIGHT', 'right', 24, false);
+				atlas.anim.addBySymbol('singLEFTmiss', 'left miss', 24, false);
+				atlas.anim.addBySymbol('singDOWNmiss', 'down miss', 24, false);
+				atlas.anim.addBySymbol('singUPmiss', 'up miss', 24, false);
+				atlas.anim.addBySymbol('singRIGHTmiss', 'right miss', 24, false);
+
+				addOffset('doorclosed', 0, 0);
+				addOffset('kick1', 0, 0);
+				addOffset('kick2', 0, 0);
+				addOffset('idle', 0, 0);
+				addOffset('singLEFT', 0, 0);
+				addOffset('singDOWN', 0, 0);
+				addOffset('singUP', 0, 0);
+				addOffset('singRIGHT', 0, 0);
+				addOffset('singLEFTmiss', 0, 0);
+				addOffset('singDOWNmiss', 0, 0);
+				addOffset('singUPmiss', 0, 0);
+				addOffset('singRIGHTmiss', 0, 0);
+
+				imageFile = 'characters/sserafim/yunjin';
+				jsonScale = 1;
+				scale.set(1, 1);
+				updateHitbox();
+				positionArray = [2, 347];
+				cameraPosition = [2, 347];
+				healthIcon = 'bf';
+				singDuration = 4;
+				flipX = (false != isPlayer);
+				healthColorArray = [49, 176, 209];
+				vocalsFile = '';
+				originalFlipX = false;
+				editorIsPlayer = null;
+				noAntialiasing = false;
+				antialiasing = ClientPrefs.data.antialiasing;
+				copyAtlasValues();
+				return;
+				#end
 		}
 	}
 
-	public function changeCharacter(character:String)
-	{
+	public function changeCharacter(character:String) {
 		animationsArray = [];
 		animOffsets = [];
 		curCharacter = character;
@@ -122,16 +449,13 @@ class Character extends FlxSprite
 			missingText.alignment = CENTER;
 		}
 
-		try
-		{
+		try {
 			#if MODS_ALLOWED
 			loadCharacterFile(Json.parse(File.getContent(path)));
 			#else
 			loadCharacterFile(Json.parse(Assets.getText(path)));
 			#end
-		}
-		catch (e:Dynamic)
-		{
+		} catch (e:Dynamic) {
 			trace('Error loading character file of "$character": $e');
 		}
 
@@ -141,8 +465,7 @@ class Character extends FlxSprite
 		dance();
 	}
 
-	public function loadCharacterFile(json:Dynamic)
-	{
+	public function loadCharacterFile(json:Dynamic) {
 		isAnimateAtlas = false;
 
 		#if flxanimate
@@ -154,21 +477,16 @@ class Character extends FlxSprite
 		scale.set(1, 1);
 		updateHitbox();
 
-		if (!isAnimateAtlas)
-		{
+		if (!isAnimateAtlas) {
 			frames = Paths.getMultiAtlas(json.image.split(','));
 		}
 		#if flxanimate
-		else
-		{
+		else {
 			atlas = new FlxAnimate();
 			atlas.showPivot = false;
-			try
-			{
+			try {
 				Paths.loadAnimateAtlas(atlas, json.image);
-			}
-			catch (e:haxe.Exception)
-			{
+			} catch (e:haxe.Exception) {
 				FlxG.log.warn('Could not load atlas ${json.image}: $e');
 				trace(e.stack);
 			}
@@ -177,8 +495,7 @@ class Character extends FlxSprite
 
 		imageFile = json.image;
 		jsonScale = json.scale;
-		if (json.scale != 1)
-		{
+		if (json.scale != 1) {
 			scale.set(jsonScale, jsonScale);
 			updateHitbox();
 		}
@@ -202,26 +519,22 @@ class Character extends FlxSprite
 
 		// animations
 		animationsArray = json.animations;
-		if (animationsArray != null && animationsArray.length > 0)
-		{
-			for (anim in animationsArray)
-			{
+		if (animationsArray != null && animationsArray.length > 0) {
+			for (anim in animationsArray) {
 				var animAnim:String = '' + anim.anim;
 				var animName:String = '' + anim.name;
 				var animFps:Int = anim.fps;
 				var animLoop:Bool = !!anim.loop; // Bruh
 				var animIndices:Array<Int> = anim.indices;
 
-				if (!isAnimateAtlas)
-				{
+				if (!isAnimateAtlas) {
 					if (animIndices != null && animIndices.length > 0)
 						animation.addByIndices(animAnim, animName, animIndices, "", animFps, animLoop);
 					else
 						animation.addByPrefix(animAnim, animName, animFps, animLoop);
 				}
 				#if flxanimate
-				else
-				{
+				else {
 					if (animIndices != null && animIndices.length > 0)
 						atlas.anim.addBySymbolIndices(animAnim, animName, animIndices, animFps, animLoop);
 					else
@@ -242,50 +555,39 @@ class Character extends FlxSprite
 		// trace('Loaded file to character ' + curCharacter);
 	}
 
-	override function update(elapsed:Float)
-	{
+	override function update(elapsed:Float) {
 		if (isAnimateAtlas)
 			atlas.update(elapsed);
 
 		if (debugMode
 			|| (!isAnimateAtlas && animation.curAnim == null)
-			|| (isAnimateAtlas && (atlas.anim.curInstance == null || atlas.anim.curSymbol == null)))
-		{
+			|| (isAnimateAtlas && (atlas.anim.curInstance == null || atlas.anim.curSymbol == null))) {
 			super.update(elapsed);
 			return;
 		}
 
-		if (heyTimer > 0)
-		{
+		if (heyTimer > 0) {
 			var rate:Float = (PlayState.instance != null ? PlayState.instance.playbackRate : 1.0);
 			heyTimer -= elapsed * rate;
-			if (heyTimer <= 0)
-			{
+			if (heyTimer <= 0) {
 				var anim:String = getAnimationName();
-				if (specialAnim && (anim == 'hey' || anim == 'cheer'))
-				{
+				if (specialAnim && (anim == 'hey' || anim == 'cheer')) {
 					specialAnim = false;
 					dance();
 				}
 				heyTimer = 0;
 			}
-		}
-		else if (specialAnim && isAnimationFinished())
-		{
+		} else if (specialAnim && isAnimationFinished()) {
 			specialAnim = false;
 			dance();
-		}
-		else if (getAnimationName().endsWith('miss') && isAnimationFinished())
-		{
+		} else if (getAnimationName().endsWith('miss') && isAnimationFinished()) {
 			dance();
 			finishAnimation();
 		}
 
-		switch (curCharacter)
-		{
+		switch (curCharacter) {
 			case 'pico-speaker':
-				if (animationNotes.length > 0 && Conductor.songPosition > animationNotes[0][0])
-				{
+				if (animationNotes.length > 0 && Conductor.songPosition > animationNotes[0][0]) {
 					var noteData:Int = 1;
 					if (animationNotes[0][1] > 2)
 						noteData = 3;
@@ -304,8 +606,7 @@ class Character extends FlxSprite
 			holdTimer = 0;
 
 		if (!isPlayer
-			&& holdTimer >= Conductor.stepCrochet * (0.0011 #if FLX_PITCH / (FlxG.sound.music != null ? FlxG.sound.music.pitch : 1) #end) * singDuration)
-		{
+			&& holdTimer >= Conductor.stepCrochet * (0.0011 #if FLX_PITCH / (FlxG.sound.music != null ? FlxG.sound.music.pitch : 1) #end) * singDuration) {
 			dance();
 			holdTimer = 0;
 		}
@@ -317,27 +618,23 @@ class Character extends FlxSprite
 		super.update(elapsed);
 	}
 
-	inline public function isAnimationNull():Bool
-	{
+	inline public function isAnimationNull():Bool {
 		return !isAnimateAtlas ? (animation.curAnim == null) : (atlas.anim.curInstance == null || atlas.anim.curSymbol == null);
 	}
 
 	var _lastPlayedAnimation:String;
 
-	inline public function getAnimationName():String
-	{
+	inline public function getAnimationName():String {
 		return _lastPlayedAnimation;
 	}
 
-	public function isAnimationFinished():Bool
-	{
+	public function isAnimationFinished():Bool {
 		if (isAnimationNull())
 			return false;
 		return !isAnimateAtlas ? animation.curAnim.finished : atlas.anim.finished;
 	}
 
-	public function finishAnimation():Void
-	{
+	public function finishAnimation():Void {
 		if (isAnimationNull())
 			return;
 
@@ -347,28 +644,24 @@ class Character extends FlxSprite
 			atlas.anim.curFrame = atlas.anim.length - 1;
 	}
 
-	public function hasAnimation(anim:String):Bool
-	{
+	public function hasAnimation(anim:String):Bool {
 		return animOffsets.exists(anim);
 	}
 
 	public var animPaused(get, set):Bool;
 
-	private function get_animPaused():Bool
-	{
+	private function get_animPaused():Bool {
 		if (isAnimationNull())
 			return false;
 		return !isAnimateAtlas ? animation.curAnim.paused : atlas.anim.isPlaying;
 	}
 
-	private function set_animPaused(value:Bool):Bool
-	{
+	private function set_animPaused(value:Bool):Bool {
 		if (isAnimationNull())
 			return value;
 		if (!isAnimateAtlas)
 			animation.curAnim.paused = value;
-		else
-		{
+		else {
 			if (value)
 				atlas.pauseAnimation();
 			else
@@ -383,47 +676,37 @@ class Character extends FlxSprite
 	/**
 	 * FOR GF DANCING SHIT
 	 */
-	public function dance()
-	{
-		if (!debugMode && !skipDance && !specialAnim)
-		{
-			if (danceIdle)
-			{
+	public function dance() {
+		if (!debugMode && !skipDance && !specialAnim) {
+			if (danceIdle) {
 				danced = !danced;
 
 				if (danced)
 					playAnim('danceRight' + idleSuffix);
 				else
 					playAnim('danceLeft' + idleSuffix);
-			}
-			else if (hasAnimation('idle' + idleSuffix))
+			} else if (hasAnimation('idle' + idleSuffix))
 				playAnim('idle' + idleSuffix);
 		}
 	}
 
-	public function playAnim(AnimName:String, Force:Bool = false, Reversed:Bool = false, Frame:Int = 0):Void
-	{
+	public function playAnim(AnimName:String, Force:Bool = false, Reversed:Bool = false, Frame:Int = 0):Void {
 		specialAnim = false;
-		if (!isAnimateAtlas)
-		{
+		if (!isAnimateAtlas) {
 			animation.play(AnimName, Force, Reversed, Frame);
-		}
-		else
-		{
+		} else {
 			atlas.anim.play(AnimName, Force, Reversed, Frame);
 			atlas.update(0);
 		}
 		_lastPlayedAnimation = AnimName;
 
-		if (hasAnimation(AnimName))
-		{
+		if (hasAnimation(AnimName)) {
 			var daOffset = animOffsets.get(AnimName);
 			offset.set(daOffset[0], daOffset[1]);
 		}
 		// else offset.set(0, 0);
 
-		if (curCharacter.startsWith('gf-') || curCharacter == 'gf')
-		{
+		if (curCharacter.startsWith('gf-') || curCharacter == 'gf') {
 			if (AnimName == 'singLEFT')
 				danced = true;
 			else if (AnimName == 'singRIGHT')
@@ -434,10 +717,8 @@ class Character extends FlxSprite
 		}
 	}
 
-	function loadMappedAnims():Void
-	{
-		try
-		{
+	function loadMappedAnims():Void {
+		try {
 			var songData:SwagSong = Song.getChart('picospeaker', Paths.formatToSongPath(Song.loadedSongName));
 			if (songData != null)
 				for (section in songData.notes)
@@ -446,14 +727,10 @@ class Character extends FlxSprite
 
 			TankmenBG.animationNotes = animationNotes;
 			animationNotes.sort(sortAnims);
-		}
-		catch (e:Dynamic)
-		{
-		}
+		} catch (e:Dynamic) {}
 	}
 
-	function sortAnims(Obj1:Array<Dynamic>, Obj2:Array<Dynamic>):Int
-	{
+	function sortAnims(Obj1:Array<Dynamic>, Obj2:Array<Dynamic>):Int {
 		return FlxSort.byValues(FlxSort.ASCENDING, Obj1[0], Obj2[0]);
 	}
 
@@ -461,17 +738,13 @@ class Character extends FlxSprite
 
 	private var settingCharacterUp:Bool = true;
 
-	public function recalculateDanceIdle()
-	{
+	public function recalculateDanceIdle() {
 		var lastDanceIdle:Bool = danceIdle;
 		danceIdle = (hasAnimation('danceLeft' + idleSuffix) && hasAnimation('danceRight' + idleSuffix));
 
-		if (settingCharacterUp)
-		{
+		if (settingCharacterUp) {
 			danceEveryNumBeats = (danceIdle ? 1 : 2);
-		}
-		else if (lastDanceIdle != danceIdle)
-		{
+		} else if (lastDanceIdle != danceIdle) {
 			var calc:Float = danceEveryNumBeats;
 			if (danceIdle)
 				calc /= 2;
@@ -483,13 +756,11 @@ class Character extends FlxSprite
 		settingCharacterUp = false;
 	}
 
-	public function addOffset(name:String, x:Float = 0, y:Float = 0)
-	{
+	public function addOffset(name:String, x:Float = 0, y:Float = 0) {
 		animOffsets[name] = [x, y];
 	}
 
-	public function quickAnimAdd(name:String, anim:String)
-	{
+	public function quickAnimAdd(name:String, anim:String) {
 		animation.addByPrefix(name, anim, 24, false);
 	}
 
@@ -500,26 +771,21 @@ class Character extends FlxSprite
 	#if flxanimate
 	public var atlas:FlxAnimate;
 
-	public override function draw()
-	{
+	public override function draw() {
 		var lastAlpha:Float = alpha;
 		var lastColor:FlxColor = color;
-		if (missingCharacter)
-		{
+		if (missingCharacter) {
 			alpha *= 0.6;
 			color = FlxColor.BLACK;
 		}
 
-		if (isAnimateAtlas)
-		{
-			if (atlas.anim.curInstance != null)
-			{
+		if (isAnimateAtlas) {
+			if (atlas.anim.curInstance != null) {
 				copyAtlasValues();
 				atlas.draw();
 				alpha = lastAlpha;
 				color = lastColor;
-				if (missingCharacter && visible)
-				{
+				if (missingCharacter && visible) {
 					missingText.x = getMidpoint().x - 150;
 					missingText.y = getMidpoint().y - 10;
 					missingText.draw();
@@ -528,8 +794,7 @@ class Character extends FlxSprite
 			return;
 		}
 		super.draw();
-		if (missingCharacter && visible)
-		{
+		if (missingCharacter && visible) {
 			alpha = lastAlpha;
 			color = lastColor;
 			missingText.x = getMidpoint().x - 150;
@@ -538,8 +803,7 @@ class Character extends FlxSprite
 		}
 	}
 
-	public function copyAtlasValues()
-	{
+	public function copyAtlasValues() {
 		@:privateAccess
 		{
 			atlas.cameras = cameras;
@@ -561,8 +825,7 @@ class Character extends FlxSprite
 		}
 	}
 
-	public override function destroy()
-	{
+	public override function destroy() {
 		atlas = FlxDestroyUtil.destroy(atlas);
 		super.destroy();
 	}

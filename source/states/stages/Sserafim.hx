@@ -19,13 +19,13 @@ class Sserafim extends BaseStage
 
 		setDefaultGF('gf');
 
-		add(new BGSprite('sserafim/bg', -1888, -660));
-		add(new BGSprite('sserafim/back-tables', -1908, 267));
-		add(new BGSprite('sserafim/floor', -2232, 631));
-		add(new BGSprite('sserafim/back-stools', -1551, 431));
-		add(new BGSprite('sserafim/front-stools', -1551, 431));
-		add(new BGSprite('sserafim/truck-stuff', -983, -707));
-		add(new BGSprite('sserafim/truck-door', -980, -173));
+		add(new BGSprite('bg', -1888, -660));
+		add(new BGSprite('back-tables', -1908, 267));
+		add(new BGSprite('floor', -2232, 631));
+		add(new BGSprite('back-stools', -1551, 431));
+		add(new BGSprite('front-stools', -1551, 431));
+		add(new BGSprite('truck-stuff', -983, -707));
+		add(new BGSprite('truck-door', -980, -173));
 	}
 
 	override function createPost()

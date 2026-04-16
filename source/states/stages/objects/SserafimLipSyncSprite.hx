@@ -1,6 +1,7 @@
 package states.stages.objects;
 
 import objects.Character;
+import flixel.FlxSprite;
 
 #if flxanimate
 import backend.ClientPrefs;
@@ -21,15 +22,17 @@ class SserafimLipSyncSprite extends FlxAnimate
 	{
 		return switch (char)
 		{
-			case 'sserafim-yunjin', 'sserafim-kazuha', 'sserafim-chaewon', 'sserafim-eunchae', 'sserafim-sakura': true;
-			default: false;
+			case 'sserafim-yunjin', 'sserafim-kazuha', 'sserafim-chaewon', 'sserafim-eunchae', 'sserafim-sakura':
+				true;
+			default:
+				false;
 		}
 	}
 
 	public var target:Character;
 	public var shouldSing:Bool = false;
 
-	var alphaMultiplier:Float;
+	var alphaMultiplier:Float = 1;
 
 	public function new(target:Character)
 	{
@@ -38,10 +41,15 @@ class SserafimLipSyncSprite extends FlxAnimate
 		this.target = target;
 		alphaMultiplier = (target != null && target.curCharacter == 'sserafim-chaewon') ? 0.5 : 1;
 
-		var asset:String = (target != null && target.curCharacter == 'sserafim-yunjin') ? 'sserafim-lipsync-yunjin' : 'sserafim-lipsync';
+		var asset:String = (target != null && target.curCharacter == 'sserafim-yunjin')
+			? 'sserafim-lipsync-yunjin'
+			: 'sserafim-lipsync';
+
 		Paths.loadAnimateAtlas(this, asset);
+
 		anim.addBySymbol('lipsync', 'lipsync', 24, false);
 		anim.play('lipsync', true);
+
 		antialiasing = ClientPrefs.data.antialiasing;
 		visible = false;
 	}
@@ -60,7 +68,7 @@ class SserafimLipSyncSprite extends FlxAnimate
 		synchronizeTransform();
 		applyPose();
 
-		if (anim.curInstance != null && anim.curSymbol != null)
+		if (anim != null && anim.curInstance != null && anim.curSymbol != null)
 			anim.curFrame = shouldSing ? getSongFrame() : 0;
 
 		visible = target.visible && target.alpha > 0.001;
@@ -68,12 +76,17 @@ class SserafimLipSyncSprite extends FlxAnimate
 
 	function synchronizeTransform():Void
 	{
+		if (target == null) return;
+
 		x = target.x;
 		y = target.y;
+
 		scale.set(target.scale.x, target.scale.y);
 		scrollFactor.set(target.scrollFactor.x, target.scrollFactor.y);
+
 		flipX = target.flipX;
 		flipY = target.flipY;
+
 		alpha = target.alpha * alphaMultiplier;
 		color = target.color;
 		shader = target.shader;
@@ -82,9 +95,11 @@ class SserafimLipSyncSprite extends FlxAnimate
 
 	function applyPose():Void
 	{
-		var pose:SserafimLipSyncPose = getPose(target.curCharacter, target.getAnimationName());
-		offset.set(pose.offsetX, pose.offsetY);
-		angle = target.angle + pose.angle;
+		if (target == null) return;
+
+		var poseData:SserafimLipSyncPose = getPose(target.curCharacter, target.getAnimationName());
+		offset.set(poseData.offsetX, poseData.offsetY);
+		angle = target.angle + poseData.angle;
 	}
 
 	function getSongFrame():Int
@@ -99,6 +114,7 @@ class SserafimLipSyncSprite extends FlxAnimate
 		var frame:Int = Std.int(Math.floor((Conductor.songPosition / 1000) * 24)) - 1;
 		if (frame < 0)
 			return 0;
+
 		return frame % frameCount;
 	}
 
@@ -117,6 +133,7 @@ class SserafimLipSyncSprite extends FlxAnimate
 					case 'singDOWN', 'idle': pose(8, 6, 23);
 					default: pose(8, 6, 23);
 				}
+
 			case 'sserafim-kazuha':
 				switch (anim)
 				{
@@ -127,6 +144,7 @@ class SserafimLipSyncSprite extends FlxAnimate
 					case 'idle': pose(5, 4, -13);
 					default: pose(5, 4, -13);
 				}
+
 			case 'sserafim-chaewon':
 				switch (anim)
 				{
@@ -137,6 +155,7 @@ class SserafimLipSyncSprite extends FlxAnimate
 					case 'idle': pose(41, 3, -166);
 					default: pose(41, 3, -166);
 				}
+
 			case 'sserafim-eunchae':
 				switch (anim)
 				{
@@ -147,6 +166,7 @@ class SserafimLipSyncSprite extends FlxAnimate
 					case 'idle': pose(43, 6, -168);
 					default: pose(43, 6, -168);
 				}
+
 			case 'sserafim-sakura':
 				switch (anim)
 				{
@@ -161,6 +181,7 @@ class SserafimLipSyncSprite extends FlxAnimate
 					case 'idle': pose(7, 2, -14);
 					default: pose(7, 2, -14);
 				}
+
 			default:
 				pose(0, 0, 0);
 		}

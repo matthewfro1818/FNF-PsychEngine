@@ -1,7 +1,0 @@
-import gooeymix.characters.GooeyBaseCharacter;
-
-class GooeyStressCharacter extends GooeyBaseCharacter {
-	public function new() {
-		super('gooey-stress');
-	}
-}

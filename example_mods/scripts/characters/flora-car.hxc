@@ -1,9 +1,0 @@
-import gooeymix.characters.FloraBaseCharacter;
-
-class FloraCarCharacter extends FloraBaseCharacter
-{
-  public function new()
-  {
-    super('flora-car');
-  }
-}

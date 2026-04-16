@@ -2,6 +2,12 @@ package states.stages.objects;
 
 import objects.Character;
 
+#if flxanimate
+import backend.ClientPrefs;
+import backend.Conductor;
+import backend.Paths;
+import flxanimate.PsychFlxAnimate as FlxAnimate;
+
 typedef SserafimLipSyncPose =
 {
 	var offsetX:Float;
@@ -23,7 +29,7 @@ class SserafimLipSyncSprite extends FlxAnimate
 	public var target:Character;
 	public var shouldSing:Bool = false;
 
-	final alphaMultiplier:Float;
+	var alphaMultiplier:Float;
 
 	public function new(target:Character)
 	{
@@ -46,6 +52,7 @@ class SserafimLipSyncSprite extends FlxAnimate
 
 		if (target == null || !supportsCharacter(target.curCharacter))
 		{
+			shouldSing = false;
 			visible = false;
 			return;
 		}
@@ -53,10 +60,8 @@ class SserafimLipSyncSprite extends FlxAnimate
 		synchronizeTransform();
 		applyPose();
 
-		if (anim.curInstance != null)
-		{
+		if (anim.curInstance != null && anim.curSymbol != null)
 			anim.curFrame = shouldSing ? getSongFrame() : 0;
-		}
 
 		visible = target.visible && target.alpha > 0.001;
 	}
@@ -84,6 +89,9 @@ class SserafimLipSyncSprite extends FlxAnimate
 
 	function getSongFrame():Int
 	{
+		if (anim == null || anim.curInstance == null || anim.curSymbol == null)
+			return 0;
+
 		var frameCount:Int = Std.int(Math.max(anim.length, 1));
 		if (frameCount <= 1)
 			return 0;
@@ -167,3 +175,22 @@ class SserafimLipSyncSprite extends FlxAnimate
 		};
 	}
 }
+#else
+class SserafimLipSyncSprite extends FlxSprite
+{
+	public static function supportsCharacter(char:String):Bool
+	{
+		return false;
+	}
+
+	public var target:Character;
+	public var shouldSing:Bool = false;
+
+	public function new(target:Character)
+	{
+		super();
+		this.target = target;
+		visible = false;
+	}
+}
+#end

@@ -31,13 +31,11 @@ class SserafimLipSyncSprite extends FlxAnimate
 
 	public var target:Character;
 	public var shouldSing:Bool = false;
-
 	var alphaMultiplier:Float = 1;
 
 	public function new(target:Character)
 	{
 		super();
-
 		this.target = target;
 		alphaMultiplier = (target != null && target.curCharacter == 'sserafim-chaewon') ? 0.5 : 1;
 
@@ -46,10 +44,8 @@ class SserafimLipSyncSprite extends FlxAnimate
 			: 'sserafim-lipsync';
 
 		Paths.loadAnimateAtlas(this, asset);
-
 		anim.addBySymbol('lipsync', 'lipsync', 24, false);
 		anim.play('lipsync', true);
-
 		antialiasing = ClientPrefs.data.antialiasing;
 		visible = false;
 	}
@@ -65,41 +61,25 @@ class SserafimLipSyncSprite extends FlxAnimate
 			return;
 		}
 
-		synchronizeTransform();
-		applyPose();
+		x = target.x;
+		y = target.y;
+		scale.set(target.scale.x, target.scale.y);
+		scrollFactor.set(target.scrollFactor.x, target.scrollFactor.y);
+		flipX = target.flipX;
+		flipY = target.flipY;
+		alpha = target.alpha * alphaMultiplier;
+		color = target.color;
+		shader = target.shader;
+		cameras = target.cameras;
+
+		var poseData:SserafimLipSyncPose = getPose(target.curCharacter, target.getAnimationName());
+		offset.set(poseData.offsetX, poseData.offsetY);
+		angle = target.angle + poseData.angle;
 
 		if (anim != null && anim.curInstance != null && anim.curSymbol != null)
 			anim.curFrame = shouldSing ? getSongFrame() : 0;
 
 		visible = target.visible && target.alpha > 0.001;
-	}
-
-	function synchronizeTransform():Void
-	{
-		if (target == null) return;
-
-		x = target.x;
-		y = target.y;
-
-		scale.set(target.scale.x, target.scale.y);
-		scrollFactor.set(target.scrollFactor.x, target.scrollFactor.y);
-
-		flipX = target.flipX;
-		flipY = target.flipY;
-
-		alpha = target.alpha * alphaMultiplier;
-		color = target.color;
-		shader = target.shader;
-		cameras = target.cameras;
-	}
-
-	function applyPose():Void
-	{
-		if (target == null) return;
-
-		var poseData:SserafimLipSyncPose = getPose(target.curCharacter, target.getAnimationName());
-		offset.set(poseData.offsetX, poseData.offsetY);
-		angle = target.angle + poseData.angle;
 	}
 
 	function getSongFrame():Int
@@ -108,92 +88,70 @@ class SserafimLipSyncSprite extends FlxAnimate
 			return 0;
 
 		var frameCount:Int = Std.int(Math.max(anim.length, 1));
-		if (frameCount <= 1)
-			return 0;
+		if (frameCount <= 1) return 0;
 
 		var frame:Int = Std.int(Math.floor((Conductor.songPosition / 1000) * 24)) - 1;
-		if (frame < 0)
-			return 0;
+		if (frame < 0) return 0;
 
 		return frame % frameCount;
 	}
 
 	static function getPose(char:String, anim:String):SserafimLipSyncPose
 	{
-		if (anim == null || anim.length < 1)
-			anim = 'idle';
+		if (anim == null || anim.length < 1) anim = 'idle';
 
 		return switch (char)
 		{
 			case 'sserafim-yunjin':
 				switch (anim)
 				{
-					case 'singUP': pose(6, 8, 22);
-					case 'singRIGHT', 'singLEFT': pose(6, 8, 23);
-					case 'singDOWN', 'idle': pose(8, 6, 23);
-					default: pose(8, 6, 23);
+					case 'singUP': {offsetX: 6, offsetY: 8, angle: 22};
+					case 'singRIGHT', 'singLEFT': {offsetX: 6, offsetY: 8, angle: 23};
+					default: {offsetX: 8, offsetY: 6, angle: 23};
 				}
-
 			case 'sserafim-kazuha':
 				switch (anim)
 				{
-					case 'singUP': pose(7, 2, -14);
-					case 'singRIGHT': pose(7, 2, -13);
-					case 'singDOWN': pose(4, 6, -12);
-					case 'singLEFT': pose(5, 4, -14);
-					case 'idle': pose(5, 4, -13);
-					default: pose(5, 4, -13);
+					case 'singUP': {offsetX: 7, offsetY: 2, angle: -14};
+					case 'singRIGHT': {offsetX: 7, offsetY: 2, angle: -13};
+					case 'singDOWN': {offsetX: 4, offsetY: 6, angle: -12};
+					case 'singLEFT': {offsetX: 5, offsetY: 4, angle: -14};
+					default: {offsetX: 5, offsetY: 4, angle: -13};
 				}
-
 			case 'sserafim-chaewon':
 				switch (anim)
 				{
-					case 'singUP': pose(38, 0, -168);
-					case 'singRIGHT': pose(39, 1, -165);
-					case 'singDOWN': pose(41, 3, -167);
-					case 'singLEFT': pose(40, 2, -165);
-					case 'idle': pose(41, 3, -166);
-					default: pose(41, 3, -166);
+					case 'singUP': {offsetX: 38, offsetY: 0, angle: -168};
+					case 'singRIGHT': {offsetX: 39, offsetY: 1, angle: -165};
+					case 'singDOWN': {offsetX: 41, offsetY: 3, angle: -167};
+					case 'singLEFT': {offsetX: 40, offsetY: 2, angle: -165};
+					default: {offsetX: 41, offsetY: 3, angle: -166};
 				}
-
 			case 'sserafim-eunchae':
 				switch (anim)
 				{
-					case 'singUP': pose(45, 10, -166);
-					case 'singRIGHT': pose(42, 5, -166);
-					case 'singDOWN': pose(41, 3, -168);
-					case 'singLEFT': pose(43, 6, -169);
-					case 'idle': pose(43, 6, -168);
-					default: pose(43, 6, -168);
+					case 'singUP': {offsetX: 45, offsetY: 10, angle: -166};
+					case 'singRIGHT': {offsetX: 42, offsetY: 5, angle: -166};
+					case 'singDOWN': {offsetX: 41, offsetY: 3, angle: -168};
+					case 'singLEFT': {offsetX: 43, offsetY: 6, angle: -169};
+					default: {offsetX: 43, offsetY: 6, angle: -168};
 				}
-
 			case 'sserafim-sakura':
 				switch (anim)
 				{
-					case 'singUP': pose(8, 1, -15);
-					case 'singRIGHT': pose(7, 2, -15);
-					case 'singDOWN': pose(6, 3, -15);
-					case 'singLEFT': pose(7, 2, -14);
-					case 'singUP-joint': pose(10, -1, -14);
-					case 'singRIGHT-joint': pose(6, 3, -15);
-					case 'singDOWN-joint': pose(5, 5, -15);
-					case 'singLEFT-joint': pose(7, 2, -16);
-					case 'idle': pose(7, 2, -14);
-					default: pose(7, 2, -14);
+					case 'singUP': {offsetX: 8, offsetY: 1, angle: -15};
+					case 'singRIGHT': {offsetX: 7, offsetY: 2, angle: -15};
+					case 'singDOWN': {offsetX: 6, offsetY: 3, angle: -15};
+					case 'singLEFT': {offsetX: 7, offsetY: 2, angle: -14};
+					case 'singUP-joint': {offsetX: 10, offsetY: -1, angle: -14};
+					case 'singRIGHT-joint': {offsetX: 6, offsetY: 3, angle: -15};
+					case 'singDOWN-joint': {offsetX: 5, offsetY: 5, angle: -15};
+					case 'singLEFT-joint': {offsetX: 7, offsetY: 2, angle: -16};
+					default: {offsetX: 7, offsetY: 2, angle: -14};
 				}
-
 			default:
-				pose(0, 0, 0);
+				{offsetX: 0, offsetY: 0, angle: 0};
 		}
-	}
-
-	static inline function pose(offsetX:Float, offsetY:Float, angle:Float):SserafimLipSyncPose
-	{
-		return {
-			offsetX: offsetX,
-			offsetY: offsetY,
-			angle: angle
-		};
 	}
 }
 #else

@@ -1,188 +1,121 @@
 package states.stages;
 
-import states.stages.objects.SserafimLipSyncSprite;
+import objects.BGSprite;
 import objects.Character;
+import objects.Note;
+import states.stages.objects.SserafimLipSyncSprite;
+
+using StringTools;
 
 class Sserafim extends BaseStage
 {
-	var opponentStrumsHidden:Bool = false;
-	var storedComboOffset:Array<Int>;
-
-	var currentVisible:Array<Bool> = [false, true, false, false, true, false];
-	var currentSinging:Array<Bool> = [false, false, false, false, false, false];
-	var beautifulGF:Bool = false;
-
-	var dadLipSync:SserafimLipSyncSprite;
-	var boyfriendLipSync:SserafimLipSyncSprite;
+	var chaewon:Character;
+	var eunchae:Character;
+	var kazuha:Character;
 
 	override function create()
 	{
+		super.create();
+
 		setDefaultGF('gf');
+
+		add(new BGSprite('sserafim/bg', -1888, -660));
+		add(new BGSprite('sserafim/back-tables', -1908, 267));
+		add(new BGSprite('sserafim/floor', -2232, 631));
+		add(new BGSprite('sserafim/back-stools', -1551, 431));
+		add(new BGSprite('sserafim/front-stools', -1551, 431));
+		add(new BGSprite('sserafim/truck-stuff', -983, -707));
+		add(new BGSprite('sserafim/truck-door', -980, -173));
 	}
 
 	override function createPost()
 	{
-		storedComboOffset = ClientPrefs.data.comboOffset.copy();
-		ClientPrefs.data.comboOffset = [9999, -50, 9999, -50];
+		super.createPost();
 
-		createLipSyncSprite(dad, dadGroup, false);
-		createLipSyncSprite(boyfriend, boyfriendGroup, true);
-		applyVisibleState();
-		applySingingState();
+		chaewon = new Character(200, -240, 'sserafim-chaewon');
+		chaewon.scrollFactor.set(1, 1);
+		addBehindBF(chaewon);
+
+		eunchae = new Character(250, 290, 'sserafim-eunchae');
+		eunchae.scrollFactor.set(1, 1);
+		add(eunchae);
+
+		kazuha = new Character(-500, 100, 'sserafim-kazuha');
+		kazuha.scrollFactor.set(1, 1);
+		add(kazuha);
 	}
 
-	override function update(elapsed:Float)
+	override function beatHit()
 	{
-		if (!opponentStrumsHidden)
+		super.beatHit();
+
+		if (curBeat % 2 == 0)
 		{
-			hideOpponentStrums();
-			opponentStrumsHidden = true;
+			danceIfNotSinging(chaewon);
+			danceIfNotSinging(eunchae);
+			danceIfNotSinging(kazuha);
 		}
 	}
 
-	override function destroy()
+	override function goodNoteHit(note:Note)
 	{
-		if (storedComboOffset != null)
-			ClientPrefs.data.comboOffset = storedComboOffset.copy();
+		super.goodNoteHit(note);
 
-		super.destroy();
-	}
+		if (note == null) return;
 
-	override function eventCalled(eventName:String, value1:String, value2:String, flValue1:Null<Float>, flValue2:Null<Float>, strumTime:Float)
-	{
-		switch (eventName)
+		switch (note.noteType)
 		{
-			case 'sserafimShow':
-				currentVisible = parseBoolArray(value1, currentVisible);
-				applyVisibleState();
+			case 'ChaewonNote':
+				singCharacter(chaewon, note.noteData);
 
-			case 'sserafimSing':
-				currentSinging = parseBoolArray(value1, currentSinging);
-				applySingingState();
+			case 'EunchaeNote':
+				singCharacter(eunchae, note.noteData);
 
-			case 'sserafimBeautiful':
-				beautifulGF = stringToBool(value1);
-				applyGFAnimationState();
+			case 'YunjinNote':
+				singCharacter(dad, note.noteData);
 
-			case 'sserafimKick':
-				if (stringToBool(value1))
-				{
-					if (gf != null)
-						gf.visible = true;
-					applyGFAnimationState();
-				}
+			case 'KazuhaNote':
+				singCharacter(kazuha, note.noteData);
+
+			case 'sakura-joint':
+				singAll(note.noteData);
 		}
 	}
 
-	function createLipSyncSprite(char:Character, charGroup:FlxSpriteGroup, isBoyfriend:Bool):Void
+	function danceIfNotSinging(char:Character):Void
 	{
-		if (char == null || !SserafimLipSyncSprite.supportsCharacter(char.curCharacter))
+		if (char == null)
 			return;
 
-		var lipSync:SserafimLipSyncSprite = new SserafimLipSyncSprite(char);
-		var targetIndex:Int = members.indexOf(charGroup);
-		if (targetIndex >= 0)
-			insert(targetIndex + 1, lipSync);
-		else
-			add(lipSync);
-
-		if (isBoyfriend)
-			boyfriendLipSync = lipSync;
-		else
-			dadLipSync = lipSync;
+		var anim:String = char.getAnimationName();
+		if (anim == null || !anim.startsWith('sing'))
+			char.dance();
 	}
 
-	function hideOpponentStrums():Void
+	function singCharacter(char:Character, noteData:Int):Void
 	{
-		for (strum in PlayState.instance.opponentStrums.members)
-		{
-			if (strum == null)
-				continue;
-			strum.visible = false;
-			strum.alpha = 0.0001;
-			strum.active = false;
-		}
-	}
-
-	function applyVisibleState():Void
-	{
-		if (dad != null)
-			dad.visible = currentVisible[1];
-
-		if (boyfriend != null)
-			boyfriend.visible = currentVisible[4];
-
-		if (gf != null)
-			gf.visible = currentVisible[5];
-
-		applyGFAnimationState();
-	}
-
-	function applySingingState():Void
-	{
-		if (dadLipSync != null)
-			dadLipSync.shouldSing = currentSinging[1];
-
-		if (boyfriendLipSync != null)
-			boyfriendLipSync.shouldSing = currentSinging[4];
-	}
-
-	function applyGFAnimationState():Void
-	{
-		if (gf == null)
+		if (char == null)
 			return;
-		if (beautifulGF && gf.hasAnimation('idle-beautiful'))
+
+		var anims:Array<String> = ['singLEFT', 'singDOWN', 'singUP', 'singRIGHT'];
+		if (noteData < 0 || noteData >= anims.length)
+			return;
+
+		var anim:String = anims[noteData];
+		if (char.hasAnimation(anim))
 		{
-			gf.idleSuffix = '-beautiful';
-			gf.recalculateDanceIdle();
-			gf.dance();
-		}
-		else if (gf.idleSuffix.length > 0)
-		{
-			gf.idleSuffix = '';
-			gf.recalculateDanceIdle();
-			gf.dance();
+			char.playAnim(anim, true);
+			char.holdTimer = 0;
 		}
 	}
 
-	function parseBoolArray(value:String, fallback:Array<Bool>):Array<Bool>
+	function singAll(noteData:Int):Void
 	{
-		if (value == null)
-			return fallback.copy();
-
-		var trimmed:String = value.trim();
-		if (trimmed.length < 1)
-			return fallback.copy();
-
-		var parsed:Array<Bool> = [];
-		for (token in ~/[\s,|]+/g.split(trimmed))
-		{
-			if (token.length < 1)
-				continue;
-			parsed.push(stringToBool(token));
-		}
-
-		if (parsed.length < fallback.length)
-		{
-			while (parsed.length < fallback.length)
-				parsed.push(fallback[parsed.length]);
-		}
-		else if (parsed.length > fallback.length)
-		{
-			parsed.resize(fallback.length);
-		}
-
-		return parsed;
-	}
-
-	function stringToBool(value:String):Bool
-	{
-		if (value == null)
-			return false;
-		return switch (value.trim().toLowerCase())
-		{
-			case 'true', '1', 'yes', 'on': true;
-			default: false;
-		}
+		singCharacter(boyfriend, noteData);
+		singCharacter(dad, noteData);
+		singCharacter(gf, noteData);
+		singCharacter(chaewon, noteData);
+		singCharacter(eunchae, noteData);
+		singCharacter(kazuha, noteData);
 	}
 }

@@ -56,6 +56,8 @@ class ModelThing
 	public var yOffset:Float = 0;
 	public var zOffset:Float = 0;
 	public var currentTime(get, never):Int;
+	private var lastAnimTime:Int = 0;
+	private var currentAnimLooping:Bool = true;
 
 	public function new(type:String, fileName:String, modelView:ModelView, scale:Float = 1, animSpeed:Map<String, Float> = null, yaw:Float = 0,
 			pitch:Float = 0, roll:Float = 0, alpha:Float = 1, x:Float = 0, y:Float = 0, z:Float = 0, noLoopList:Array<String> = null,
@@ -322,22 +324,26 @@ class ModelThing
 		playAnim("idle", true);
 	}
 
-	public function update():Void {}
+	public function update():Void
+	{
+		if (!currentAnimLooping)
+		{
+			var currentAnimTime:Int = currentTime;
+			if (currentAnimTime == lastAnimTime && lastAnimTime > 0)
+				lastAnimTime = -1;
+		}
+	}
 
 	public function isAnimationFinished():Bool
 	{
-		if (modelType == "md2")
+		if (!currentAnimLooping)
 		{
-			if (vertexAnimator == null)
-				return false;
-			return vertexAnimator.animationState == null || !vertexAnimator.playing;
+			var currentAnimTime:Int = currentTime;
+			if (currentAnimTime == lastAnimTime && lastAnimTime > 0)
+				return true;
+			lastAnimTime = currentAnimTime;
 		}
-		else
-		{
-			if (skeletonAnimator == null)
-				return false;
-			return skeletonAnimator.animationState == null || !skeletonAnimator.playing;
-		}
+		return false;
 	}
 
 	public function animExists(anim:String):Bool
@@ -363,6 +369,8 @@ class ModelThing
 		if (force || currentAnim != anim)
 		{
 			var newSpeed:Float = animSpeed.exists(anim) ? animSpeed[anim] : animSpeed["default"];
+			currentAnimLooping = !noLoopList.contains(anim);
+			lastAnimTime = 0;
 			if (modelType == "md2")
 			{
 				vertexAnimator.playbackSpeed = newSpeed;

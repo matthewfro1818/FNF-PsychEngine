@@ -883,9 +883,10 @@ class Character extends FlxSprite {
 		if (isAnimationNull())
 			return;
 
-		if (!isAnimateAtlas)
-			animation.curAnim.finish();
-		else
+		if (!isAnimateAtlas) {
+			if (animation.curAnim != null)
+				animation.curAnim.finish();
+		} else
 			atlas.anim.curFrame = atlas.anim.length - 1;
 	}
 

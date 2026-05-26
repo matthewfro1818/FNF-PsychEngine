@@ -1,6 +1,9 @@
 package backend;
 
 import flixel.FlxSubState;
+#if HSCRIPT_ALLOWED
+import psychlua.HScript;
+#end
 
 class MusicBeatSubstate extends FlxSubState
 {
@@ -25,8 +28,62 @@ class MusicBeatSubstate extends FlxSubState
 	inline function get_controls():Controls
 		return Controls.instance;
 
+	#if HSCRIPT_ALLOWED
+	public var stateScripts:Array<HScript> = [];
+
+	function getStateScriptNames():Array<String>
+	{
+		var cls = Type.getClassName(Type.getClass(this));
+		if (cls == null)
+			return [];
+		var split = cls.split('.');
+		return [split[split.length - 1]];
+	}
+
+	function initStateScripts():Void
+	{
+		for (name in getStateScriptNames())
+		{
+			if (name == null || name.trim().length < 1)
+				continue;
+			for (key in ['substates/$name.hx', 'data/substates/$name.hx'])
+			{
+				var path = Paths.modFolders(key);
+				if (!FileSystem.exists(path))
+					path = Paths.getSharedPath(key);
+				if (FileSystem.exists(path))
+					stateScripts.push(new HScript(null, path));
+			}
+		}
+	}
+
+	function callOnStateScripts(funcToCall:String, args:Array<Dynamic> = null):Void
+	{
+		for (script in stateScripts)
+		{
+			@:privateAccess
+			if (script != null && script.exists(funcToCall))
+				script.call(funcToCall, args);
+		}
+	}
+	#end
+
+	override function create()
+	{
+		super.create();
+		#if HSCRIPT_ALLOWED
+		initStateScripts();
+		callOnStateScripts('create', []);
+		callOnStateScripts('onCreate', []);
+		#end
+	}
+
 	override function update(elapsed:Float)
 	{
+		#if HSCRIPT_ALLOWED
+		callOnStateScripts('update', [elapsed]);
+		callOnStateScripts('onUpdate', [elapsed]);
+		#end
 		// everyStep();
 		if (!persistentUpdate)
 			MusicBeatState.timePassedOnState += elapsed;
@@ -112,12 +169,32 @@ class MusicBeatSubstate extends FlxSubState
 
 	public function beatHit():Void
 	{
-		// do literally nothing dumbass
+		#if HSCRIPT_ALLOWED
+		callOnStateScripts('beatHit', [curBeat]);
+		callOnStateScripts('onBeatHit', [curBeat]);
+		#end
 	}
 
 	public function sectionHit():Void
 	{
-		// yep, you guessed it, nothing again, dumbass
+		#if HSCRIPT_ALLOWED
+		callOnStateScripts('sectionHit', [curSection]);
+		callOnStateScripts('onSectionHit', [curSection]);
+		#end
+	}
+
+	override function destroy()
+	{
+		#if HSCRIPT_ALLOWED
+		if (stateScripts != null)
+		{
+			for (script in stateScripts)
+				if (script != null)
+					script.destroy();
+			stateScripts.resize(0);
+		}
+		#end
+		super.destroy();
 	}
 
 	function getBeatsOnSection()

@@ -434,6 +434,14 @@ class PlayState extends MusicBeatState
 				new PhillyBlazin(); // Weekend 1 - Blazin
 			case 'sserafim':
 				new Sserafim();
+			case 'skeletonStage':
+				new SkeletonStage();
+			case 'minecraft':
+				new Minecraft();
+			case 'checker':
+				new Checker();
+			case 'fnafStage':
+				new FnafStage();
 		}
 		if (isPixelStage)
 			introSoundsSuffix = '-pixel';

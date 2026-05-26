@@ -12,9 +12,11 @@ import states.stages.objects.TankmenBG;
 typedef CharacterFile = {
 	var animations:Array<AnimArray>;
 	var image:String;
+	@:optional var model:CharacterModelFile;
 	var scale:Float;
 	var sing_duration:Float;
 	var healthicon:String;
+	@:optional var healthIcon:Dynamic;
 
 	var position:Array<Float>;
 	var camera_position:Array<Float>;
@@ -23,6 +25,28 @@ typedef CharacterFile = {
 	var healthbar_colors:Array<Int>;
 	var vocals_file:String;
 	@:optional var _editor_isPlayer:Null<Bool>;
+}
+
+typedef CharacterModelFile = {
+	var name:String;
+	var type:String;
+	@:optional var scale:Null<Float>;
+	@:optional var yaw:Null<Float>;
+	@:optional var pitch:Null<Float>;
+	@:optional var roll:Null<Float>;
+	@:optional var x:Null<Float>;
+	@:optional var y:Null<Float>;
+	@:optional var z:Null<Float>;
+	@:optional var view_width:Null<Float>;
+	@:optional var view_height:Null<Float>;
+	@:optional var ambient:Null<Float>;
+	@:optional var specular:Null<Float>;
+	@:optional var diffuse:Null<Float>;
+	@:optional var alpha:Null<Float>;
+	@:optional var no_loop:Array<String>;
+	@:optional var anim_speed:Dynamic;
+	@:optional var md5_animations:Dynamic;
+	@:optional var source_mod:String;
 }
 
 typedef AnimArray = {
@@ -68,6 +92,59 @@ class Character extends FlxSprite {
 	public var missingText:FlxText;
 	public var hasMissAnimations:Bool = false;
 	public var vocalsFile:String = '';
+
+	public var camOffsets:Array<Float> = [0, 0];
+	public var posOffsets:Array<Float> = [0, 0];
+
+	// 3D model characters
+	public var isModel:Bool = false;
+	public var modelName:String = '';
+	public var beganLoading:Bool = false;
+	public var modelType:String = 'md2';
+	public var modelScale:Float = 1;
+	public var modelYaw:Float = 0;
+	public var modelPitch:Float = 0;
+	public var modelRoll:Float = 0;
+	public var modelX:Float = 0;
+	public var modelY:Float = 0;
+	public var modelZ:Float = 0;
+	public var modelViewWidth:Float = 720;
+	public var modelViewHeight:Float = 720;
+	public var modelAmbient:Float = 1;
+	public var modelSpecular:Float = 1;
+	public var modelDiffuse:Float = 1;
+	public var modelAlpha:Float = 1;
+	public var modelSourceMod:String = null;
+	public var modelNoLoop:Array<String> = [];
+	public var modelAnimSpeed:Map<String, Float> = [];
+	public var modelMD5Animations:Map<String, String> = [];
+	public var modelView:ModelView;
+	public var model:ModelThing;
+	var beganLoadingModel:Bool = false;
+	var ownsModelView:Bool = false;
+	public var isGlass:Bool = false;
+	public var modelOrigBPM:Int;
+	public var initAlpha:Float = 1.0;
+	public var shimmer:Bool = false;
+	public var modelSpeed:Map<String, Float> = new Map<String, Float>();
+
+	public var viewX:Float = 750;
+	public var viewY:Float = 750;
+	public var ambient:Float = 1;
+	public var specular:Float = 1;
+	public var diffuse:Float = 1;
+	public var animSpeed:Map<String, Float> = new Map<String, Float>();
+	public var noLoopList:Array<String> = [];
+	public var md5Anims:Map<String, String> = new Map<String, String>();
+
+	public var initYaw:Float = 0;
+	public var initPitch:Float = 0;
+	public var initX:Float = 0;
+	public var initY:Float = 0;
+	public var initZ:Float = 0;
+
+	public static var modelMutex:Bool = false;
+	public static var modelMutexThing:ModelThing;
 
 	// Used on Character Editor
 	public var imageFile:String = '';

@@ -153,6 +153,10 @@ class Character extends FlxSprite {
 	public var originalFlipX:Bool = false;
 	public var editorIsPlayer:Null<Bool> = null;
 
+	inline function setAntialiasingDirect(sprite:FlxSprite, value:Bool):Void {
+		@:bypassAccessor sprite.antialiasing = value;
+	}
+
 	public function new(x:Float, y:Float, ?character:String = 'bf', ?isPlayer:Bool = false) {
 		super(x, y);
 
@@ -210,7 +214,7 @@ class Character extends FlxSprite {
 				originalFlipX = false;
 				editorIsPlayer = null;
 				noAntialiasing = false;
-				antialiasing = ClientPrefs.data.antialiasing;
+				setAntialiasingDirect(this, ClientPrefs.data.antialiasing);
 				copyAtlasValues();
 				return;
 				#end
@@ -256,7 +260,7 @@ class Character extends FlxSprite {
 				originalFlipX = false;
 				editorIsPlayer = null;
 				noAntialiasing = false;
-				antialiasing = ClientPrefs.data.antialiasing;
+				setAntialiasingDirect(this, ClientPrefs.data.antialiasing);
 				copyAtlasValues();
 				return;
 				#end
@@ -302,7 +306,7 @@ class Character extends FlxSprite {
 				originalFlipX = false;
 				editorIsPlayer = null;
 				noAntialiasing = false;
-				antialiasing = ClientPrefs.data.antialiasing;
+				setAntialiasingDirect(this, ClientPrefs.data.antialiasing);
 				copyAtlasValues();
 				return;
 				#end
@@ -370,7 +374,7 @@ class Character extends FlxSprite {
 				originalFlipX = false;
 				editorIsPlayer = null;
 				noAntialiasing = false;
-				antialiasing = ClientPrefs.data.antialiasing;
+				setAntialiasingDirect(this, ClientPrefs.data.antialiasing);
 				copyAtlasValues();
 				return;
 				#end
@@ -445,7 +449,7 @@ class Character extends FlxSprite {
 				originalFlipX = true;
 				editorIsPlayer = null;
 				noAntialiasing = false;
-				antialiasing = ClientPrefs.data.antialiasing;
+				setAntialiasingDirect(this, ClientPrefs.data.antialiasing);
 				copyAtlasValues();
 				return;
 				#end
@@ -497,7 +501,7 @@ class Character extends FlxSprite {
 				originalFlipX = false;
 				editorIsPlayer = null;
 				noAntialiasing = false;
-				antialiasing = ClientPrefs.data.antialiasing;
+				setAntialiasingDirect(this, ClientPrefs.data.antialiasing);
 				copyAtlasValues();
 				return;
 				#end
@@ -593,7 +597,7 @@ class Character extends FlxSprite {
 
 		// antialiasing
 		noAntialiasing = (json.no_antialiasing == true);
-		antialiasing = ClientPrefs.data.antialiasing ? !noAntialiasing : false;
+		setAntialiasingDirect(this, ClientPrefs.data.antialiasing ? !noAntialiasing : false);
 
 		// animations
 		animationsArray = json.animations;
@@ -974,7 +978,7 @@ class Character extends FlxSprite {
 			atlas.flipX = flipX;
 			atlas.flipY = flipY;
 			atlas.shader = shader;
-			atlas.antialiasing = antialiasing;
+			setAntialiasingDirect(atlas, antialiasing);
 			atlas.colorTransform = colorTransform;
 			atlas.color = color;
 		}
@@ -995,7 +999,7 @@ class Character extends FlxSprite {
 		spr.flipX = flipX;
 		spr.flipY = flipY;
 		spr.shader = shader;
-		spr.antialiasing = antialiasing;
+		setAntialiasingDirect(spr, antialiasing);
 		spr.colorTransform = colorTransform;
 		spr.color = color;
 	}

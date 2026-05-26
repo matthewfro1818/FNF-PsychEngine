@@ -794,6 +794,8 @@ class Character extends FlxSprite {
 	override function update(elapsed:Float) {
 		if (isModel && modelView != null)
 			modelView.update();
+		if (isModel && model != null)
+			model.update();
 
 		if (isAnimateAtlas)
 			atlas.update(elapsed);

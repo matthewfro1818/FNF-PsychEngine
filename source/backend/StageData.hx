@@ -115,6 +115,16 @@ class StageData
 				return 'schoolEvil';
 			case 'ugh' | 'guns' | 'stress':
 				return 'tank';
+			case 'dont-mine-at-night':
+				return 'minecraft';
+			case 'super-sonic-racing':
+				return 'checker';
+			case 'rockslide-rumble':
+				return 'crashStage';
+			case 'break-my-mind':
+				return 'fnafStage';
+			case 'spooky-scary-skeletons':
+			    return 'skeletonStage';
 		}
 		return 'stage';
 	}

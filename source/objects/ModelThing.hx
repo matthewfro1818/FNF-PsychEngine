@@ -8,6 +8,7 @@ import away3d.animators.data.Skeleton;
 import away3d.animators.nodes.SkeletonClipNode;
 import away3d.animators.nodes.VertexClipNode;
 import away3d.animators.transitions.CrossfadeTransition;
+import away3d.core.base.Geometry;
 import away3d.entities.Mesh;
 import away3d.events.Asset3DEvent;
 import away3d.events.LoaderEvent;
@@ -19,6 +20,8 @@ import away3d.loaders.parsers.MD5AnimParser;
 import away3d.loaders.parsers.MD5MeshParser;
 import away3d.materials.TextureMaterial;
 import away3d.materials.methods.CelSpecularMethod;
+import away3d.textures.ATFTexture;
+import away3d.textures.BitmapTexture;
 import away3d.utils.Cast;
 import openfl.Assets;
 import openfl.utils.ByteArray;
@@ -26,10 +29,10 @@ import openfl.utils.ByteArray;
 class ModelThing
 {
 	var modelBytes:ByteArray;
-	var modelMaterial:TextureMaterial;
+	public var modelMaterial:TextureMaterial;
 	var animationSet:VertexAnimationSet;
 	var vertexAnimator:VertexAnimator;
-	var animationSetSkeleton:SkeletonAnimationSet;
+	public var animationSetSkeleton:SkeletonAnimationSet;
 	var skeletonAnimator:SkeletonAnimator;
 	var skeleton:Skeleton;
 	var stateTransition:CrossfadeTransition;
@@ -37,6 +40,11 @@ class ModelThing
 	var animSpeed:Map<String, Float>;
 	var scaleValue:Float;
 	var fileName:String;
+	var jointsPerVertex:Int = 4;
+	var geos:Map<String, Geometry> = [];
+	var bitmapTexture:BitmapTexture;
+	var atfTexture:ATFTexture;
+	var atfBytes:ByteArray;
 
 	public var mesh:Mesh;
 	public var modelView:ModelView;
@@ -47,10 +55,12 @@ class ModelThing
 	public var xOffset:Float = 0;
 	public var yOffset:Float = 0;
 	public var zOffset:Float = 0;
+	public var currentTime(get, never):Int;
 
 	public function new(type:String, fileName:String, modelView:ModelView, scale:Float = 1, animSpeed:Map<String, Float> = null, yaw:Float = 0,
 			pitch:Float = 0, roll:Float = 0, alpha:Float = 1, x:Float = 0, y:Float = 0, z:Float = 0, noLoopList:Array<String> = null,
-			md5Anims:Map<String, String> = null)
+			md5Anims:Map<String, String> = null, atf:Bool = false, antialiasing:Bool = true, ambient:Float = 1, specular:Float = 1,
+			diffuse:Float = 1, light:Bool = false, jointsPerVertex:Int = 4)
 	{
 		this.modelType = type;
 		this.fileName = fileName;
@@ -58,22 +68,46 @@ class ModelThing
 		this.scaleValue = scale;
 		this.animSpeed = animSpeed != null ? animSpeed : ["default" => 1.0];
 		this.noLoopList = noLoopList != null ? noLoopList : [];
+		this.jointsPerVertex = jointsPerVertex;
 		xOffset = x;
 		yOffset = y;
 		zOffset = z;
 
-		var texturePath = 'assets/models/$fileName/$fileName.png';
-		if (!Assets.exists(texturePath))
+		if (atf)
 		{
-			trace('ERROR: TEXTURE "$texturePath" CAN NOT BE FOUND!');
-			return;
+			var texturePath = 'assets/models/$fileName/$fileName.atf';
+			if (!Assets.exists(texturePath))
+			{
+				trace('ERROR: TEXTURE "$texturePath" CAN NOT BE FOUND!');
+				return;
+			}
+			atfBytes = Assets.getBytes(texturePath);
+			atfTexture = new ATFTexture(atfBytes);
+			modelMaterial = new TextureMaterial(atfTexture, antialiasing);
+		}
+		else
+		{
+			var texturePath = 'assets/models/$fileName/$fileName.png';
+			if (!Assets.exists(texturePath))
+			{
+				trace('ERROR: TEXTURE "$texturePath" CAN NOT BE FOUND!');
+				return;
+			}
+			bitmapTexture = Cast.bitmapTexture(texturePath);
+			modelMaterial = new TextureMaterial(bitmapTexture, antialiasing);
 		}
 
-		modelMaterial = new TextureMaterial(Cast.bitmapTexture(texturePath));
-		modelMaterial.lightPicker = modelView.lightPicker;
+		if (light)
+		{
+			modelMaterial.lightPicker = modelView.lightPicker;
+			modelMaterial.shadowMethod = modelView.shadowMapMethod;
+		}
 		modelMaterial.gloss = 30;
 		modelMaterial.specularMethod = new CelSpecularMethod();
-		modelMaterial.ambient = 1;
+		modelMaterial.ambient = ambient;
+		modelMaterial.specular = specular;
+		if (modelView.light != null)
+			modelView.light.diffuse = diffuse;
 		modelMaterial.alpha = alpha;
 
 		modelView.cameraController.panAngle = 90;
@@ -148,6 +182,7 @@ class ModelThing
 			trace('ERROR: MODEL "$modelPath" CAN NOT BE FOUND!');
 			return;
 		}
+		animationSetSkeleton = new SkeletonAnimationSet(jointsPerVertex);
 		stateTransition = new CrossfadeTransition(0.15);
 		modelBytes = Assets.getBytes(modelPath);
 		Asset3DLibrary.enableParser(AWDParser);
@@ -221,20 +256,31 @@ class ModelThing
 
 	function onAssetCompleteAWD(event:Asset3DEvent):Void
 	{
+		var assetName:String = event.asset.name;
+		var hasPrefix:Bool = assetName != null && assetName.startsWith(fileName + "_");
 		switch (event.asset.assetType)
 		{
 			case Asset3DType.SKELETON:
-				skeleton = cast event.asset;
-				animationSetSkeleton = new SkeletonAnimationSet();
+				if (hasPrefix || skeleton == null)
+					skeleton = cast event.asset;
 				skeletonAnimator = new SkeletonAnimator(animationSetSkeleton, skeleton, true);
 			case Asset3DType.ANIMATION_NODE:
 				var node:SkeletonClipNode = cast event.asset;
+				if (hasPrefix)
+					node.name = assetName.substr(fileName.length + 1);
 				if (animationSetSkeleton != null)
 					animationSetSkeleton.addAnimation(node);
 				if (noLoopList.contains(node.name))
 					node.looping = false;
 			case Asset3DType.MESH:
-				setupMesh(cast event.asset);
+				if (hasPrefix || mesh == null)
+					setupMesh(cast event.asset);
+			case Asset3DType.GEOMETRY:
+				var geo:Geometry = cast event.asset;
+				if (hasPrefix)
+					geo.name = assetName.substr(fileName.length + 1);
+				if (geo.name != null && geo.name.length > 0)
+					geos[geo.name] = geo;
 		}
 	}
 
@@ -276,17 +322,23 @@ class ModelThing
 		playAnim("idle", true);
 	}
 
-	public function playAnim(anim:String = "", force:Bool = false, offset:Int = 0):Void
-	{
-		if (!fullyLoaded)
-			return;
+	public function update():Void {}
 
-		var hasAnim = switch (modelType)
+	public function animExists(anim:String):Bool
+	{
+		return switch (modelType)
 		{
 			case "md2": animationSet != null && animationSet.animationNames.indexOf(anim) != -1;
 			default: animationSetSkeleton != null && animationSetSkeleton.animationNames.indexOf(anim) != -1;
 		}
-		if (!hasAnim)
+	}
+
+	public function playAnim(anim:String = "", force:Bool = false, offset:Int = 0, geo:String = ""):Void
+	{
+		if (!fullyLoaded)
+			return;
+
+		if (!animExists(anim))
 		{
 			trace('ANIMATION NAME $anim NOT FOUND.');
 			return;
@@ -302,6 +354,13 @@ class ModelThing
 			}
 			else
 			{
+				if (geo != null && geo.length > 0)
+				{
+					if (geos.exists(geo))
+						mesh.geometry = geos[geo];
+					else
+						trace('GEO NAME $geo NOT FOUND FOR $fileName');
+				}
 				skeletonAnimator.playbackSpeed = newSpeed;
 				skeletonAnimator.play(anim, stateTransition, offset);
 			}
@@ -322,8 +381,12 @@ class ModelThing
 	public function destroy():Void
 	{
 		begoneEventListeners();
-		if (mesh != null)
+		if (mesh != null) {
+			if (mesh.parent != null)
+				mesh.parent.removeChild(mesh);
 			mesh.disposeWithChildren();
+			mesh = null;
+		}
 		if (modelBytes != null)
 			modelBytes.clear();
 		if (animationSet != null)
@@ -339,9 +402,53 @@ class ModelThing
 		if (animationMap != null)
 			for (bytes in animationMap)
 				bytes.clear();
+		if (geos != null)
+		{
+			for (geo in geos)
+				if (geo != null)
+					geo.dispose();
+			geos.clear();
+		}
+		if (bitmapTexture != null)
+			bitmapTexture.dispose();
+		if (atfTexture != null)
+			atfTexture.dispose();
+		if (atfBytes != null)
+			atfBytes.clear();
+		if (modelMaterial != null)
+			modelMaterial.dispose();
 		stateTransition = null;
 		animationMap = null;
+		geos = null;
+		bitmapTexture = null;
+		atfTexture = null;
+		atfBytes = null;
 		modelMaterial = null;
 		modelView = null;
+	}
+
+	public function addYaw(angle:Float):Void
+	{
+		if (mesh != null)
+			mesh.yaw(angle);
+	}
+
+	public function addPitch(angle:Float):Void
+	{
+		if (mesh != null)
+			mesh.pitch(angle);
+	}
+
+	public function addRoll(angle:Float):Void
+	{
+		if (mesh != null)
+			mesh.roll(angle);
+	}
+
+	function get_currentTime():Int
+	{
+		if (skeletonAnimator != null)
+			return skeletonAnimator.time;
+		return 0;
 	}
 }

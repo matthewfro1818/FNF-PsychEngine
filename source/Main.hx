@@ -33,6 +33,8 @@ import haxe.io.Path;
 #end
 import backend.Highscore;
 
+import objects.ModelView;
+
 // NATIVE API STUFF, YOU CAN IGNORE THIS AND SCROLL //
 #if (linux && !debug)
 @:cppInclude('./external/gamemode_client.h')
@@ -51,6 +53,8 @@ class Main extends Sprite
 	};
 
 	public static var fpsVar:FPSCounter;
+	
+	public static var modelView:ModelView;
 
 	// You can pretty much ignore everything from here on - your code should go in your states.
 
@@ -170,6 +174,8 @@ class Main extends Sprite
 			fpsVar.visible = ClientPrefs.data.showFPS;
 		}
 		#end
+
+        modelView = new ModelView();
 
 		#if (linux || mac) // fix the app icon not showing up on the Linux Panel / Mac Dock
 		var icon = Image.fromFile("icon.png");

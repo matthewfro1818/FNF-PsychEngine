@@ -67,25 +67,39 @@ class ModelView implements IFlxDestroyable
 	{
 		if (view == null)
 			return;
-		view.render();
-		bindRenderTexture();
+		try
+		{
+			view.render();
+			bindRenderTexture();
+		}
+		catch (e:Dynamic)
+		{
+			trace('Error updating model view: $e');
+		}
 	}
 
 	function bindRenderTexture():Void
 	{
-		if (view.stage3DProxy == null || view.stage3DProxy.context3D == null || FlxG.stage == null || FlxG.stage.context3D == null)
+		if (view == null || view.stage3DProxy == null || view.stage3DProxy.context3D == null || FlxG.stage == null || FlxG.stage.context3D == null)
 			return;
 
 		var gl = FlxG.stage.context3D.gl;
 		if (gl == null)
 			return;
-		if (!madeBuffer)
+		try
 		{
-			framebuffer = gl.createFramebuffer();
-			gl.bindFramebuffer(gl.FRAMEBUFFER, framebuffer);
-			madeBuffer = true;
+			if (!madeBuffer)
+			{
+				framebuffer = gl.createFramebuffer();
+				gl.bindFramebuffer(gl.FRAMEBUFFER, framebuffer);
+				madeBuffer = true;
+			}
+			gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, renderTexture.__textureID, 0);
 		}
-		gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, renderTexture.__textureID, 0);
+		catch (e:Dynamic)
+		{
+			trace('Error binding render texture: $e');
+		}
 	}
 
 	public function addModel(model:Mesh):Void
@@ -99,11 +113,9 @@ class ModelView implements IFlxDestroyable
 	{
 		cameraController = null;
 		lookAtPosition = null;
-		if (view != null && view.camera != null)
-		{
-			view.camera.disposeWithChildren();
-			view.camera.disposeAsset();
-		}
+		if (addedModels != null)
+			addedModels.resize(0);
+		var disposedLight = light;
 		if (light != null)
 			light.disposeWithChildren();
 		light = null;
@@ -121,15 +133,27 @@ class ModelView implements IFlxDestroyable
 		sprite = FlxDestroyUtil.destroy(sprite);
 		if (view != null)
 		{
-			while (view.scene.numChildren > 0)
+			if (view.scene != null)
 			{
-				var child = view.scene.getChildAt(0);
-				view.scene.removeChildAt(0);
-				if (child != null)
-					child.disposeWithChildren();
+				while (view.scene.numChildren > 0)
+				{
+					var child = view.scene.getChildAt(0);
+					view.scene.removeChildAt(0);
+					if (child != null && child != disposedLight)
+					{
+						try
+							child.disposeWithChildren()
+						catch (e:Dynamic)
+							trace('Error disposing model view child: $e');
+					}
+				}
 			}
-			FlxG.removeChild(view);
-			view.dispose();
+			if (view.parent != null)
+				FlxG.removeChild(view);
+			try
+				view.dispose()
+			catch (e:Dynamic)
+				trace('Error disposing model view: $e');
 		}
 		if (framebuffer != null && FlxG.stage != null && FlxG.stage.context3D != null && FlxG.stage.context3D.gl != null)
 			FlxG.stage.context3D.gl.deleteFramebuffer(framebuffer);

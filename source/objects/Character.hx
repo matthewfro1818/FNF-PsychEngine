@@ -46,6 +46,10 @@ typedef CharacterModelFile = {
 	@:optional var no_loop:Array<String>;
 	@:optional var anim_speed:Dynamic;
 	@:optional var md5_animations:Dynamic;
+	@:optional var geo_map:Dynamic;
+	@:optional var atf:Null<Bool>;
+	@:optional var light:Null<Bool>;
+	@:optional var joints_per_vertex:Null<Int>;
 	@:optional var source_mod:String;
 }
 
@@ -118,6 +122,10 @@ class Character extends FlxSprite {
 	public var modelNoLoop:Array<String> = [];
 	public var modelAnimSpeed:Map<String, Float> = [];
 	public var modelMD5Animations:Map<String, String> = [];
+	public var modelGeoMap:Map<String, String> = [];
+	public var modelAtf:Bool = false;
+	public var modelLight:Bool = false;
+	public var modelJointsPerVertex:Int = 4;
 	public var modelView:ModelView;
 	public var model:ModelThing;
 	var beganLoadingModel:Bool = false;
@@ -165,6 +173,8 @@ class Character extends FlxSprite {
 		animOffsets = new Map<String, Array<Dynamic>>();
 		this.isPlayer = isPlayer;
 		changeCharacter(character);
+
+		var loadFrom = Main.modelView.sprite;
 
 		switch (curCharacter) {
 			case 'pico-speaker':
@@ -505,6 +515,85 @@ class Character extends FlxSprite {
 				copyAtlasValues();
 				return;
 				#end
+			
+			case 'cube':
+				modelName = "cube";
+				modelScale = 50;
+				modelOrigBPM = 75;
+				isModel = true;
+				loadGraphicFromSprite(loadFrom);
+				scale.x = scale.y = 1.3;
+				initYaw = -45;
+				updateHitbox();
+
+			case 'round':
+				modelName = "round";
+				initAlpha = 0.86;
+				shimmer = true;
+				modelScale = 50;
+				modelOrigBPM = 75;
+				isModel = true;
+				loadGraphicFromSprite(loadFrom);
+				scale.x = scale.y = 1.3;
+				initYaw = -45;
+				updateHitbox();
+			
+			case 'prisma':
+				modelName = "prisma";
+				modelScale = 50;
+				var multiplier = Conductor.bpm / 100;
+				animSpeed = [
+					"default" => 2.1 * multiplier,
+					"idle" => 1.5 * multiplier,
+					"singLEFT" => 2.5 * multiplier
+				];
+				for (thing in ["singUPEnd", "singLEFTEnd", "singRIGHTEnd", "singDOWNEnd"])
+					animSpeed[thing] = 1.5;
+				isModel = true;
+				noLoopList = [
+					"idle", "singUP", "singLEFT", "singRIGHT", "singDOWN", "singUPEnd", "singLEFTEnd", "singRIGHTEnd", "singDOWNEnd", "idleEnd"
+				];
+				ambient = 1;
+				specular = 1;
+				diffuse = 1;
+				initYaw = -50;
+				isGlass = true;
+				viewX = 600;
+				viewY = 600;
+				if (isPlayer)
+					posOffsets = [viewX / 2, -550];
+				else
+					posOffsets = [-viewX / 2, -550];
+				if (isPlayer)
+					camOffsets = [-viewX / 2, viewY / 2];
+				else
+					camOffsets = [viewX / 2, viewY / 2];
+			
+			case 'monkey':
+				// DD: Okay, don't load models here cuz the engine will crash with more than one model
+
+				// model = new ModelThing("monkey", Main.modelView, 100, 80);
+				// model = new ModelThing("boyfriend", Main.modelView, 1.5, 80);
+				modelName = "monkey";
+				modelScale = 90;
+				modelOrigBPM = 75;
+				isModel = true;
+				loadGraphicFromSprite(loadFrom);
+				scale.x = scale.y = 1.4;
+				initYaw = 0;
+				updateHitbox();
+
+			case 'bf-poly':
+				// model = new ModelThing("boyfriend", Main.modelViewBF, 1.5, 80);
+				modelName = "boyfriend";
+				modelScale = 1.2;
+				modelOrigBPM = 75;
+				isModel = true;
+				loadGraphicFromSprite(loadFrom);
+				scale.x = scale.y = 1.6;
+				updateHitbox();
+				initYaw = 45;
+				flipX = true;
 		}
 	}
 
@@ -556,6 +645,7 @@ class Character extends FlxSprite {
 
 		scale.set(1, 1);
 		updateHitbox();
+		noAntialiasing = (json.no_antialiasing == true);
 
 		if (isModel) {
 			loadModelCharacter(json.model);
@@ -596,7 +686,6 @@ class Character extends FlxSprite {
 		editorIsPlayer = json._editor_isPlayer;
 
 		// antialiasing
-		noAntialiasing = (json.no_antialiasing == true);
 		setAntialiasingDirect(this, ClientPrefs.data.antialiasing ? !noAntialiasing : false);
 
 		// animations
@@ -661,11 +750,16 @@ class Character extends FlxSprite {
 		modelNoLoop = modelFile.no_loop != null ? modelFile.no_loop : [];
 		modelAnimSpeed = parseModelAnimSpeed(modelFile.anim_speed);
 		modelMD5Animations = parseModelMD5Animations(modelFile.md5_animations);
+		modelGeoMap = parseModelStringMap(modelFile.geo_map);
+		modelAtf = modelFile.atf == true;
+		modelLight = modelFile.light == true;
+		modelJointsPerVertex = modelFile.joints_per_vertex != null ? modelFile.joints_per_vertex : 4;
 
 		modelView = new ModelView(modelViewWidth, modelViewHeight, modelAmbient, modelSpecular, modelDiffuse);
 		ownsModelView = true;
 		model = new ModelThing(modelType, modelName, modelView, modelScale, modelAnimSpeed, modelYaw, modelPitch, modelRoll, modelAlpha, modelX, modelY,
-			modelZ, modelNoLoop, modelMD5Animations);
+			modelZ, modelNoLoop, modelMD5Animations, modelAtf, !noAntialiasing, modelAmbient, modelSpecular, modelDiffuse, modelLight,
+			modelJointsPerVertex);
 		loadGraphic(modelView.sprite.graphic);
 	}
 
@@ -682,6 +776,10 @@ class Character extends FlxSprite {
 	}
 
 	function parseModelMD5Animations(data:Dynamic):Map<String, String> {
+		return parseModelStringMap(data);
+	}
+
+	function parseModelStringMap(data:Dynamic):Map<String, String> {
 		var result:Map<String, String> = [];
 		if (data != null) {
 			for (field in Reflect.fields(data)) {
@@ -843,7 +941,7 @@ class Character extends FlxSprite {
 		specialAnim = false;
 		if (isModel) {
 			if (model != null)
-				model.playAnim(AnimName, Force, Frame);
+				model.playAnim(AnimName, Force, Frame, modelGeoMap.exists(AnimName) ? modelGeoMap[AnimName] : "");
 		} else if (!isAnimateAtlas) {
 			animation.play(AnimName, Force, Reversed, Frame);
 		} else {

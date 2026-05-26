@@ -177,7 +177,6 @@ class Song
 			var fmt:String = songJson.format;
 			if (fmt == null)
 				fmt = songJson.format = 'unknown';
-
 			switch (convertTo)
 			{
 				case 'psych_v1':

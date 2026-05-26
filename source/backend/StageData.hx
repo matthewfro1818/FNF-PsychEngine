@@ -124,7 +124,7 @@ class StageData
 			case 'break-my-mind':
 				return 'fnafStage';
 			case 'spooky-scary-skeletons':
-			    return 'skeletonStage';
+				return 'skeletonStage';
 		}
 		return 'stage';
 	}

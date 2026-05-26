@@ -61,7 +61,8 @@ class Sserafim extends BaseStage
 	{
 		super.goodNoteHit(note);
 
-		if (note == null) return;
+		if (note == null)
+			return;
 
 		switch (note.noteType)
 		{

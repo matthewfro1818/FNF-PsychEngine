@@ -32,7 +32,6 @@ import haxe.CallStack;
 import haxe.io.Path;
 #end
 import backend.Highscore;
-
 import objects.ModelView;
 
 // NATIVE API STUFF, YOU CAN IGNORE THIS AND SCROLL //
@@ -53,7 +52,7 @@ class Main extends Sprite
 	};
 
 	public static var fpsVar:FPSCounter;
-	
+
 	public static var modelView:ModelView;
 
 	// You can pretty much ignore everything from here on - your code should go in your states.
@@ -175,7 +174,7 @@ class Main extends Sprite
 		}
 		#end
 
-        modelView = new ModelView();
+		modelView = new ModelView();
 
 		#if (linux || mac) // fix the app icon not showing up on the Linux Panel / Mac Dock
 		var icon = Image.fromFile("icon.png");

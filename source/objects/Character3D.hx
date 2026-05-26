@@ -107,8 +107,8 @@ class Character3D extends FlxBasic
 		if (!animSpeed.exists("default"))
 			animSpeed["default"] = 1;
 
-		model = new ModelThing("awd", modelName, modelView, modelScale, animSpeed, initYaw, initPitch, initRoll, 1, xOffset, yOffset, zOffset,
-			noLoopList, null, atf, antialias, ambient, specular, diffuse, light, jointsPerVertex);
+		model = new ModelThing("awd", modelName, modelView, modelScale, animSpeed, initYaw, initPitch, initRoll, 1, xOffset, yOffset, zOffset, noLoopList,
+			null, atf, antialias, ambient, specular, diffuse, light, jointsPerVertex);
 		dance();
 	}
 

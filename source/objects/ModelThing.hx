@@ -29,10 +29,14 @@ import openfl.utils.ByteArray;
 class ModelThing
 {
 	var modelBytes:ByteArray;
+
 	public var modelMaterial:TextureMaterial;
+
 	var animationSet:VertexAnimationSet;
 	var vertexAnimator:VertexAnimator;
+
 	public var animationSetSkeleton:SkeletonAnimationSet;
+
 	var skeletonAnimator:SkeletonAnimator;
 	var skeleton:Skeleton;
 	var stateTransition:CrossfadeTransition;
@@ -56,13 +60,14 @@ class ModelThing
 	public var yOffset:Float = 0;
 	public var zOffset:Float = 0;
 	public var currentTime(get, never):Int;
+
 	private var lastAnimTime:Int = 0;
 	private var currentAnimLooping:Bool = true;
 
 	public function new(type:String, fileName:String, modelView:ModelView, scale:Float = 1, animSpeed:Map<String, Float> = null, yaw:Float = 0,
 			pitch:Float = 0, roll:Float = 0, alpha:Float = 1, x:Float = 0, y:Float = 0, z:Float = 0, noLoopList:Array<String> = null,
-			md5Anims:Map<String, String> = null, atf:Bool = false, antialiasing:Bool = true, ambient:Float = 1, specular:Float = 1,
-			diffuse:Float = 1, light:Bool = false, jointsPerVertex:Int = 4)
+			md5Anims:Map<String, String> = null, atf:Bool = false, antialiasing:Bool = true, ambient:Float = 1, specular:Float = 1, diffuse:Float = 1,
+			light:Bool = false, jointsPerVertex:Int = 4)
 	{
 		this.modelType = type;
 		this.fileName = fileName;
@@ -405,7 +410,8 @@ class ModelThing
 	public function destroy():Void
 	{
 		begoneEventListeners();
-		if (mesh != null) {
+		if (mesh != null)
+		{
 			if (mesh.parent != null)
 				mesh.parent.removeChild(mesh);
 			mesh.disposeWithChildren();

@@ -28,21 +28,20 @@ class Prompt extends BasePrompt
 
 	public function new(title:String, yesFunction:Void->Void, ?noFunction:Void->Void, ?_yesTxt:String, ?_noTxt:String)
 	{
-		if (_yesTxt != null)
-			this._yesTxt = _yesTxt;
-		if (_noTxt != null)
-			this._noTxt = _noTxt;
 		this.yesFunction = yesFunction;
 		this.noFunction = noFunction;
-		super(title, promptCreate);
+		this._yesTxt = _yesTxt == null ? 'OK' : _yesTxt;
+		this._noTxt = _noTxt == null ? 'Cancel' : _noTxt;
+		super(300, 120, title, promptCreate);
 	}
 
 	function promptCreate(_)
 	{
-		var btnY = 390;
+		var btnY = bg.y + bg.height - 50;
 		var btn:PsychUIButton = new PsychUIButton(0, btnY, _yesTxt, function()
 		{
-			yesFunction();
+			if (yesFunction != null)
+				yesFunction();
 			close();
 		});
 		btn.normalStyle.bgColor = FlxColor.RED;
@@ -61,8 +60,6 @@ class Prompt extends BasePrompt
 
 	override function close()
 	{
-		if (noFunction != null)
-			noFunction();
 		super.close();
 	}
 }
@@ -94,7 +91,7 @@ class BasePrompt extends MusicBeatSubstate
 		cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
 		bg = new FlxSprite().makeGraphic(1, 1, FlxColor.BLACK);
 		bg.alpha = 0.8;
-		bg.scale.set(_sizeX, _sizeY);
+		bg.scale.set(this._sizeX, this._sizeY);
 		bg.updateHitbox();
 		bg.screenCenter();
 		bg.cameras = cameras;
@@ -116,13 +113,6 @@ class BasePrompt extends MusicBeatSubstate
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
-
-		_blockInput = Math.max(0, _blockInput - elapsed);
-		if (_blockInput <= 0 && FlxG.keys.justPressed.ESCAPE)
-		{
-			close();
-			return;
-		}
 
 		if (onUpdate != null)
 			onUpdate(this, elapsed);

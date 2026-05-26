@@ -2,7 +2,6 @@ package states.stages.objects;
 
 import objects.Character;
 import flixel.FlxSprite;
-
 #if flxanimate
 import backend.ClientPrefs;
 import backend.Conductor;
@@ -31,6 +30,7 @@ class SserafimLipSyncSprite extends FlxAnimate
 
 	public var target:Character;
 	public var shouldSing:Bool = false;
+
 	var alphaMultiplier:Float = 1;
 
 	public function new(target:Character)
@@ -39,9 +39,7 @@ class SserafimLipSyncSprite extends FlxAnimate
 		this.target = target;
 		alphaMultiplier = (target != null && target.curCharacter == 'sserafim-chaewon') ? 0.5 : 1;
 
-		var asset:String = (target != null && target.curCharacter == 'sserafim-yunjin')
-			? 'sserafim-lipsync-yunjin'
-			: 'sserafim-lipsync';
+		var asset:String = (target != null && target.curCharacter == 'sserafim-yunjin') ? 'sserafim-lipsync-yunjin' : 'sserafim-lipsync';
 
 		Paths.loadAnimateAtlas(this, asset);
 		anim.addBySymbol('lipsync', 'lipsync', 24, false);
@@ -88,17 +86,20 @@ class SserafimLipSyncSprite extends FlxAnimate
 			return 0;
 
 		var frameCount:Int = Std.int(Math.max(anim.length, 1));
-		if (frameCount <= 1) return 0;
+		if (frameCount <= 1)
+			return 0;
 
 		var frame:Int = Std.int(Math.floor((Conductor.songPosition / 1000) * 24)) - 1;
-		if (frame < 0) return 0;
+		if (frame < 0)
+			return 0;
 
 		return frame % frameCount;
 	}
 
 	static function getPose(char:String, anim:String):SserafimLipSyncPose
 	{
-		if (anim == null || anim.length < 1) anim = 'idle';
+		if (anim == null || anim.length < 1)
+			anim = 'idle';
 
 		return switch (char)
 		{

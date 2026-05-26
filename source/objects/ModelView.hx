@@ -15,6 +15,8 @@ import openfl.display.BitmapData;
 import openfl.display3D.textures.RectangleTexture;
 import openfl.geom.Vector3D;
 
+@:access(openfl.display3D.Context3D)
+@:access(openfl.display3D.textures.RectangleTexture)
 class ModelView implements IFlxDestroyable
 {
 	public var view:View3D;

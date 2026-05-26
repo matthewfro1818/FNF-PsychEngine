@@ -1,0 +1,465 @@
+{
+    "directory": "",
+    "defaultZoom": 0.9,
+    "stageUI": "normal",
+    "boyfriend": [
+        1217.5,
+        592
+    ],
+    "girlfriend": [
+        787,
+        779
+    ],
+    "opponent": [
+        329.5,
+        913
+    ],
+    "hide_girlfriend": false,
+    "camera_boyfriend": [
+        -300,
+        -100
+    ],
+    "camera_opponent": [
+        150,
+        0
+    ],
+    "camera_girlfriend": [
+        0,
+        0
+    ],
+    "camera_speed": 1,
+    "objects": [
+        {
+            "name": "limoSunset",
+            "x": -180,
+            "y": -80,
+            "scale": [
+                0.9,
+                0.9
+            ],
+            "scroll": [
+                0.1,
+                0.1
+            ],
+            "type": "sprite",
+            "image": "limo/erect/limoSunset"
+        },
+        {
+            "name": "bgLimo",
+            "x": -200,
+            "y": 480,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                0.4,
+                0.4
+            ],
+            "type": "animatedSprite",
+            "image": "limo/erect/bgLimo",
+            "animations": [
+                {
+                    "anim": "drive",
+                    "name": "background limo blue",
+                    "fps": 24,
+                    "loop": true,
+                    "indices": [],
+                    "offsets": [
+                        0,
+                        0
+                    ]
+                }
+            ],
+            "firstAnimation": "drive"
+        },
+        {
+            "name": "shootingStar",
+            "x": 200,
+            "y": 0,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                0.12,
+                0.12
+            ],
+            "type": "animatedSprite",
+            "image": "limo/erect/shooting star",
+            "animations": [
+                {
+                    "anim": "shooting star",
+                    "name": "shooting star",
+                    "fps": 24,
+                    "loop": false,
+                    "indices": [],
+                    "offsets": [
+                        0,
+                        0
+                    ]
+                }
+            ],
+            "firstAnimation": "shooting star"
+        },
+        {
+            "name": "limoDancer2",
+            "x": 400,
+            "y": 100,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                0.4,
+                0.4
+            ],
+            "type": "animatedSprite",
+            "image": "limo/henchmen",
+            "animations": [
+                {
+                    "anim": "danceLeft",
+                    "name": "hench dancing",
+                    "fps": 24,
+                    "loop": false,
+                    "indices": [],
+                    "offsets": [
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "anim": "danceRight",
+                    "name": "hench dancing",
+                    "fps": 24,
+                    "loop": false,
+                    "indices": [],
+                    "offsets": [
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "anim": "hit1",
+                    "name": "hench hit 1",
+                    "fps": 24,
+                    "loop": false,
+                    "indices": [],
+                    "offsets": [
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "anim": "hit2",
+                    "name": "hench hit 2",
+                    "fps": 24,
+                    "loop": false,
+                    "indices": [],
+                    "offsets": [
+                        0,
+                        0
+                    ]
+                }
+            ],
+            "firstAnimation": "danceLeft"
+        },
+        {
+            "name": "limoDancer3",
+            "x": 700,
+            "y": 100,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                0.4,
+                0.4
+            ],
+            "type": "animatedSprite",
+            "image": "limo/henchmen",
+            "animations": [
+                {
+                    "anim": "danceLeft",
+                    "name": "hench dancing",
+                    "fps": 24,
+                    "loop": false,
+                    "indices": [],
+                    "offsets": [
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "anim": "danceRight",
+                    "name": "hench dancing",
+                    "fps": 24,
+                    "loop": false,
+                    "indices": [],
+                    "offsets": [
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "anim": "hit1",
+                    "name": "hench hit 1",
+                    "fps": 24,
+                    "loop": false,
+                    "indices": [],
+                    "offsets": [
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "anim": "hit2",
+                    "name": "hench hit 2",
+                    "fps": 24,
+                    "loop": false,
+                    "indices": [],
+                    "offsets": [
+                        0,
+                        0
+                    ]
+                }
+            ],
+            "firstAnimation": "danceLeft"
+        },
+        {
+            "name": "limoDancer4",
+            "x": 1000,
+            "y": 100,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                0.4,
+                0.4
+            ],
+            "type": "animatedSprite",
+            "image": "limo/henchmen",
+            "animations": [
+                {
+                    "anim": "danceLeft",
+                    "name": "hench dancing",
+                    "fps": 24,
+                    "loop": false,
+                    "indices": [],
+                    "offsets": [
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "anim": "danceRight",
+                    "name": "hench dancing",
+                    "fps": 24,
+                    "loop": false,
+                    "indices": [],
+                    "offsets": [
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "anim": "hit1",
+                    "name": "hench hit 1",
+                    "fps": 24,
+                    "loop": false,
+                    "indices": [],
+                    "offsets": [
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "anim": "hit2",
+                    "name": "hench hit 2",
+                    "fps": 24,
+                    "loop": false,
+                    "indices": [],
+                    "offsets": [
+                        0,
+                        0
+                    ]
+                }
+            ],
+            "firstAnimation": "danceLeft"
+        },
+        {
+            "name": "limoDancer5",
+            "x": 1300,
+            "y": 100,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                0.4,
+                0.4
+            ],
+            "type": "animatedSprite",
+            "image": "limo/henchmen",
+            "animations": [
+                {
+                    "anim": "danceLeft",
+                    "name": "hench dancing",
+                    "fps": 24,
+                    "loop": false,
+                    "indices": [],
+                    "offsets": [
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "anim": "danceRight",
+                    "name": "hench dancing",
+                    "fps": 24,
+                    "loop": false,
+                    "indices": [],
+                    "offsets": [
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "anim": "hit1",
+                    "name": "hench hit 1",
+                    "fps": 24,
+                    "loop": false,
+                    "indices": [],
+                    "offsets": [
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "anim": "hit2",
+                    "name": "hench hit 2",
+                    "fps": 24,
+                    "loop": false,
+                    "indices": [],
+                    "offsets": [
+                        0,
+                        0
+                    ]
+                }
+            ],
+            "firstAnimation": "danceLeft"
+        },
+        {
+            "name": "limoDancer1",
+            "x": 100,
+            "y": 100,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                0.4,
+                0.4
+            ],
+            "type": "animatedSprite",
+            "image": "limo/henchmen",
+            "animations": [
+                {
+                    "anim": "danceLeft",
+                    "name": "hench dancing",
+                    "fps": 24,
+                    "loop": false,
+                    "indices": [],
+                    "offsets": [
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "anim": "danceRight",
+                    "name": "hench dancing",
+                    "fps": 24,
+                    "loop": false,
+                    "indices": [],
+                    "offsets": [
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "anim": "hit1",
+                    "name": "hench hit 1",
+                    "fps": 24,
+                    "loop": false,
+                    "indices": [],
+                    "offsets": [
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "anim": "hit2",
+                    "name": "hench hit 2",
+                    "fps": 24,
+                    "loop": false,
+                    "indices": [],
+                    "offsets": [
+                        0,
+                        0
+                    ]
+                }
+            ],
+            "firstAnimation": "danceLeft"
+        },
+        {
+            "name": "limo",
+            "x": -120,
+            "y": 520,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                1,
+                1
+            ],
+            "type": "animatedSprite",
+            "image": "limo/erect/limoDrive",
+            "animations": [
+                {
+                    "anim": "drive",
+                    "name": "Limo stage",
+                    "fps": 24,
+                    "loop": true,
+                    "indices": [],
+                    "offsets": [
+                        0,
+                        0
+                    ]
+                }
+            ],
+            "firstAnimation": "drive"
+        },
+        {
+            "name": "fastCar",
+            "x": -12600,
+            "y": 160,
+            "scale": [
+                1,
+                1
+            ],
+            "scroll": [
+                1,
+                1
+            ],
+            "type": "sprite",
+            "image": "limo/fastCarLol"
+        }
+    ],
+    "_editorMeta": {
+        "dad": "dad",
+        "boyfriend": "bf",
+        "gf": "gf"
+    }
+}

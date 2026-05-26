@@ -49,6 +49,8 @@ typedef CharacterModelFile = {
 	@:optional var source_mod:String;
 }
 
+typedef ModelThing = Dynamic;
+
 typedef AnimArray = {
 	var anim:String;
 	var name:String;

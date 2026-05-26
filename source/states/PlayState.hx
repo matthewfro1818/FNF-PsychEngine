@@ -382,32 +382,32 @@ class PlayState extends MusicBeatState
 		{
 			case 'stage':
 				new StageWeek1(); // Week 1
-			case 'mainStageErect':
+			case 'mainStageErect', 'stageErect':
 				new StageWeek1(); // Week 1 Erect
 			case 'spooky':
 				new Spooky(); // Week 2
 			case 'spookyMansion':
 				new Spooky(); // Week 2 legacy name
-			case 'spookyMansionErect':
+			case 'spookyMansionErect', 'spookyErect':
 				new SpookyMansionErect();
 
 			case 'philly':
 				new Philly(); // Week 3
 			case 'phillyTrain':
 				new Philly(); // Week 3 legacy name
-			case 'phillyTrainErect':
+			case 'phillyTrainErect', 'phillyErect':
 				new Philly(); // Week 3 erect fallback
 			case 'limo':
 				new Limo(); // Week 4
 			case 'limoRide':
 				new Limo(); // Week 4 legacy name
-			case 'limoRideErect':
+			case 'limoRideErect', 'limoErect':
 				new Limo(); // Week 4 erect fallback
 			case 'mall':
 				new Mall(); // Week 5 - Cocoa, Eggnog
 			case 'mallXmas':
 				new Mall(); // Week 5 legacy name
-			case 'mallXmasErect':
+			case 'mallXmasErect', 'mallErect':
 				new Mall(); // Week 5 erect fallback
 
 			case 'mallEvil':
@@ -425,11 +425,13 @@ class PlayState extends MusicBeatState
 				new Tank(); // Week 7 - Ugh, Guns, Stress
 			case 'tankmanBattlefield':
 				new Tank(); // Week 7 legacy name
-			case 'tankmanBattlefieldErect':
+			case 'tankmanBattlefieldErect', 'tankErect':
 				new TankmanBattlefieldErect();
 
-			case 'phillyStreets':
+			case 'phillyStreets', 'streets':
 				new PhillyStreets(); // Weekend 1 - Darnell, Lit Up, 2Hot
+			case 'phillyStreetsErect', 'streetsErect':
+				new PhillyStreets(); // Weekend 1 erect fallback
 			case 'phillyBlazin':
 				new PhillyBlazin(); // Weekend 1 - Blazin
 			case 'sserafim':

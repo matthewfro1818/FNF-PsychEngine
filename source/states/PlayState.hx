@@ -444,6 +444,8 @@ class PlayState extends MusicBeatState
 				new Checker();
 			case 'fnafStage':
 				new FnafStage();
+			case 'crashStage':
+				new CrashStage();
 		}
 		if (isPixelStage)
 			introSoundsSuffix = '-pixel';

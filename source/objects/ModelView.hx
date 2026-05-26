@@ -65,7 +65,7 @@ class ModelView implements IFlxDestroyable
 
 	public function update():Void
 	{
-		if (view == null)
+		if (view == null || view.stage3DProxy == null || view.stage3DProxy.context3D == null)
 			return;
 		try
 		{

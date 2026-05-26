@@ -871,7 +871,7 @@ class Character extends FlxSprite {
 
 	public function isAnimationFinished():Bool {
 		if (isModel)
-			return false;
+			return model != null && model.isAnimationFinished();
 		if (isAnimationNull())
 			return false;
 		return !isAnimateAtlas ? animation.curAnim.finished : atlas.anim.finished;

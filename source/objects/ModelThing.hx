@@ -324,6 +324,22 @@ class ModelThing
 
 	public function update():Void {}
 
+	public function isAnimationFinished():Bool
+	{
+		if (modelType == "md2")
+		{
+			if (vertexAnimator == null)
+				return false;
+			return vertexAnimator.animationState == null || !vertexAnimator.playing;
+		}
+		else
+		{
+			if (skeletonAnimator == null)
+				return false;
+			return skeletonAnimator.animationState == null || !skeletonAnimator.playing;
+		}
+	}
+
 	public function animExists(anim:String):Bool
 	{
 		return switch (modelType)

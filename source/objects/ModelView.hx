@@ -25,6 +25,7 @@ class ModelView implements IFlxDestroyable
 	public var lightPicker:StaticLightPicker;
 	public var shadowMapMethod:FilteredShadowMapMethod;
 	public var sprite:FlxSprite = new FlxSprite();
+	public var addedModels:Array<ModelThing> = [];
 
 	var lookAtPosition:Vector3D = new Vector3D();
 	var renderTexture:RectangleTexture;

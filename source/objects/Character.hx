@@ -49,8 +49,6 @@ typedef CharacterModelFile = {
 	@:optional var source_mod:String;
 }
 
-typedef ModelThing = Dynamic;
-
 typedef AnimArray = {
 	var anim:String;
 	var name:String;
@@ -544,17 +542,20 @@ class Character extends FlxSprite {
 
 	public function loadCharacterFile(json:Dynamic) {
 		isAnimateAtlas = false;
+		isModel = (json.model != null);
 
 		#if flxanimate
 		var animToFind:String = Paths.getPath('images/' + json.image + '/Animation.json', TEXT);
-		if (#if MODS_ALLOWED FileSystem.exists(animToFind) || #end Assets.exists(animToFind))
+		if (!isModel && (#if MODS_ALLOWED FileSystem.exists(animToFind) || #end Assets.exists(animToFind)))
 			isAnimateAtlas = true;
 		#end
 
 		scale.set(1, 1);
 		updateHitbox();
 
-		if (!isAnimateAtlas) {
+		if (isModel) {
+			loadModelCharacter(json.model);
+		} else if (!isAnimateAtlas) {
 			frames = Paths.getMultiAtlas(json.image.split(','));
 		}
 		#if flxanimate
@@ -632,7 +633,66 @@ class Character extends FlxSprite {
 		// trace('Loaded file to character ' + curCharacter);
 	}
 
+	function loadModelCharacter(modelFile:CharacterModelFile):Void {
+		if (modelView != null && ownsModelView)
+			modelView.destroy();
+		if (model != null)
+			model.destroy();
+
+		modelName = modelFile.name;
+		modelType = modelFile.type != null ? modelFile.type : 'md2';
+		modelScale = modelFile.scale != null ? modelFile.scale : 1;
+		modelYaw = modelFile.yaw != null ? modelFile.yaw : 0;
+		modelPitch = modelFile.pitch != null ? modelFile.pitch : 0;
+		modelRoll = modelFile.roll != null ? modelFile.roll : 0;
+		modelX = modelFile.x != null ? modelFile.x : 0;
+		modelY = modelFile.y != null ? modelFile.y : 0;
+		modelZ = modelFile.z != null ? modelFile.z : 0;
+		modelViewWidth = modelFile.view_width != null ? modelFile.view_width : 720;
+		modelViewHeight = modelFile.view_height != null ? modelFile.view_height : 720;
+		modelAmbient = modelFile.ambient != null ? modelFile.ambient : 1;
+		modelSpecular = modelFile.specular != null ? modelFile.specular : 1;
+		modelDiffuse = modelFile.diffuse != null ? modelFile.diffuse : 1;
+		modelAlpha = modelFile.alpha != null ? modelFile.alpha : 1;
+		modelNoLoop = modelFile.no_loop != null ? modelFile.no_loop : [];
+		modelAnimSpeed = parseModelAnimSpeed(modelFile.anim_speed);
+		modelMD5Animations = parseModelMD5Animations(modelFile.md5_animations);
+
+		modelView = new ModelView(modelViewWidth, modelViewHeight, modelAmbient, modelSpecular, modelDiffuse);
+		ownsModelView = true;
+		model = new ModelThing(modelType, modelName, modelView, modelScale, modelAnimSpeed, modelYaw, modelPitch, modelRoll, modelAlpha, modelX, modelY,
+			modelZ, modelNoLoop, modelMD5Animations);
+		loadGraphic(modelView.sprite.graphic);
+	}
+
+	function parseModelAnimSpeed(data:Dynamic):Map<String, Float> {
+		var result:Map<String, Float> = ["default" => 1.0];
+		if (data != null) {
+			for (field in Reflect.fields(data)) {
+				var value:Null<Float> = cast Reflect.field(data, field);
+				if (value != null && !Math.isNaN(value))
+					result[field] = value;
+			}
+		}
+		return result;
+	}
+
+	function parseModelMD5Animations(data:Dynamic):Map<String, String> {
+		var result:Map<String, String> = [];
+		if (data != null) {
+			for (field in Reflect.fields(data)) {
+				var value:Dynamic = Reflect.field(data, field);
+				if (value != null)
+					result[field] = Std.string(value);
+			}
+		}
+		return result;
+	}
+
 	override function update(elapsed:Float) {
+		if (isModel && modelView != null)
+			modelView.update();
+
 		if (isAnimateAtlas)
 			atlas.update(elapsed);
 
@@ -696,6 +756,8 @@ class Character extends FlxSprite {
 	}
 
 	inline public function isAnimationNull():Bool {
+		if (isModel)
+			return _lastPlayedAnimation == null;
 		return !isAnimateAtlas ? (animation.curAnim == null) : (atlas.anim.curInstance == null || atlas.anim.curSymbol == null);
 	}
 
@@ -706,6 +768,8 @@ class Character extends FlxSprite {
 	}
 
 	public function isAnimationFinished():Bool {
+		if (isModel)
+			return false;
 		if (isAnimationNull())
 			return false;
 		return !isAnimateAtlas ? animation.curAnim.finished : atlas.anim.finished;
@@ -728,12 +792,16 @@ class Character extends FlxSprite {
 	public var animPaused(get, set):Bool;
 
 	private function get_animPaused():Bool {
+		if (isModel)
+			return false;
 		if (isAnimationNull())
 			return false;
 		return !isAnimateAtlas ? animation.curAnim.paused : atlas.anim.isPlaying;
 	}
 
 	private function set_animPaused(value:Bool):Bool {
+		if (isModel)
+			return value;
 		if (isAnimationNull())
 			return value;
 		if (!isAnimateAtlas)
@@ -769,7 +837,10 @@ class Character extends FlxSprite {
 
 	public function playAnim(AnimName:String, Force:Bool = false, Reversed:Bool = false, Frame:Int = 0):Void {
 		specialAnim = false;
-		if (!isAnimateAtlas) {
+		if (isModel) {
+			if (model != null)
+				model.playAnim(AnimName, Force, Frame);
+		} else if (!isAnimateAtlas) {
 			animation.play(AnimName, Force, Reversed, Frame);
 		} else {
 			atlas.anim.play(AnimName, Force, Reversed, Frame);
@@ -870,6 +941,13 @@ class Character extends FlxSprite {
 			}
 			return;
 		}
+		if (isModel) {
+			if (modelView != null && modelView.sprite != null) {
+				copyModelValues();
+				modelView.sprite.draw();
+			}
+			return;
+		}
 		super.draw();
 		if (missingCharacter && visible) {
 			alpha = lastAlpha;
@@ -902,7 +980,35 @@ class Character extends FlxSprite {
 		}
 	}
 
+	public function copyModelValues() {
+		var spr:FlxSprite = modelView.sprite;
+		spr.cameras = cameras;
+		spr.scrollFactor = scrollFactor;
+		spr.scale = scale;
+		spr.offset = offset;
+		spr.origin = origin;
+		spr.x = x;
+		spr.y = y;
+		spr.angle = angle;
+		spr.alpha = alpha;
+		spr.visible = visible;
+		spr.flipX = flipX;
+		spr.flipY = flipY;
+		spr.shader = shader;
+		spr.antialiasing = antialiasing;
+		spr.colorTransform = colorTransform;
+		spr.color = color;
+	}
+
 	public override function destroy() {
+		if (model != null) {
+			model.destroy();
+			model = null;
+		}
+		if (modelView != null && ownsModelView) {
+			modelView.destroy();
+			modelView = null;
+		}
 		atlas = FlxDestroyUtil.destroy(atlas);
 		super.destroy();
 	}

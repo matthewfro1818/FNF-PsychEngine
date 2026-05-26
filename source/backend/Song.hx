@@ -189,6 +189,8 @@ class Song
 					}
 			}
 		}
+		if (songJson.events == null)
+			songJson.events = [];
 		return songJson;
 	}
 }

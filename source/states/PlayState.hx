@@ -26,6 +26,15 @@ import states.FreeplayState;
 import states.editors.ChartingState;
 import states.editors.CharacterEditorState;
 
+#if mobile
+import mobile.objects.MobileControls;
+import mobile.backend.MobileData;
+import mobile.input.MobileInputID;
+#end
+
+
+
+
 import substates.PauseSubState;
 import substates.GameOverSubstate;
 

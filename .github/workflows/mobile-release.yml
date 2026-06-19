@@ -1,5 +1,12 @@
 name: Mobile + Release
-on: workflow_dispatch
+on: 
+  push:
+    branches:
+      - lol
+  pull_request:
+    branches:
+      - lol
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -7,7 +14,7 @@ permissions:
 
 env:
   PROJECT_NAME: PsychEngine
-  REPO_PATH: matthewfroncek36/FNF-PsychEngine-1
+  REPO_PATH: matthewfro1818/FNF-PsychEngine
 
 jobs:
   get-commit-hash:
@@ -40,13 +47,13 @@ jobs:
       matrix:
         include:
           - name: Android
-            os: macos-15
+            os: ubuntu-latest
             buildArgs: "android -final -D officialBuild"
             setupCommand: sh ./setup/unix.sh
             artifactName: androidBuild
             artifactPath: "export/release/android/bin/app/build/outputs/apk/release/*.apk"
           - name: iOS
-            os: macos-13
+            os: macos-15
             setupCommand: sh ./setup/unix.sh
             buildArgs: "ios -final -nosign -D officialBuild"
             artifactName: iOSBuild

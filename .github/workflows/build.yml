@@ -54,13 +54,21 @@ jobs:
       - name: Install Libraries
         run: ${{ inputs.setupCommand }}
 
+      - name: Setup Java 17
+        if: inputs.name == 'Android'
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
       - name: Configure Android
         if: inputs.name == 'Android'
         run: |
           haxelib run lime config ANDROID_SDK $ANDROID_HOME
           haxelib run lime config ANDROID_NDK_ROOT ${{ steps.setup-ndk.outputs.ndk-path }}
-          haxelib run lime config JAVA_HOME $JAVA_HOME_17_arm64
+          haxelib run lime config JAVA_HOME $JAVA_HOME
           haxelib run lime config ANDROID_SETUP true
+
 
       - name: Compile
         run: haxelib run lime build ${{ inputs.buildArgs }}

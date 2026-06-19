@@ -1,5 +1,12 @@
 name: Mobile + Release
-on: workflow_dispatch
+on: 
+  push:
+    branches:
+      - lol
+  pull_request:
+    branches:
+      - lol
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -7,7 +14,7 @@ permissions:
 
 env:
   PROJECT_NAME: PsychEngine
-  REPO_PATH: matthewfroncek36/FNF-PsychEngine-1
+  REPO_PATH: matthewfro1818/FNF-PsychEngine
 
 jobs:
   get-commit-hash:
